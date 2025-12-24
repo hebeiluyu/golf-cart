@@ -74,8 +74,18 @@
 }
 
 .site-header .logo {
-  width: 120px;        /* logo 显示大小 */
+  width: 120px;
+  display: block;
+
+  /* 只让 logo 靠左，不影响中间文字 */
+  margin-left: 0;
+  margin-right: auto;
   margin-bottom: 15px;
+
+  /* 让 logo 底色和绿色背景融合 */
+  background-color: #0f5132;
+  padding: 6px 10px;
+  border-radius: 4px;
 }
 
 /* 副标题 */
@@ -237,6 +247,7 @@
 
 </body>
 </html>
+
 
 
 
