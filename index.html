@@ -278,36 +278,51 @@ summary::-webkit-details-marker {
     <img src="images/products/main/golf-cart-main-03.jpg" alt="Golf Cart Rear View">
   </div>
 </section>
-<section>
-  <details>
-    <summary>4 Seat Electric Golf Cart【可折叠】</summary>
+<div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 40px;">
 
-    <div class="img-row">
-      <img src="images/products/4-seat/4-seat-01.jpg" alt="4 seat golf cart front view">
-      <img src="images/products/4-seat/4-seat-02.jpg" alt="4 seat golf cart side view">
-    </div>
+  <!-- 左侧：主图 -->
+  <div style="flex: 1;">
+    <img 
+      src="images/46-seat/main.jpg" 
+      alt="Electric Golf Cart"
+      style="width: 100%; border-radius: 8px;"
+    >
+  </div>
 
-    <p class="product-desc">
-      Popular 4-seat electric golf cart designed for passenger transport.
-      Suitable for resorts, hotels, campuses, and sightseeing areas.
+  <!-- 右侧：文字 + 折叠 -->
+  <div style="flex: 1; font-family: Arial, sans-serif; color: #222;">
+
+    <h1 style="margin-top: 0;">
+      4-Seat Electric Golf Cart
+    </h1>
+
+    <p style="line-height: 1.7;">
+      Compact electric golf cart designed for smooth and quiet passenger transport.
+      Ideal for resorts, hotels, campuses, and private communities.
     </p >
-  </details>
-</section>
-<section>
-  <details>
-    <summary>6 Seat Electric Golf Cart【可折叠】</summary>
 
-    <div class="img-row">
-      <img src="images/products/6-seat/6-seat-01.jpg" alt="6 seat golf cart front view">
-      <img src="images/products/6-seat/6-seat-02.jpg" alt="6 seat golf cart rear view">
-    </div>
+    <!-- 折叠栏 -->
+    <details style="margin-top: 20px;">
+      <summary style="
+        cursor: pointer;
+        font-size: 16px;
+        color: #555;
+        list-style: none;
+      ">
+        ▶ More Models
+      </summary>
 
-    <p class="product-desc">
-      High-capacity 6-seat electric golf cart for group transportation.
-      Widely used in tourist attractions, large resorts, and industrial parks.
-    </p >
-  </details>
-</section>
+      <div style="margin-top: 15px; line-height: 1.8;">
+        <p><strong>4 Seat Model</strong><br>
+        Suitable for small groups and short-distance transport.</p >
+
+        <p><strong>6 Seat Model</strong><br>
+        Extended seating capacity for larger passenger needs.</p >
+      </div>
+    </details>
+
+  </div>
+</div>
 <!-- ===== PRODUCT DETAILS ===== -->
 <section>
   <h2>Product Details</h2>
@@ -397,6 +412,7 @@ summary::-webkit-details-marker {
 </a >
 </body>
 </html>
+
 
 
 
