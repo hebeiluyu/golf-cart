@@ -276,15 +276,15 @@ summary::-webkit-details-marker {
   <div style="display: flex; align-items: center; gap: 12px;">
 <section>
 
-  <!-- 标题行：Main Product + 小箭头 -->
-  <h2 style="display:flex; align-items:center; gap:10px;">
-    Main Product
-    <span style="font-size:14px; color:#666;">▶ More styles</span>
-  </h2>
+<h2 style="display:flex; align-items:center; gap:10px; cursor:pointer;"
+    onclick="toggleMore()">
+  Main Product
+  <span id="arrow" style="font-size:14px; color:#666;">▶ More styles</span>
+</h2>
 
   <!-- 折叠内容：4座 / 6座 -->
   <!-- Main Product 三张图（保持你原来的） -->
-  <div class="img-row">
+  <div class="img-row" id="moreStyles">
     <img src="images/products/main/golf-cart-main-01.jpg" alt="Electric Golf Cart">
     <img src="images/products/main/golf-cart-main-02.jpg" alt="Golf Cart Side View">
     <img src="images/products/main/golf-cart-main-03.jpg" alt="Golf Cart Rear View">
@@ -407,8 +407,19 @@ summary::-webkit-details-marker {
 >
   💬
 </a >
+<script>
+  function toggleMore() {
+    var box = document.getElementById("moreStyles");
+    if (box.style.display === "none") {
+      box.style.display = "flex";
+    } else {
+      box.style.display = "none";
+    }
+  }
+</script>
 </body>
 </html>
+
 
 
 
