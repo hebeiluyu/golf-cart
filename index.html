@@ -29,6 +29,41 @@
       text-align: center;
       margin-bottom: 30px;
     }
+    /* ===== 产品图片行 ===== */
+.img-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== 产品文字说明 ===== */
+.product-desc {
+  max-width: 900px;
+  margin: 20px auto 40px;
+  text-align: center;
+  line-height: 1.7;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ===== 折叠模块 ===== */
+details {
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+summary {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
     .img-row {
       display: flex;
       flex-wrap: wrap;
@@ -323,6 +358,7 @@
 </a >
 </body>
 </html>
+
 
 
 
