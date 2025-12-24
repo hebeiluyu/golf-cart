@@ -20,6 +20,49 @@
       padding: 40px 20px;
       text-align: center;
     }
+    <style>
+/* 顶部 Logo 区 */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header img {
+  height: 60px;
+}
+
+.company-text h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.company-text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 主视觉 Hero 区 */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f7f9fb;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #555;
+  font-size: 15px;
+}
+</style>
     section {
       padding: 50px 20px;
       max-width: 1200px;
@@ -69,21 +112,22 @@
 </head>
 
 <body>
+<header class="site-header">
+  < img src="images/logo.jpg" alt="HEBEI LUYU Logo">
 
-<h1 style="text-align:center; margin-top:30px;">
-HEBEI LUYU IMPORT AND EXPORT CO.,LTD
-</h1>
+  <div class="company-text">
+    <h1>HEBEI LUYU IMPORT AND EXPORT CO., LTD</h1>
+    <p>Electric Golf Cart Manufacturer & Exporter</p >
+  </div>
+</header>
 
-<p style="text-align:center; color:#666; font-size:15px;">
-Electric Golf Cart Manufacturer & Exporter
-</p >
 <!-- ===== HERO / MAIN ===== -->
-<header>
-  <h1>Electric Golf Cart Manufacturer from China</h1>
+<section class="hero">
+  <h2>Electric Golf Cart Manufacturer from China</h2>
   <p>
     Factory Direct Supply · OEM & ODM Customization · Exported Worldwide
-  </p>
-</header>
+  </p >
+</section>
 <div style="text-align:center; margin:30px 0;">
   <a href="https://wa.me/8613292812529"
      target="_blank"
@@ -210,6 +254,7 @@ Electric Golf Cart Manufacturer & Exporter
 
 </body>
 </html>
+
 
 
 
