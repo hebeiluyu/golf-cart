@@ -36,7 +36,42 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+/* ===== 产品文字说明（居中） ===== */
+.product-desc {
+  max-width: 900px;
+  margin: 20px auto 40px;
+  text-align: center;
+  line-height: 1.7;
+  color: #333;
+  font-size: 16px;
+}
 
+/* ===== 可折叠样式 ===== */
+details {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: " ⌄";
+  font-size: 16px;
+}
+
+details[open] summary::after {
+  content: " ⌃";
+}
 /* ===== 产品文字说明 ===== */
 .product-desc {
   max-width: 900px;
@@ -358,6 +393,7 @@ summary::-webkit-details-marker {
 </a >
 </body>
 </html>
+
 
 
 
