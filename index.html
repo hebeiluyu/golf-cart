@@ -271,12 +271,35 @@ summary::-webkit-details-marker {
 
 </section>
 <section>
-  <h2>Main Product</h2>
-  <div class="img-row">
+
+  <!-- 标题行 -->
+  <div style="display: flex; align-items: center; gap: 12px;">
+  <section>
+
+  <h2 style="display:flex; align-items:center; gap:10px;">
+    Main Product
+    <details style="display:inline-block;">
+      <summary style="
+        cursor:pointer;
+        font-size:14px;
+        color:#555;
+        list-style:none;
+      ">
+        ▶ 更多款式
+      </summary>
+      <span style="font-size:13px; color:#777;">
+        4 / 6 Seat Available
+      </span>
+    </details>
+  </h2>
+
+  <!-- 三张主图：始终显示 -->
+  <div class="img-row" style="margin-top: 20px;">
     <img src="images/products/main/golf-cart-main-01.jpg" alt="Electric Golf Cart">
     <img src="images/products/main/golf-cart-main-02.jpg" alt="Golf Cart Side View">
     <img src="images/products/main/golf-cart-main-03.jpg" alt="Golf Cart Rear View">
   </div>
+
 </section>
 <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 40px;">
 
@@ -412,6 +435,7 @@ summary::-webkit-details-marker {
 </a >
 </body>
 </html>
+
 
 
 
