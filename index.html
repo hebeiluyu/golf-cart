@@ -65,17 +65,43 @@
       color: #aaa;
       font-size: 14px;
     }
+    /* ===== Header / Logo ===== */
+.site-header {
+  background: #0f5132;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.site-header .logo {
+  width: 120px;        /* logo 显示大小 */
+  margin-bottom: 15px;
+}
+
+/* 副标题 */
+.tagline {
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+/* Hero 区域文字居中 */
+.hero {
+  text-align: center;
+}
+
+/* 这句：Factory Direct Supply 居中 */
+.hero p {
+  text-align: center;
+}
   </style>
 </head>
 
 <body>
 <header class="site-header">
-  < img src="images/logo.jpg" alt="HEBEI LUYU Logo">
+  < img src="images/logo.jpg" alt="HEBEI LUYU Logo" class="logo">
 
-  <div class="company-text">
-    <h1>HEBEI LUYU IMPORT AND EXPORT CO., LTD</h1>
-    <p>Electric Golf Cart Manufacturer & Exporter</p >
-  </div>
+  <h1>HEBEI LUYU IMPORT AND EXPORT CO., LTD</h1>
+  <p class="tagline">Electric Golf Cart Manufacturer & Exporter</p >
 </header>
 
 <!-- ===== HERO / MAIN ===== -->
@@ -211,6 +237,7 @@
 
 </body>
 </html>
+
 
 
 
