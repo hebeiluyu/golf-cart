@@ -36,6 +36,20 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+/* ===== 图片统一比例（高级版）===== */
+.img-row img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-row img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 /* ===== 产品文字说明（居中） ===== */
 .product-desc {
   max-width: 900px;
@@ -409,6 +423,7 @@ summary::-webkit-details-marker {
 </script>
 </body>
 </html>
+
 
 
 
