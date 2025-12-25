@@ -33,13 +33,13 @@
 .img-row {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px 30px;
   flex-wrap: wrap;
 }
 /* ===== 图片统一比例（高级版）===== */
 .img-row img {
-  width: 280px;
-  height: 200px;
+  width: 260px;
+  height: 190px;
   object-fit: cover;
   border-radius: 12px;
   cursor: pointer;
@@ -49,6 +49,41 @@
 .img-row img:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/* ===== 手机 / 平板自适应 ===== */
+@media (max-width: 1024px) {
+  .img-row img {
+    width: calc(33.333% - 30px); /* 平板 3 列 */
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-row img {
+    width: calc(50% - 30px); /* 手机 2 列 */
+    height: 160px;
+  }
+}
+/* ===== 灯箱（点击放大） ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.lightbox.active {
+  display: flex;
 }
 /* ===== 产品文字说明（居中） ===== */
 .product-desc {
@@ -421,8 +456,29 @@ summary::-webkit-details-marker {
     }
   }
 </script>
+<!-- 图片灯箱 -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.querySelectorAll('.img-row img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
 </body>
 </html>
+
 
 
 
