@@ -1,544 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Electric Golf Cart & Mini Bus Manufacturer | Luyu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LUYU is a professional manufacturer of electric golf carts and mini buses, providing reliable electric vehicles for golf courses, resorts, campuses, and commercial use worldwide.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products | Luyue Electric Vehicles</title>
+  <meta name="description" content="Explore Luyue Electric Vehicles product categories: electric golf carts, utility vehicles, electric mini buses, and OEM & custom solutions. Factory direct supply for export." />
+  <link rel="canonical" href="https://luyuevcart.com/products.html" />
+
   <style>
-    body {
+    :root{
+      --brand:#b86b22;
+      --ink:#1a1a1a;
+      --muted:#666;
+      --bg:#faf7f3;
+      --card:#ffffff;
+      --line:#e9e1d8;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
     }
-    header {
-      background: #0f5132;
-      color: #fff;
-      padding: 20px 16px;
-      text-align: center;
+    header{
+      background:#0f0f10;
+      color:#fff;
+      padding:18px 16px;
     }
-    section {
-      padding: 30px 16px;
-      max-width: 1200px;
-      margin: auto;
+    .wrap{max-width:1100px;margin:0 auto;padding:0 16px;}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
+    .brand{
+      display:flex;align-items:center;gap:10px;
     }
-    /* ===== 产品图片行 ===== */
-.img-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px 30px;
-  flex-wrap: wrap;
-}
-/* ===== 图片统一比例（高级版）===== */
-.img-row img {
-  width: 260px;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.img-row img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-/* ===== 手机 / 平板自适应 ===== */
-@media (max-width: 1024px) {
-  .img-row img {
-    width: calc(33.333% - 30px); /* 平板 3 列 */
-    height: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  .img-row img {
-    width: calc(50% - 30px); /* 手机 2 列 */
-    height: 160px;
-  }
-}
-/* ===== 灯箱（点击放大） ===== */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-.lightbox.active {
-  display: flex;
-}
-/* ===== 产品文字说明（居中） ===== */
-.product-desc {
-  max-width: 900px;
-  margin: 20px auto 40px;
-  text-align: center;
-  line-height: 1.7;
-  color: #333;
-  font-size: 16px;
-}
-
-/* ===== 可折叠样式 ===== */
-details {
-  max-width: 1000px;
-  margin: 0 auto 40px;
-}
-
-summary {
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  list-style: none;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::after {
-  content: " ⌄";
-  font-size: 16px;
-}
-
-details[open] summary::after {
-  content: " ⌃";
-}
-/* ===== 产品文字说明 ===== */
-.product-desc {
-  max-width: 900px;
-  margin: 20px auto 40px;
-  text-align: center;
-  line-height: 1.7;
-  color: #333;
-  font-size: 16px;
-}
-
-/* ===== 折叠模块 ===== */
-details {
-  max-width: 1100px;
-  margin: 30px auto;
-}
-
-summary {
-  font-size: 22px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  list-style: none;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-    .img-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    .brand img{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#fff;}
+    .brand .name{font-weight:700;letter-spacing:.4px}
+    nav a{
+      color:#fff;text-decoration:none;margin-left:14px;font-size:14px;opacity:.95;
     }
-    .img-row img {
-      width: 260px;
-      border-radius: 6px;
+    nav a:hover{opacity:1;text-decoration:underline}
+    .hero{
+      padding:28px 0 10px;
     }
-    /* WhatsApp 悬浮按钮 */
-.whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 80px;
-  width: 56px;
-  height: 56px;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  line-height: 56px;
-  z-index: 9999;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.whatsapp-float:hover {
-  background-color: #1ebe5d;
-}
-    ul {
-      max-width: 800px;
-      margin: auto;
+    .hero h1{margin:0 0 8px;font-size:30px}
+    .hero p{margin:0;color:var(--muted);max-width:760px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+      padding:18px 0 34px;
     }
-    .contact {
-      background: #f5f5f5;
-      text-align: center;
-      padding: 40px 20px;
+    .card{
+      grid-column:span 6;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height:280px;
     }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
+    .card .img{
+      height:170px;
+      background:#ddd;
+      display:flex;align-items:center;justify-content:center;
+      color:#444;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: #aaa;
-      font-size: 14px;
+    .card .content{padding:16px}
+    .card h2{margin:0 0 6px;font-size:20px}
+    .card p{margin:0 0 12px;color:var(--muted)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px;padding:0;list-style:none}
+    .tags li{
+      font-size:12px;
+      padding:4px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:#444;
     }
-    /* ===== Header / Logo ===== */
-.site-header {
-  background: #0f5132;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-/* Header 横向布局 */
-.header-inner {
-  display: flex;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Logo 样式：只负责靠左 */
-.site-header .logo {
-  width: 110px;
-  margin-right: 20px;
-  background-color: #0f5132;
-  padding: 6px;
-  border-radius: 4px;
-}
-
-/* 中间文字区域 */
-.header-text {
-  text-align: center;
-  flex: 1;
-}
-
-.header-text h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.header-text .tagline {
-  margin-top: 6px;
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-/* 副标题 */
-.tagline {
-  opacity: 0.9;
-  font-size: 16px;
-}
-
-/* Hero 区域文字居中 */
-.hero {
-  text-align: center;
-}
-
-/* 这句：Factory Direct Supply 居中 */
-.hero p {
-  text-align: center;
-}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      border:1px solid var(--brand);
+      color:var(--brand);
+      background:#fff;
+    }
+    .btn.primary{
+      background:var(--brand);
+      color:#fff;
+    }
+    .btn:hover{filter:brightness(.98)}
+    .note{
+      border:1px dashed var(--line);
+      background:#fff;
+      border-radius:14px;
+      padding:14px 16px;
+      color:#444;
+      margin:10px 0 26px;
+    }
+    .note b{color:#000}
+    footer{
+      background:#0f0f10;color:#fff;margin-top:10px;
+      padding:18px 0;
+      font-size:14px;
+    }
+    footer a{color:#fff}
+    @media (max-width:820px){
+      .card{grid-column:span 12}
+      .hero h1{font-size:26px}
+    }
   </style>
-<link rel="canonical" href="https://luyuevcart.com/" />
 </head>
 
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <img src="images/logo.jpg" class="logo" alt="LUYU Logo">
-
-    <div class="header-text">
-      <h1>HEBEI LUYU IMPORT AND EXPORT CO., LTD</h1>
-      <p class="tagline">Electric Golf Cart Manufacturer & Exporter</p >
+  <header>
+    <div class="wrap topbar">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="LUYU Logo" />
+        <div>
+          <div class="name">Luyue Electric Vehicles</div>
+          <div style="font-size:12px;opacity:.85;">Factory Direct • OEM & Custom • Export Ready</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="oem.html">OEM & Custom</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- ===== HERO / MAIN ===== -->
-<section class="hero">
-  <h2>Electric Golf Carts & Mini Buses for Export</h2>
-  <p>
-    Factory Direct Supply · OEM & ODM Customization · Exported Worldwide
-  </p >
-</section>
-<div style="text-align:center; margin:30px 0;">
-  <a href="https://wa.me/8613292812529"
-     target="_blank"
-     style="display:inline-block;
-            background:#25D366;
-            color:#fff;
-            padding:16px 34px;
-            border-radius:8px;
-            font-size:17px;
-            font-weight:bold;
-            text-decoration:none;">
-    Contact Us on WhatsApp
-  </a >
-</div>
-<div style="text-align:center; margin:25px 0;">
+  <main class="wrap">
+    <section class="hero">
+      <h1>Products</h1>
+      <p>
+        Explore our electric vehicle categories for resorts, golf courses, campuses, tourist attractions, industrial parks, and commercial transport.
+        Choose a category below to view typical models and customization options.
+      </p>
+    </section>
 
-</div>
-<!-- TRUST / CREDIBILITY -->
-<section style="max-width:900px; margin:40px auto; text-align:center; line-height:1.8;">
+    <div class="note">
+      <b>Tip:</b> If you’re not ready to build the detail pages yet, you can still use this page now.
+      Later we will create 3 category pages and connect these buttons to them.
+    </div>
 
-  <h2>Why Choose HEBEI LUYU?</h2>
+    <section class="grid">
+      <!-- Electric Golf Carts -->
+      <article class="card">
+        <div class="img">Replace with your Golf Cart photo</div>
+        <div class="content">
+          <h2>Electric Golf Carts</h2>
+          <p>Comfortable, quiet, and export-ready carts for golf courses, resorts, private clubs, and communities.</p>
+          <ul class="tags">
+            <li>2–8 Seats</li><li>Lithium/Lead-acid</li><li>Street/Off-road</li><li>Custom Colors</li>
+          </ul>
+          <div class="btnrow">
+            <a class="btn primary" href="golf-carts.html">View Category</a>
+            <a class="btn" href="contact.html">Get a Quote</a>
+          </div>
+        </div>
+      </article>
 
-  <p>
-    ✔ 10+ Years Experience in Electric Golf Cart Manufacturing<br>
-    ✔ Factory Direct Supply · No Middleman<br>
-    ✔ OEM & ODM Customization Available<br>
-    ✔ Exported to USA, Europe, Middle East & Africa<br>
-    ✔ Fast Response · Professional Sales Team
-  </p >
+      <!-- Utility Vehicles -->
+      <article class="card">
+        <div class="img">Replace with your Utility / UTV photo</div>
+        <div class="content">
+          <h2>Utility Vehicles (UTV)</h2>
+          <p>Work-ready electric utility vehicles for maintenance, cargo transport, warehouses, and industrial use.</p>
+          <ul class="tags">
+            <li>Cargo Box</li><li>Lifted Options</li><li>Heavy Duty Frame</li><li>OEM Branding</li>
+          </ul>
+          <div class="btnrow">
+            <a class="btn primary" href="utility-vehicles.html">View Category</a>
+            <a class="btn" href="contact.html">Get a Quote</a>
+          </div>
+        </div>
+      </article>
 
-  <p style="margin-top:25px; font-size:16px; color:#333;">
-    📩 Contact us on WhatsApp now to get <b>latest price, catalog & shipping solution</b>.
-  </p >
+      <!-- Electric Mini Buses -->
+      <article class="card">
+        <div class="img">Replace with your Mini Bus photo</div>
+        <div class="content">
+          <h2>Electric Mini Buses</h2>
+          <p>Shuttle solutions for hotels, campuses, tourist transport, and internal park transportation.</p>
+          <ul class="tags">
+            <li>8–23 Seats</li><li>Custom Layout</li><li>Safety Options</li><li>Export Support</li>
+          </ul>
+          <div class="btnrow">
+            <a class="btn primary" href="mini-buses.html">View Category</a>
+            <a class="btn" href="contact.html">Get a Quote</a>
+          </div>
+        </div>
+      </article>
 
-</section>
-<section>
+      <!-- OEM & Custom -->
+      <article class="card">
+        <div class="img">Replace with Factory / Custom photo</div>
+        <div class="content">
+          <h2>OEM & Custom Solutions</h2>
+          <p>Flexible customization: seating, battery systems, lighting, accessories, colors, and logo branding.</p>
+          <ul class="tags">
+            <li>Fast Sampling</li><li>QC & Inspection</li><li>Container Loading</li><li>Global Shipping</li>
+          </ul>
+          <div class="btnrow">
+            <a class="btn primary" href="oem.html">Learn OEM</a>
+            <a class="btn" href="contact.html">Request Custom</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
 
-  <!-- 标题行 -->
-  <!-- 标题行 -->
-<section>
-  <h2 style="text-align:center; margin-bottom:20px;">
-    Main Product
-  </h2>
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>© <span id="y"></span> Luyue Electric Vehicles. All rights reserved.</div>
+      <div>
+        <a href="contact.html">Contact</a> · <a href="products.html">Products</a>
+      </div>
+    </div>
+  </footer>
 
-  <div class="img-row">
-  <img src="images/products/main/golf-cart-main-01.jpg" alt="Electric Golf Cart" loading="lazy">
-  <img src="images/products/main/golf-cart-main-02.jpg" alt="Golf Cart Side View" loading="lazy">
-  <img src="images/products/main/golf-cart-main-03.jpg" alt="Golf Cart Rear View" loading="lazy">
-  <img src="images/products/main/golf-cart-main-04.jpg" alt="Electric Golf Cart" loading="lazy">
-  <img src="images/products/main/golf-cart-main-05.jpg" alt="Electric Golf Cart" loading="lazy">
-  <img src="images/products/main/golf-cart-main-06.jpg" alt="Electric Golf Cart" loading="lazy">
-  <img src="images/products/main/golf-cart-main-07.jpg" alt="Electric Golf Cart" loading="lazy">
-  <img src="images/products/main/golf-cart-main-08.jpg" alt="Electric Golf Cart" loading="lazy">
-</div>
-
-<p style="max-width:900px;margin:20px auto;text-align:center;line-height:1.7;">
-  Our electric golf carts are designed for golf courses, resorts, hotels and commercial use.
-  Multiple seating options and customization are available to meet different market needs.
-</p>
-</section>
-<!-- ===== Other Product Models ===== -->
-<section id="other-models">
-  <h2>Other Product Models</h2>
-
-  <div class="img-row">
-    <img src="images/products/other/other-01.jpg" alt="Other Golf Cart Model">
-    <img src="images/products/other/other-02.jpg" alt="Other Golf Cart Model">
-    <img src="images/products/other/other-03.jpg" alt="Other Golf Cart Model">
-    <img src="images/products/other/other-04.jpg" alt="Other Golf Cart Model">
-  </div>
-
-  <div class="img-row">
-    <img src="images/products/other/other-05.jpg" alt="Other Golf Cart Model">
-    <img src="images/products/other/other-06.jpg" alt="Other Golf Cart Model">
-    <img src="images/products/other/other-07.jpg" alt="Other Golf Cart Model">
-    <img src="images/products/other/other-08.jpg" alt="Other Golf Cart Model">
-  </div>
-
-<p style="max-width:900px;margin:20px auto;text-align:center;line-height:1.7;">
-  In addition to golf carts, we also supply electric mini buses and other special-purpose vehicles,
-  suitable for sightseeing, campus transport and commercial applications.
-</p>
-</section>
-
-<!-- ===== APPLICATION ===== -->
-<section>
-  <h2>Application Scenarios</h2>
-  <div class="img-row">
-    <img src="images/products/application/app-01.jpg" alt="Golf Course">
-    <img src="images/products/application/app-02.jpg" alt="Resort Use">
-    <img src="images/products/application/app-03.jpg" alt="Park Transport">
-  </div>
-<p style="max-width:900px;margin:20px auto;text-align:center;line-height:1.7;">
-  Our electric vehicles are widely used in golf courses, resorts, hotels, parks,
-  campuses and industrial areas for efficient and eco-friendly transportation.
-</p>
-</section>
-
-<!-- ===== Factory & Production ===== -->
-<section id="factory">
-  <h2>Factory & Production</h2>
-
-  <div class="img-row">
-    <img src="images/products/factory/factory-01.jpg" alt="Golf Cart Factory">
-    <img src="images/products/factory/factory-02.jpg" alt="Golf Cart Production Line">
-    <img src="images/products/factory/factory-03.jpg" alt="Golf Cart Assembly">
-    <img src="images/products/factory/factory-04.jpg" alt="Golf Cart Workshop">
-  </div>
-
-  <div class="img-row">
-    <img src="images/products/factory/factory-05.jpg" alt="Electric Golf Cart Factory">
-    <img src="images/products/factory/factory-06.jpg" alt="Golf Cart Manufacturing">
-    <img src="images/products/factory/factory-07.jpg" alt="Golf Cart Testing">
-    <img src="images/products/factory/factory-08.jpg" alt="Golf Cart Warehouse">
-  </div>
-</section>
-
-<!-- ===== Loading & Package ===== -->
-<section id="loading">
-  <h2>Loading & Package</h2>
-
-  <div class="img-row">
-    <img src="images/products/loading/loading-01.jpg" alt="Golf Cart Packing">
-    <img src="images/products/loading/loading-02.jpg" alt="Golf Cart Packaging">
-    <img src="images/products/loading/loading-03.jpg" alt="Golf Cart Loading Container">
-    <img src="images/products/loading/loading-04.jpg" alt="Golf Cart Export Packing">
-  </div>
-
-  <div class="img-row">
-    <img src="images/products/loading/loading-05.jpg" alt="Electric Golf Cart Shipping">
-    <img src="images/products/loading/loading-06.jpg" alt="Golf Cart Container Loading">
-    <img src="images/products/loading/loading-07.jpg" alt="Golf Cart Export">
-    <img src="images/products/loading/loading-08.jpg" alt="Golf Cart Logistics">
-  </div>
-</section>
-
-<footer style="background:#0f3d2e;color:#ffffff;padding:40px 20px;text-align:center;">
-
-  <h3>HEBEI LUYU IMPORT AND EXPORT CO., LTD</h3>
-
-  <p style="margin:14px 0;font-size:16px;opacity:0.95;">
-    Reliable Electric Golf Carts · Factory Direct · OEM & ODM
-  </p>
-
-  <p style="margin:10px 0;">
-    📞 Tel / WhatsApp: +86 132 9281 2529<br>
-    📧 Email: sales.hebeiluyu@gmail.com
-  </p>
-
-  <a href="https://wa.me/8613292812529"
-     target="_blank"
-     style="display:inline-block;margin-top:15px;
-            background:#25D366;color:#fff;
-            padding:12px 24px;
-            border-radius:30px;
-            text-decoration:none;
-            font-weight:bold;">
-    💬 Chat on WhatsApp
-  </a>
-
-  <p style="margin-top:25px;font-size:14px;opacity:0.8;">
-    © 2025 HEBEI LUYU IMPORT AND EXPORT CO., LTD. All rights reserved.
-  </p>
-
-</footer>
-
-<a
-  href="https://wa.me/8613292812529"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat on WhatsApp"
->
-  💬
-</a >
-<script>
-  function toggleMore() {
-    var box = document.getElementById("moreStyles");
-    if (box.style.display === "none") {
-      box.style.display = "flex";
-    } else {
-      box.style.display = "none";
-    }
-  }
-</script>
-<!-- 图片灯箱 -->
-<div class="lightbox" id="lightbox">
-  <img src="" alt="">
-</div>
-
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-
-  document.querySelectorAll('.img-row img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.add('active');
-    });
-  });
-
-  lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-  });
-</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
