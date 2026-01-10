@@ -7,10 +7,8 @@
   <title>Luyu Electric Vehicles | Electric Golf Cart & Mini Bus Manufacturer</title>
   <meta name="description" content="Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV), and electric mini buses. OEM/ODM customization, export-ready quality, factory direct supply." />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://luyuevcart.com/" />
 
-  <!-- Basic Open Graph -->
   <meta property="og:title" content="Luyu Electric Vehicles | Electric Golf Cart & Mini Bus Manufacturer" />
   <meta property="og:description" content="Factory direct electric vehicles: golf carts, UTV, and mini buses with OEM/ODM customization." />
   <meta property="og:type" content="website" />
@@ -18,15 +16,23 @@
 
   <style>
     :root{
-      --bg:#0b0f14;
-      --bg2:#0f1722;
-      --card:#121a26;
-      --muted:#9aa7b7;
-      --text:#e9eef5;
-      --line:rgba(255,255,255,.08);
-      --brand:#b87511; /* warm bronze */
+      /* ✅ 核心：改成“浅主体 + 深导航” */
+      --page:#f4f6f9;          /* 页面主背景（浅灰） */
+      --surface:#ffffff;       /* 白色卡片/区域 */
+      --surface2:#f9fafb;      /* 次级浅色 */
+      --text:#111827;          /* 深色文字 */
+      --muted:#6b7280;         /* 灰色文字 */
+      --line:rgba(17,24,39,.10);
+
+      /* 导航/深色区域 */
+      --nav:#0b0f14;
+      --nav2:#0f1722;
+
+      /* 品牌色 */
+      --brand:#b87511; 
       --brand2:#f0b35a;
-      --shadow: 0 18px 60px rgba(0,0,0,.35);
+
+      --shadow: 0 18px 60px rgba(0,0,0,.12);
       --radius:16px;
       --radius2:22px;
       --max:1200px;
@@ -35,119 +41,90 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(240,179,90,.18), transparent 55%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(184,117,17,.16), transparent 60%),
-                  linear-gradient(180deg, #070a0e, #0b0f14 35%, #070a0e);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica;
+      background: var(--page);
       color:var(--text);
-      line-height:1.6;
+      line-height:1.65;
       overflow-x:hidden;
     }
-
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
     .pill{
       display:inline-flex;align-items:center;gap:10px;
-      padding:8px 12px;border:1px solid var(--line);
-      border-radius:999px;color:var(--muted);font-size:13px;
-      background: rgba(255,255,255,.03);
+      padding:8px 12px;border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;color:rgba(255,255,255,.9);font-size:13px;
+      background: rgba(0,0,0,.25);
       backdrop-filter: blur(6px);
     }
     .dot{width:8px;height:8px;border-radius:50%;background:var(--brand2);box-shadow:0 0 18px rgba(240,179,90,.6)}
+
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 16px;border-radius:12px;
-      border:1px solid rgba(240,179,90,.25);
+      border:1px solid rgba(240,179,90,.28);
       background: linear-gradient(180deg, rgba(184,117,17,.95), rgba(150,95,14,.95));
-      color:#111;font-weight:700;
-      box-shadow: 0 16px 30px rgba(184,117,17,.25);
+      color:#111;font-weight:800;
+      box-shadow: 0 16px 30px rgba(184,117,17,.18);
       transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
       cursor:pointer;
       user-select:none;
     }
-    .btn:hover{transform: translateY(-2px);box-shadow: 0 22px 44px rgba(184,117,17,.35);filter:saturate(1.1)}
+    .btn:hover{transform: translateY(-2px);box-shadow: 0 22px 44px rgba(184,117,17,.24);filter:saturate(1.08)}
     .btn.secondary{
-      background: rgba(255,255,255,.06);
+      background: var(--surface);
       color: var(--text);
       border:1px solid var(--line);
-      box-shadow:none;
+      box-shadow: 0 10px 20px rgba(0,0,0,.06);
     }
-    .btn.secondary:hover{transform: translateY(-2px);background: rgba(255,255,255,.08)}
+    .btn.secondary:hover{transform: translateY(-2px);background: var(--surface2)}
     .btn.small{padding:10px 12px;border-radius:10px;font-size:14px}
 
-    /* Header */
+    /* Header（深色保持专业感） */
     .header{
       position:sticky;top:0;z-index:50;
-      background: rgba(8,12,18,.75);
-      border-bottom:1px solid var(--line);
+      background: rgba(11,15,20,.86);
+      border-bottom:1px solid rgba(255,255,255,.10);
       backdrop-filter: blur(10px);
     }
     .header-inner{
       display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;
-      gap:14px;
+      padding:12px 0;gap:14px;
     }
-
-    .brand{
-      display:flex;align-items:center;gap:12px;min-width:240px;
-    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:240px}
     .logo{
       width:42px;height:42px;border-radius:12px;
-      background: rgba(255,255,255,.08);
-      border:1px solid var(--line);
-      overflow:hidden;
-      display:grid;place-items:center;
+      background: rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      overflow:hidden;display:grid;place-items:center;
       box-shadow: 0 10px 26px rgba(0,0,0,.25);
       flex:0 0 auto;
     }
     .logo img{width:100%;height:100%;object-fit:cover}
-    .logo .fallback{
-      font-weight:900;color:rgba(240,179,90,.95);
-      letter-spacing:.5px;
-    }
-
+    .logo .fallback{font-weight:900;color:rgba(240,179,90,.95);letter-spacing:.5px}
     .brand-text{display:flex;flex-direction:column;line-height:1.15}
-    .brand-text strong{font-size:15px}
-    .brand-text span{font-size:12px;color:var(--muted)}
+    .brand-text strong{font-size:15px;color:#fff}
+    .brand-text span{font-size:12px;color:rgba(255,255,255,.72)}
 
-    .nav{
-      display:flex;align-items:center;gap:18px;flex-wrap:wrap;
-      justify-content:flex-end;
-    }
+    .nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
     .nav a{
-      font-size:14px;color:rgba(233,238,245,.9);
+      font-size:14px;color:rgba(255,255,255,.90);
       padding:8px 10px;border-radius:10px;
       border:1px solid transparent;
       transition: background .18s ease, border-color .18s ease, transform .18s ease;
       white-space:nowrap;
     }
-    .nav a:hover{
-      background: rgba(255,255,255,.06);
-      border-color: var(--line);
-      transform: translateY(-1px);
-    }
-    .nav .cta{
-      padding:10px 12px;border-radius:12px;
-      background: rgba(184,117,17,.12);
-      border:1px solid rgba(240,179,90,.22);
-    }
+    .nav a:hover{background: rgba(255,255,255,.08);border-color: rgba(255,255,255,.12);transform: translateY(-1px)}
+    .nav .cta{padding:10px 12px;border-radius:12px;background: rgba(184,117,17,.18);border:1px solid rgba(240,179,90,.22)}
 
-    /* Hero */
-    .hero{
-      position:relative;
-      padding:56px 0 28px;
-    }
-    .hero-grid{
-      display:grid;grid-template-columns: 1.25fr .75fr;
-      gap:22px;
-      align-items:stretch;
-    }
+    /* Hero：背景图 + 深色覆盖，但整体页面不黑 */
+    .hero{padding:48px 0 22px}
+    .hero-grid{display:grid;grid-template-columns: 1.25fr .75fr;gap:18px;align-items:stretch}
     .hero-card{
-      border:1px solid var(--line);
+      border:1px solid rgba(17,24,39,.10);
       border-radius: var(--radius2);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background: var(--surface);
       box-shadow: var(--shadow);
       overflow:hidden;
       position:relative;
@@ -156,246 +133,145 @@
     .hero-bg{
       position:absolute;inset:0;
       background:
-        linear-gradient(90deg, rgba(11,15,20,.88), rgba(11,15,20,.55)),
-        url("images/hero-bg.jpg"); /* ✅ 替换这里：你的首页背景图 */
+        linear-gradient(90deg, rgba(11,15,20,.82), rgba(11,15,20,.40)),
+        url("images/hero-bg.jpg"); /* ✅ 换你的背景图 */
       background-size:cover;
       background-position:center;
       filter:saturate(1.05) contrast(1.02);
       transform: scale(1.02);
     }
-    .hero-content{
-      position:relative;
-      padding:32px 28px;
-      max-width: 740px;
-    }
-    .hero h1{
-      margin:14px 0 10px;
-      font-size: clamp(28px, 3vw, 44px);
-      line-height:1.15;
-      letter-spacing:-.3px;
-    }
-    .hero p{
-      margin:0;
-      color: rgba(233,238,245,.86);
-      font-size: 16px;
-      max-width: 62ch;
-    }
-    .hero-actions{
-      display:flex;gap:12px;flex-wrap:wrap;
-      margin-top:18px;
-    }
-    .hero-badges{
-      display:flex;gap:10px;flex-wrap:wrap;margin-top:16px
-    }
+    .hero-content{position:relative;padding:30px 26px;max-width: 760px;color:#fff}
+    .hero h1{margin:14px 0 10px;font-size: clamp(28px, 3vw, 44px);line-height:1.15;letter-spacing:-.3px}
+    .hero p{margin:0;color:rgba(255,255,255,.86);font-size:16px;max-width:62ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .badge{
-      font-size:12px;color:rgba(233,238,245,.9);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
+      font-size:12px;color:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.22);
       padding:8px 10px;border-radius:999px;
+      backdrop-filter: blur(6px);
     }
 
     .hero-side{
-      border:1px solid var(--line);
+      border:1px solid rgba(17,24,39,.10);
       border-radius: var(--radius2);
-      background: rgba(255,255,255,.04);
+      background: var(--surface);
       box-shadow: var(--shadow);
-      padding:18px;
-      display:flex;flex-direction:column;gap:14px;
+      padding:18px;display:flex;flex-direction:column;gap:14px;
     }
-    .side-title{
-      display:flex;align-items:center;justify-content:space-between;gap:12px
-    }
+    .side-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .side-title strong{font-size:14px}
     .side-title span{font-size:12px;color:var(--muted)}
     .side-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
     .side-item{
       padding:12px;border-radius:14px;
       border:1px solid var(--line);
-      background: rgba(0,0,0,.18);
-      transition: transform .18s ease, background .18s ease;
+      background: var(--surface2);
+      transition: transform .18s ease;
     }
-    .side-item:hover{transform: translateY(-2px);background: rgba(0,0,0,.28)}
+    .side-item:hover{transform: translateY(-2px)}
     .side-item b{display:block;font-size:13px}
     .side-item small{color:var(--muted);font-size:12px}
 
-    /* Sections */
-    section{padding:36px 0}
-    .section-head{
-      display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;
-      margin-bottom:16px;
-    }
+    section{padding:34px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
     .section-head h2{margin:0;font-size:26px}
     .section-head p{margin:0;color:var(--muted);max-width:70ch}
 
-    /* Cards grid */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:16px;
-    }
+    .grid{display:grid;grid-template-columns: repeat(12, 1fr);gap:16px}
     .card{
       grid-column: span 4;
       border:1px solid var(--line);
       border-radius: var(--radius2);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      background: var(--surface);
+      box-shadow: 0 18px 50px rgba(0,0,0,.08);
       overflow:hidden;
       transform: translateY(0);
       transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
       position:relative;
     }
-    .card:hover{
-      transform: translateY(-4px);
-      box-shadow: 0 28px 70px rgba(0,0,0,.35);
-      border-color: rgba(240,179,90,.22);
-    }
+    .card:hover{transform: translateY(-4px);box-shadow: 0 26px 70px rgba(0,0,0,.12);border-color: rgba(240,179,90,.32)}
     .card-media{
       height:170px;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
-        url("images/placeholder.jpg"); /* ✅ 替换：每个卡片图 */
-      background-size:cover;
-      background-position:center;
-      position:relative;
-      overflow:hidden;
-    }
-    .card:hover .card-media::after{
-      transform: scale(1.08);
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
+        url("images/placeholder.jpg");
+      background-size:cover;background-position:center;
+      position:relative;overflow:hidden;
     }
     .card-media::after{
-      content:"";
-      position:absolute;inset:0;
-      background: inherit;
-      transform: scale(1);
-      transition: transform .35s ease;
-      filter:saturate(1.06);
+      content:"";position:absolute;inset:0;background: inherit;
+      transform: scale(1);transition: transform .35s ease;filter:saturate(1.04);
     }
+    .card:hover .card-media::after{transform: scale(1.08)}
     .card-media .label{
       position:absolute;left:14px;bottom:14px;z-index:2;
       display:inline-flex;align-items:center;gap:8px;
       padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.18);
       background: rgba(0,0,0,.35);
       backdrop-filter: blur(6px);
       font-size:12px;color:rgba(255,255,255,.92)
     }
     .card-body{padding:16px 16px 14px}
     .card-body h3{margin:0 0 6px;font-size:18px}
-    .card-body p{margin:0;color:rgba(233,238,245,.82);font-size:14px}
+    .card-body p{margin:0;color:var(--muted);font-size:14px}
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .chip{
-      padding:7px 10px;border-radius:999px;font-size:12px;
-      background: rgba(255,255,255,.06);
-      border:1px solid var(--line);
-      color: rgba(233,238,245,.9);
-    }
+    .chip{padding:7px 10px;border-radius:999px;font-size:12px;background: var(--surface2);border:1px solid var(--line);color:#374151}
     .card-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
-    /* Split section */
-    .split{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap:16px;
-      align-items:stretch;
-    }
-    .panel{
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.04);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      padding:18px;
-    }
-    .panel h3{margin:0 0 8px;font-size:18px}
-    .panel p{margin:0;color:var(--muted)}
-    .list{
-      margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px
-    }
-    .list li{
-      padding:12px;border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.18);
-      transition: transform .18s ease;
-    }
-    .list li:hover{transform: translateY(-2px)}
-    .list b{display:block;font-size:13px}
-    .list small{color:var(--muted);font-size:12px}
-
-    /* CTA band */
     .cta{
-      border:1px solid rgba(240,179,90,.18);
-      background: linear-gradient(90deg, rgba(184,117,17,.18), rgba(255,255,255,.03));
+      border:1px solid rgba(240,179,90,.25);
+      background: linear-gradient(90deg, rgba(184,117,17,.12), rgba(255,255,255,.70));
       border-radius: var(--radius2);
       padding:18px;
       display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      box-shadow: 0 20px 60px rgba(0,0,0,.08);
     }
     .cta h3{margin:0;font-size:18px}
-    .cta p{margin:0;color:rgba(233,238,245,.85);max-width:70ch}
+    .cta p{margin:0;color:#374151;max-width:70ch}
 
-    /* Footer */
-    footer{
-      margin-top:22px;
-      border-top:1px solid var(--line);
-      background: rgba(6,9,13,.65);
-    }
+    /* Footer：深色更稳 */
+    footer{margin-top:22px;border-top:1px solid rgba(17,24,39,.10);background: var(--nav)}
     .footer-top{
-      padding:28px 0 18px;
-      display:grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      padding:26px 0 16px;
+      display:grid;grid-template-columns: 1.2fr 1fr 1fr 1fr;
       gap:16px;
     }
     .footer-col{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
       border-radius: var(--radius);
       padding:14px;
+      color:rgba(255,255,255,.88);
     }
     .footer-col h4{margin:0 0 10px;font-size:14px}
-    .footer-col p, .footer-col a, .footer-col li{
-      color:rgba(233,238,245,.82);
-      font-size:13px;
-    }
-    .footer-col p{margin:0 0 8px}
+    .footer-col p,.footer-col a,.footer-col li{font-size:13px;color:rgba(255,255,255,.78)}
+    .footer-col a:hover{text-decoration:underline}
     .footer-links{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-    .footer-links a:hover{text-decoration:underline}
-    .social{
-      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px
-    }
+    .social{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .social a{
-      width:38px;height:38px;border-radius:12px;
-      display:grid;place-items:center;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
+      width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
       transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      color:rgba(255,255,255,.9);
     }
-    .social a:hover{
-      transform: translateY(-2px);
-      background: rgba(255,255,255,.07);
-      border-color: rgba(240,179,90,.22);
-    }
+    .social a:hover{transform: translateY(-2px);background: rgba(255,255,255,.08);border-color: rgba(240,179,90,.25)}
     .footer-bottom{
-      border-top:1px solid var(--line);
+      border-top:1px solid rgba(255,255,255,.10);
       padding:14px 0;
       display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      color:var(--muted);font-size:12px;
+      color:rgba(255,255,255,.65);font-size:12px;
     }
 
-    /* Scroll reveal */
-    .reveal{
-      opacity:0;
-      transform: translateY(14px);
-      transition: opacity .55s ease, transform .55s ease;
-    }
-    .reveal.show{
-      opacity:1;
-      transform: translateY(0);
-    }
+    /* reveal */
+    .reveal{opacity:0;transform: translateY(14px);transition: opacity .55s ease, transform .55s ease}
+    .reveal.show{opacity:1;transform: translateY(0)}
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns: 1fr}
-      .split{grid-template-columns: 1fr}
       .card{grid-column: span 6}
       .footer-top{grid-template-columns: 1fr 1fr}
       .brand{min-width:auto}
@@ -411,14 +287,12 @@
 
 <body>
 
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="header-inner">
 
         <a class="brand" href="index.html" aria-label="Luyu Electric Vehicles Home">
           <div class="logo" title="Logo">
-            <!-- ✅ 放你的logo：images/logo.png 或 images/logo.jpg -->
             <img src="images/logo.png" alt="Luyu logo"
                  onerror="this.remove(); this.parentElement.innerHTML='<div class=&quot;fallback&quot;>LUYU</div>';">
           </div>
@@ -440,7 +314,6 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -453,7 +326,6 @@
             <p>
               Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV),
               and electric mini buses for resorts, campuses, industrial parks, and public transport.
-              Factory direct supply with stable quality and customization options.
             </p>
 
             <div class="hero-actions">
@@ -505,13 +377,12 @@
     </div>
   </section>
 
-  <!-- Product Categories -->
   <section>
     <div class="container">
       <div class="section-head reveal">
         <div>
           <h2>Our Product Categories</h2>
-          <p>Build a strong SEO structure by dedicating one page per product category. Start here, then expand into detailed model pages.</p>
+          <p>Start with category pages, then expand into detailed model pages for SEO coverage.</p>
         </div>
         <a class="btn small secondary" href="products.html">Open Products Page</a>
       </div>
@@ -520,13 +391,13 @@
 
         <article class="card reveal">
           <div class="card-media" style="background-image:
-            linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+            linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
             url('images/golf-cart.jpg');">
             <span class="label">Golf Carts</span>
           </div>
           <div class="card-body">
             <h3>Electric Golf Carts</h3>
-            <p>Quiet, comfortable carts for golf courses, resorts, private clubs, and communities.</p>
+            <p>Quiet, comfortable carts for golf courses, resorts, and communities.</p>
             <div class="chips">
               <span class="chip">2–8 Seats</span><span class="chip">Lithium / Lead-acid</span><span class="chip">Street / Off-road</span>
             </div>
@@ -539,13 +410,13 @@
 
         <article class="card reveal">
           <div class="card-media" style="background-image:
-            linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+            linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
             url('images/utv.jpg');">
             <span class="label">Utility / UTV</span>
           </div>
           <div class="card-body">
             <h3>Utility Vehicles (UTV)</h3>
-            <p>Work-ready electric utility vehicles for maintenance, cargo transport, and industrial use.</p>
+            <p>Work-ready electric utility vehicles for maintenance and cargo transport.</p>
             <div class="chips">
               <span class="chip">Cargo Box</span><span class="chip">Heavy Duty</span><span class="chip">OEM Branding</span>
             </div>
@@ -558,13 +429,13 @@
 
         <article class="card reveal">
           <div class="card-media" style="background-image:
-            linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+            linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
             url('images/mini-bus.jpg');">
             <span class="label">Mini Bus</span>
           </div>
           <div class="card-body">
             <h3>Electric Mini Buses</h3>
-            <p>Shuttle solutions for hotels, campuses, tourist transport, and internal park transportation.</p>
+            <p>Shuttle solutions for hotels, campuses, and tourist transport.</p>
             <div class="chips">
               <span class="chip">8–23 Seats</span><span class="chip">Custom Layout</span><span class="chip">Export Ready</span>
             </div>
@@ -575,86 +446,6 @@
           </div>
         </article>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Factory / OEM -->
-  <section>
-    <div class="container">
-      <div class="split">
-
-        <div class="panel reveal">
-          <h3>OEM & Custom Solutions</h3>
-          <p>Make your vehicles match your market: seating, battery, colors, accessories, and logo branding.</p>
-          <ul class="list">
-            <li><b>Branding & Appearance</b><small>Logo, decals, colors, canopy, seats</small></li>
-            <li><b>Performance Options</b><small>Battery system, motor, controller</small></li>
-            <li><b>Export Packaging</b><small>Protection, labeling, container loading support</small></li>
-          </ul>
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn small" href="oem.html">Learn OEM</a>
-            <a class="btn small secondary" href="contact.html">Request Custom</a>
-          </div>
-        </div>
-
-        <div class="panel reveal" style="position:relative;overflow:hidden">
-          <div style="position:absolute;inset:0;opacity:.18;background:
-            url('images/factory.jpg') center/cover no-repeat;"></div>
-          <div style="position:relative">
-            <h3>Factory Quality & Export Standards</h3>
-            <p>From frame welding and assembly to final inspection, we focus on stability, efficiency, and export-ready quality.</p>
-            <ul class="list">
-              <li><b>Inspection Support</b><small>QC checkpoints & final inspection</small></li>
-              <li><b>Capacity & Delivery</b><small>Stable production scheduling</small></li>
-              <li><b>Global Shipping</b><small>Documentation & logistics support</small></li>
-            </ul>
-            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-              <a class="btn small" href="about.html">About Factory</a>
-              <a class="btn small secondary" href="contact.html">Ask Delivery Time</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Applications -->
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <h2>Typical Applications</h2>
-          <p>Help buyers quickly see if you match their scenario. This also helps SEO by covering intent keywords.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="card reveal" style="grid-column: span 3;">
-          <div class="card-body">
-            <h3>Resorts</h3>
-            <p>Quiet operation, comfortable seating, and custom branding.</p>
-          </div>
-        </div>
-        <div class="card reveal" style="grid-column: span 3;">
-          <div class="card-body">
-            <h3>Golf Courses</h3>
-            <p>Reliable carts with battery options and export-ready packing.</p>
-          </div>
-        </div>
-        <div class="card reveal" style="grid-column: span 3;">
-          <div class="card-body">
-            <h3>Campuses</h3>
-            <p>Shuttle and service vehicles for safe daily transportation.</p>
-          </div>
-        </div>
-        <div class="card reveal" style="grid-column: span 3;">
-          <div class="card-body">
-            <h3>Industrial Parks</h3>
-            <p>Utility vehicles for cargo movement and maintenance work.</p>
-          </div>
-        </div>
       </div>
 
       <div class="cta reveal" style="margin-top:16px">
@@ -667,10 +458,10 @@
           <a class="btn secondary" href="products.html">Browse Products</a>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
 
@@ -679,25 +470,15 @@
           <h4>Luyu Electric Vehicles</h4>
           <p>Electric golf carts, utility vehicles (UTV), and electric mini buses. Factory direct supply with OEM/ODM customization and export-ready quality.</p>
           <div class="social" aria-label="Social links">
-            <!-- ✅ 把 # 换成你的真实链接 -->
-            <a href="#" title="Facebook" aria-label="Facebook">
-              <span>f</span>
-            </a>
-            <a href="#" title="LinkedIn" aria-label="LinkedIn">
-              <span>in</span>
-            </a>
-            <a href="#" title="YouTube" aria-label="YouTube">
-              <span>▶</span>
-            </a>
-            <a href="#" title="Instagram" aria-label="Instagram">
-              <span>◎</span>
-            </a>
+            <a href="#" title="Facebook" aria-label="Facebook"><span>f</span></a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn"><span>in</span></a>
+            <a href="#" title="YouTube" aria-label="YouTube"><span>▶</span></a>
+            <a href="#" title="Instagram" aria-label="Instagram"><span>◎</span></a>
           </div>
         </div>
 
         <div class="footer-col">
           <h4>Contact</h4>
-          <!-- ✅ 替换为你的真实信息 -->
           <p>Email: <a href="mailto:carol@luyuecart.com">carol@luyuecart.com</a></p>
           <p>WhatsApp: <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a></p>
           <p>Address: Hebei, China (add detailed address)</p>
@@ -733,10 +514,8 @@
   </footer>
 
   <script>
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Scroll reveal
     const els = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
