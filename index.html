@@ -1,528 +1,735 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Luyu Electric Vehicles | Electric Golf Cart & Mini Bus Manufacturer</title>
-  <meta name="description" content="Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV), and electric mini buses. OEM/ODM customization, export-ready quality, factory direct supply." />
-
+  <title>Luyu Electric Vehicles | EV Cart Manufacturer (OEM/CKD) | Export-Ready</title>
+  <meta name="description" content="Luyu Electric Vehicles manufactures EV golf carts, utility vehicles (UTV), mini buses, and petrol carts. OEM/CKD supported. Strong factory capability and export experience for global buyers." />
   <link rel="canonical" href="https://luyuevcart.com/" />
-
-  <meta property="og:title" content="Luyu Electric Vehicles | Electric Golf Cart & Mini Bus Manufacturer" />
-  <meta property="og:description" content="Factory direct electric vehicles: golf carts, UTV, and mini buses with OEM/ODM customization." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://luyuevcart.com/" />
 
   <style>
     :root{
-      /* ✅ 核心：改成“浅主体 + 深导航” */
-      --page:#f4f6f9;          /* 页面主背景（浅灰） */
-      --surface:#ffffff;       /* 白色卡片/区域 */
-      --surface2:#f9fafb;      /* 次级浅色 */
-      --text:#111827;          /* 深色文字 */
-      --muted:#6b7280;         /* 灰色文字 */
-      --line:rgba(17,24,39,.10);
+      --bg: #0b0f0d;
+      --surface: rgba(255,255,255,.06);
+      --surface2: rgba(255,255,255,.10);
+      --card: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.58);
 
-      /* 导航/深色区域 */
-      --nav:#0b0f14;
-      --nav2:#0f1722;
+      --green: #2ee59d;
+      --green2:#00c27a;
+      --line: rgba(255,255,255,.14);
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 18px;
 
-      /* 品牌色 */
-      --brand:#b87511; 
-      --brand2:#f0b35a;
-
-      --shadow: 0 18px 60px rgba(0,0,0,.12);
-      --radius:16px;
-      --radius2:22px;
-      --max:1200px;
+      --max: 1180px;
     }
 
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica;
-      background: var(--page);
-      color:var(--text);
-      line-height:1.65;
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 700px at 15% 0%, rgba(46,229,157,.16), transparent 60%),
+        radial-gradient(900px 600px at 95% 15%, rgba(0,194,122,.14), transparent 55%),
+        linear-gradient(180deg, #060806 0%, #0b0f0d 45%, #070a08 100%);
+      color: var(--text);
       overflow-x:hidden;
     }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    .pill{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:8px 12px;border:1px solid rgba(255,255,255,.14);
-      border-radius:999px;color:rgba(255,255,255,.9);font-size:13px;
-      background: rgba(0,0,0,.25);
-      backdrop-filter: blur(6px);
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding:0 18px; }
+
+    /* Top bar */
+    header.site-header{
+      position: sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(5,8,6,.78), rgba(5,8,6,.58));
+      border-bottom: 1px solid rgba(255,255,255,.10);
     }
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--brand2);box-shadow:0 0 18px rgba(240,179,90,.6)}
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding: 12px 0;
+    }
 
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+    }
+    .brand .logo{
+      width:42px; height:42px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      overflow:hidden;
+      display:grid;
+      place-items:center;
+      flex: 0 0 auto;
+    }
+    .brand .logo img{
+      width:100%;
+      height:100%;
+      object-fit: contain;
+      padding:6px;
+    }
+    .brand .name{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brand .name strong{
+      font-size: 14.5px;
+      letter-spacing: .2px;
+    }
+    .brand .name span{
+      font-size: 12px;
+      color: var(--muted2);
+    }
+
+    nav.topnav{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+    }
+    nav.topnav a{
+      font-size: 13.5px;
+      color: rgba(255,255,255,.80);
+      padding: 8px 10px;
+      border-radius: 12px;
+      transition: .18s ease;
+    }
+    nav.topnav a:hover{
+      color: white;
+      background: rgba(255,255,255,.08);
+      transform: translateY(-1px);
+    }
+    .cta{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 16px;border-radius:12px;
-      border:1px solid rgba(240,179,90,.28);
-      background: linear-gradient(180deg, rgba(184,117,17,.95), rgba(150,95,14,.95));
-      color:#111;font-weight:800;
-      box-shadow: 0 16px 30px rgba(184,117,17,.18);
-      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 13.5px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.92);
+      transition: .18s ease;
       cursor:pointer;
       user-select:none;
     }
-    .btn:hover{transform: translateY(-2px);box-shadow: 0 22px 44px rgba(184,117,17,.24);filter:saturate(1.08)}
-    .btn.secondary{
-      background: var(--surface);
-      color: var(--text);
-      border:1px solid var(--line);
-      box-shadow: 0 10px 20px rgba(0,0,0,.06);
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(46,229,157,.45);
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      background: rgba(46,229,157,.10);
     }
-    .btn.secondary:hover{transform: translateY(-2px);background: var(--surface2)}
-    .btn.small{padding:10px 12px;border-radius:10px;font-size:14px}
-
-    /* Header（深色保持专业感） */
-    .header{
-      position:sticky;top:0;z-index:50;
-      background: rgba(11,15,20,.86);
-      border-bottom:1px solid rgba(255,255,255,.10);
-      backdrop-filter: blur(10px);
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(46,229,157,.95), rgba(0,194,122,.92));
+      border-color: rgba(46,229,157,.65);
+      color: #062015;
     }
-    .header-inner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;gap:14px;
-    }
-    .brand{display:flex;align-items:center;gap:12px;min-width:240px}
-    .logo{
-      width:42px;height:42px;border-radius:12px;
-      background: rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.12);
-      overflow:hidden;display:grid;place-items:center;
-      box-shadow: 0 10px 26px rgba(0,0,0,.25);
-      flex:0 0 auto;
-    }
-    .logo img{width:100%;height:100%;object-fit:cover}
-    .logo .fallback{font-weight:900;color:rgba(240,179,90,.95);letter-spacing:.5px}
-    .brand-text{display:flex;flex-direction:column;line-height:1.15}
-    .brand-text strong{font-size:15px;color:#fff}
-    .brand-text span{font-size:12px;color:rgba(255,255,255,.72)}
-
-    .nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
-    .nav a{
-      font-size:14px;color:rgba(255,255,255,.90);
-      padding:8px 10px;border-radius:10px;
-      border:1px solid transparent;
-      transition: background .18s ease, border-color .18s ease, transform .18s ease;
-      white-space:nowrap;
-    }
-    .nav a:hover{background: rgba(255,255,255,.08);border-color: rgba(255,255,255,.12);transform: translateY(-1px)}
-    .nav .cta{padding:10px 12px;border-radius:12px;background: rgba(184,117,17,.18);border:1px solid rgba(240,179,90,.22)}
-
-    /* Hero：背景图 + 深色覆盖，但整体页面不黑 */
-    .hero{padding:48px 0 22px}
-    .hero-grid{display:grid;grid-template-columns: 1.25fr .75fr;gap:18px;align-items:stretch}
-    .hero-card{
-      border:1px solid rgba(17,24,39,.10);
-      border-radius: var(--radius2);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-      min-height: 360px;
-    }
-    .hero-bg{
-      position:absolute;inset:0;
-      background:
-        linear-gradient(90deg, rgba(11,15,20,.82), rgba(11,15,20,.40)),
-        url("images/hero-bg.jpg"); /* ✅ 换你的背景图 */
-      background-size:cover;
-      background-position:center;
-      filter:saturate(1.05) contrast(1.02);
-      transform: scale(1.02);
-    }
-    .hero-content{position:relative;padding:30px 26px;max-width: 760px;color:#fff}
-    .hero h1{margin:14px 0 10px;font-size: clamp(28px, 3vw, 44px);line-height:1.15;letter-spacing:-.3px}
-    .hero p{margin:0;color:rgba(255,255,255,.86);font-size:16px;max-width:62ch}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .badge{
-      font-size:12px;color:rgba(255,255,255,.92);
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.22);
-      padding:8px 10px;border-radius:999px;
-      backdrop-filter: blur(6px);
+    .btn.primary:hover{
+      filter: brightness(1.03);
+      box-shadow: 0 18px 40px rgba(0,194,122,.22);
     }
 
-    .hero-side{
-      border:1px solid rgba(17,24,39,.10);
-      border-radius: var(--radius2);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      padding:18px;display:flex;flex-direction:column;gap:14px;
+    /* Hero */
+    .hero{
+      padding: 26px 0 12px;
     }
-    .side-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .side-title strong{font-size:14px}
-    .side-title span{font-size:12px;color:var(--muted)}
-    .side-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-    .side-item{
-      padding:12px;border-radius:14px;
-      border:1px solid var(--line);
-      background: var(--surface2);
-      transition: transform .18s ease;
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: stretch;
     }
-    .side-item:hover{transform: translateY(-2px)}
-    .side-item b{display:block;font-size:13px}
-    .side-item small{color:var(--muted);font-size:12px}
-
-    section{padding:34px 0}
-    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
-    .section-head h2{margin:0;font-size:26px}
-    .section-head p{margin:0;color:var(--muted);max-width:70ch}
-
-    .grid{display:grid;grid-template-columns: repeat(12, 1fr);gap:16px}
-    .card{
-      grid-column: span 4;
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      background: var(--surface);
-      box-shadow: 0 18px 50px rgba(0,0,0,.08);
-      overflow:hidden;
-      transform: translateY(0);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-      position:relative;
-    }
-    .card:hover{transform: translateY(-4px);box-shadow: 0 26px 70px rgba(0,0,0,.12);border-color: rgba(240,179,90,.32)}
-    .card-media{
-      height:170px;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
-        url("images/placeholder.jpg");
-      background-size:cover;background-position:center;
-      position:relative;overflow:hidden;
-    }
-    .card-media::after{
-      content:"";position:absolute;inset:0;background: inherit;
-      transform: scale(1);transition: transform .35s ease;filter:saturate(1.04);
-    }
-    .card:hover .card-media::after{transform: scale(1.08)}
-    .card-media .label{
-      position:absolute;left:14px;bottom:14px;z-index:2;
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.35);
-      backdrop-filter: blur(6px);
-      font-size:12px;color:rgba(255,255,255,.92)
-    }
-    .card-body{padding:16px 16px 14px}
-    .card-body h3{margin:0 0 6px;font-size:18px}
-    .card-body p{margin:0;color:var(--muted);font-size:14px}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .chip{padding:7px 10px;border-radius:999px;font-size:12px;background: var(--surface2);border:1px solid var(--line);color:#374151}
-    .card-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-
-    .cta{
-      border:1px solid rgba(240,179,90,.25);
-      background: linear-gradient(90deg, rgba(184,117,17,.12), rgba(255,255,255,.70));
-      border-radius: var(--radius2);
-      padding:18px;
-      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-      box-shadow: 0 20px 60px rgba(0,0,0,.08);
-    }
-    .cta h3{margin:0;font-size:18px}
-    .cta p{margin:0;color:#374151;max-width:70ch}
-
-    /* Footer：深色更稳 */
-    footer{margin-top:22px;border-top:1px solid rgba(17,24,39,.10);background: var(--nav)}
-    .footer-top{
-      padding:26px 0 16px;
-      display:grid;grid-template-columns: 1.2fr 1fr 1fr 1fr;
-      gap:16px;
-    }
-    .footer-col{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+    .hero-left, .hero-right{
       border-radius: var(--radius);
-      padding:14px;
-      color:rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
     }
-    .footer-col h4{margin:0 0 10px;font-size:14px}
-    .footer-col p,.footer-col a,.footer-col li{font-size:13px;color:rgba(255,255,255,.78)}
-    .footer-col a:hover{text-decoration:underline}
-    .footer-links{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-    .social{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .social a{
-      width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
-      border:1px solid rgba(255,255,255,.10);
+
+    .hero-left{
+      padding: 22px 22px 18px;
+      min-height: 420px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(46,229,157,.35);
+      background: rgba(46,229,157,.10);
+      color: rgba(255,255,255,.88);
+      font-size: 12.5px;
+      margin-bottom: 14px;
+    }
+    .pill .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(46,229,157,.18);
+    }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(28px, 3vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -0.4px;
+    }
+
+    .hero-sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 52ch;
+    }
+    .hero-sub strong{ color: rgba(255,255,255,.92); }
+
+    .hero-actions{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .trust{
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      display:flex;
+      gap: 14px;
+      flex-wrap:wrap;
+      color: var(--muted2);
+      font-size: 12.5px;
+    }
+    .trust span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      transition:.18s ease;
+    }
+    .trust span:hover{
+      transform: translateY(-1px);
+      border-color: rgba(46,229,157,.35);
+      background: rgba(46,229,157,.10);
+      color: rgba(255,255,255,.86);
+    }
+    .trust i{
+      width:8px;height:8px;border-radius:50%;
+      background: rgba(46,229,157,.95);
+    }
+
+    /* Right: big carousel image */
+    .hero-right{
+      min-height: 420px;
+    }
+    .carousel{
+      position:absolute; inset:0;
+      background: #0a0d0b;
+    }
+    .carousel img{
+      position:absolute; inset:0;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      opacity:0;
+      transform: scale(1.02);
+      transition: opacity .55s ease, transform .9s ease;
+      filter: saturate(1.05) contrast(1.05);
+    }
+    .carousel img.active{
+      opacity:1;
+      transform: scale(1.00);
+    }
+    .carousel::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55)),
+        radial-gradient(800px 500px at 20% 20%, rgba(46,229,157,.22), transparent 55%);
+      pointer-events:none;
+    }
+    .carousel-ui{
+      position:absolute;
+      left:14px; right:14px; bottom:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      z-index:2;
+    }
+    .dots{
+      display:flex;
+      gap: 7px;
+    }
+    .dotbtn{
+      width:9px;height:9px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.18);
+      cursor:pointer;
+      transition:.18s ease;
+    }
+    .dotbtn.active{
+      background: var(--green);
+      border-color: rgba(46,229,157,.75);
+      box-shadow: 0 0 0 6px rgba(46,229,157,.18);
+    }
+    .car-caption{
+      font-size: 12px;
+      color: rgba(255,255,255,.78);
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.12);
+      max-width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Section */
+    section{
+      padding: 26px 0;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -.2px;
+    }
+    .section-head p{
+      margin:0;
+      color: var(--muted2);
+      font-size: 13.5px;
+    }
+
+    /* Product cards */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      overflow:hidden;
+      box-shadow: 0 14px 38px rgba(0,0,0,.35);
+      transition: .22s ease;
+      position:relative;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(46,229,157,.45);
+      box-shadow: 0 20px 55px rgba(0,0,0,.45);
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-40% -30% auto -30%;
+      height: 70%;
+      background: radial-gradient(closest-side, rgba(46,229,157,.26), transparent 70%);
+      opacity: 0;
+      transition: .25s ease;
+      pointer-events:none;
+    }
+    .card:hover::before{ opacity: 1; }
+
+    .card-media{
+      height: 176px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      position:relative;
+    }
+    .card-media img{
+      width:100%; height:100%;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.05);
+      transform: scale(1.02);
+      transition: transform .35s ease;
+    }
+    .card:hover .card-media img{ transform: scale(1.06); }
+    .badge{
+      position:absolute;
+      left: 12px; top: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(0,0,0,.38);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.86);
+      backdrop-filter: blur(8px);
+    }
+    .card-body{
+      padding: 14px 14px 16px;
+    }
+    .card-body h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: -.15px;
+    }
+    .card-body p{
+      margin:0 0 12px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+      min-height: 44px;
+    }
+    .card-actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .btn.small{ padding: 9px 12px; border-radius: 12px; }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.25);
+      padding: 22px 0 18px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .footer-card{
+      border-radius: var(--radius);
       background: rgba(255,255,255,.05);
-      transition: transform .18s ease, background .18s ease, border-color .18s ease;
-      color:rgba(255,255,255,.9);
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 14px;
     }
-    .social a:hover{transform: translateY(-2px);background: rgba(255,255,255,.08);border-color: rgba(240,179,90,.25)}
-    .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.10);
-      padding:14px 0;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      color:rgba(255,255,255,.65);font-size:12px;
+    .footer-card h4{
+      margin:0 0 10px;
+      font-size: 14px;
+      letter-spacing: .2px;
+    }
+    .footer-card p, .footer-card a{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .footer-card a:hover{ color: rgba(255,255,255,.92); }
+
+    .social{
+      display:flex;
+      gap:10px;
+      margin-top: 12px;
+      flex-wrap:wrap;
+    }
+    .iconbtn{
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      display:grid;
+      place-items:center;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      transition:.18s ease;
+    }
+    .iconbtn:hover{
+      transform: translateY(-2px);
+      border-color: rgba(46,229,157,.45);
+      background: rgba(46,229,157,.10);
+    }
+    .icon{
+      width:18px; height:18px; opacity:.9;
+      fill: rgba(255,255,255,.88);
     }
 
-    /* reveal */
-    .reveal{opacity:0;transform: translateY(14px);transition: opacity .55s ease, transform .55s ease}
-    .reveal.show{opacity:1;transform: translateY(0)}
+    .copyright{
+      margin-top: 14px;
+      color: rgba(255,255,255,.52);
+      font-size: 12px;
+      text-align:center;
+    }
 
+    /* Responsive */
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr}
-      .card{grid-column: span 6}
-      .footer-top{grid-template-columns: 1fr 1fr}
-      .brand{min-width:auto}
-    }
-    @media (max-width: 640px){
-      .nav{gap:8px}
-      .card{grid-column: span 12}
-      .footer-top{grid-template-columns: 1fr}
-      .hero-content{padding:26px 18px}
+      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-left, .hero-right{ min-height: unset; }
+      .hero-left{ min-height: 380px; }
+      .hero-right{ min-height: 320px; }
+      .cards{ grid-template-columns: 1fr; }
+      nav.topnav{ display:none; }
     }
   </style>
 </head>
 
 <body>
-
-  <header class="header">
-    <div class="container">
+  <header class="site-header">
+    <div class="wrap">
       <div class="header-inner">
-
-        <a class="brand" href="index.html" aria-label="Luyu Electric Vehicles Home">
-          <div class="logo" title="Logo">
-            <img src="images/logo.png" alt="Luyu logo"
-                 onerror="this.remove(); this.parentElement.innerHTML='<div class=&quot;fallback&quot;>LUYU</div>';">
+        <a class="brand" href="index.html" aria-label="Go to Home">
+          <div class="logo">
+            <!-- Put your logo at /images/logo.png -->
+            <img src="images/logo.png" alt="Luyu Electric Vehicles Logo" onerror="this.style.display='none'; this.parentElement.style.background='rgba(46,229,157,.12)';">
           </div>
-          <div class="brand-text">
+          <div class="name">
             <strong>Luyu Electric Vehicles</strong>
-            <span>Factory Direct · OEM & Custom · Export Ready</span>
+            <span>Factory Direct · OEM/CKD · Export Ready</span>
           </div>
         </a>
 
-        <nav class="nav" aria-label="Primary">
+        <nav class="topnav" aria-label="Primary Navigation">
           <a href="index.html">Home</a>
           <a href="products.html">Products</a>
-          <a href="oem.html">OEM &amp; Custom</a>
+          <a href="oem-custom.html">OEM &amp; Custom</a>
           <a href="about.html">About Us</a>
-          <a class="cta" href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
 
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/8613292812529" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <div class="pill"><span class="dot"></span>Eco-friendly EV carts · OEM/CKD available</div>
 
-        <div class="hero-card reveal">
-          <div class="hero-bg" aria-hidden="true"></div>
-          <div class="hero-content">
-            <span class="pill"><span class="dot"></span> Export-ready electric vehicles · OEM/ODM available</span>
-            <h1>Electric Vehicle Manufacturer for Golf &amp; Commercial Transport</h1>
-            <p>
-              Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV),
-              and electric mini buses for resorts, campuses, industrial parks, and public transport.
+            <h1>EV Cart Manufacturer · Eco-Friendly · OEM/CKD</h1>
+
+            <p class="hero-sub">
+              We build <strong>EV golf carts</strong>, <strong>utility vehicles (UTV)</strong>, <strong>mini buses</strong>, and <strong>petrol carts</strong>.
+              <br>
+              Export-ready production with strong factory capability and proven global shipping experience.
             </p>
 
             <div class="hero-actions">
-              <a class="btn" href="products.html">View Products</a>
-              <a class="btn secondary" href="contact.html">Get a Quote</a>
+              <a class="btn primary" href="products.html">View Products</a>
+              <a class="btn" href="https://wa.me/8613292812529" target="_blank" rel="noopener">Get a Quote (WhatsApp)</a>
             </div>
 
-            <div class="hero-badges">
-              <span class="badge">OEM Branding</span>
-              <span class="badge">Battery Options</span>
-              <span class="badge">Container Loading Support</span>
-              <span class="badge">Global Shipping</span>
+            <div class="trust" aria-label="Highlights">
+              <span><i></i>OEM Branding</span>
+              <span><i></i>Battery Options</span>
+              <span><i></i>Export Packing</span>
+              <span><i></i>QC &amp; Inspection</span>
             </div>
           </div>
-        </div>
 
-        <aside class="hero-side reveal">
-          <div class="side-title">
-            <strong>Quick Facts</strong>
-            <span>What buyers care about</span>
-          </div>
-
-          <ul class="side-list">
-            <li class="side-item">
-              <b>Fast Quotation</b>
-              <small>Reply within 24 hours (business days)</small>
-            </li>
-            <li class="side-item">
-              <b>OEM & Custom</b>
-              <small>Seats · Colors · Accessories · Logo</small>
-            </li>
-            <li class="side-item">
-              <b>Export Ready</b>
-              <small>Inspection support · Packing · Loading</small>
-            </li>
-            <li class="side-item">
-              <b>Popular Use Cases</b>
-              <small>Resorts · Golf · Campus · Industrial parks</small>
-            </li>
-          </ul>
-
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:2px">
-            <a class="btn small" href="contact.html">Request Quote</a>
-            <a class="btn small secondary" href="about.html">Factory Info</a>
-          </div>
-        </aside>
-
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <h2>Our Product Categories</h2>
-          <p>Start with category pages, then expand into detailed model pages for SEO coverage.</p>
-        </div>
-        <a class="btn small secondary" href="products.html">Open Products Page</a>
-      </div>
-
-      <div class="grid">
-
-        <article class="card reveal">
-          <div class="card-media" style="background-image:
-            linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
-            url('images/golf-cart.jpg');">
-            <span class="label">Golf Carts</span>
-          </div>
-          <div class="card-body">
-            <h3>Electric Golf Carts</h3>
-            <p>Quiet, comfortable carts for golf courses, resorts, and communities.</p>
-            <div class="chips">
-              <span class="chip">2–8 Seats</span><span class="chip">Lithium / Lead-acid</span><span class="chip">Street / Off-road</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn small" href="products.html#electric-golf-carts">View Category</a>
-              <a class="btn small secondary" href="contact.html">Get a Quote</a>
+          <div class="hero-right" aria-label="Hero image carousel">
+            <div class="carousel" id="heroCarousel">
+              <!-- Replace these images in /images/ -->
+              <img class="active" src="images/hero-1.jpg" alt="Electric golf carts production line" />
+              <img src="images/hero-2.jpg" alt="Utility vehicles for industrial use" />
+              <img src="images/hero-3.jpg" alt="Electric mini buses for resorts and campuses" />
+              <img src="images/hero-4.jpg" alt="Factory inspection and container loading" />
+              <div class="carousel-ui">
+                <div class="dots" id="heroDots" aria-label="Carousel navigation"></div>
+                <div class="car-caption" id="heroCaption">Electric golf carts production line</div>
+              </div>
             </div>
           </div>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-media" style="background-image:
-            linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
-            url('images/utv.jpg');">
-            <span class="label">Utility / UTV</span>
-          </div>
-          <div class="card-body">
-            <h3>Utility Vehicles (UTV)</h3>
-            <p>Work-ready electric utility vehicles for maintenance and cargo transport.</p>
-            <div class="chips">
-              <span class="chip">Cargo Box</span><span class="chip">Heavy Duty</span><span class="chip">OEM Branding</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn small" href="products.html#utility-vehicles">View Category</a>
-              <a class="btn small secondary" href="contact.html">Get a Quote</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-media" style="background-image:
-            linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25)),
-            url('images/mini-bus.jpg');">
-            <span class="label">Mini Bus</span>
-          </div>
-          <div class="card-body">
-            <h3>Electric Mini Buses</h3>
-            <p>Shuttle solutions for hotels, campuses, and tourist transport.</p>
-            <div class="chips">
-              <span class="chip">8–23 Seats</span><span class="chip">Custom Layout</span><span class="chip">Export Ready</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn small" href="products.html#electric-mini-buses">View Category</a>
-              <a class="btn small secondary" href="contact.html">Get a Quote</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="cta reveal" style="margin-top:16px">
-        <div>
-          <h3>Need a quote or recommended model?</h3>
-          <p>Tell us your usage scenario, seating capacity, and target market. We’ll recommend suitable configurations and provide a fast quotation.</p>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn" href="contact.html">Get a Quote</a>
-          <a class="btn secondary" href="products.html">Browse Products</a>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-
-      <div class="footer-top">
-        <div class="footer-col">
-          <h4>Luyu Electric Vehicles</h4>
-          <p>Electric golf carts, utility vehicles (UTV), and electric mini buses. Factory direct supply with OEM/ODM customization and export-ready quality.</p>
-          <div class="social" aria-label="Social links">
-            <a href="#" title="Facebook" aria-label="Facebook"><span>f</span></a>
-            <a href="#" title="LinkedIn" aria-label="LinkedIn"><span>in</span></a>
-            <a href="#" title="YouTube" aria-label="YouTube"><span>▶</span></a>
-            <a href="#" title="Instagram" aria-label="Instagram"><span>◎</span></a>
+    <!-- PRODUCT CATEGORIES -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Our Product Categories</h2>
+            <p>Choose a category to open its dedicated page (no mixed categories).</p>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Email: <a href="mailto:carol@luyuecart.com">carol@luyuecart.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a></p>
-          <p>Address: Hebei, China (add detailed address)</p>
-        </div>
+        <div class="cards">
+          <!-- Golf Carts -->
+          <article class="card">
+            <div class="card-media">
+              <span class="badge">Golf Carts</span>
+              <img src="images/card-golf.jpg" alt="Electric golf carts" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(180deg, rgba(46,229,157,.22), rgba(255,255,255,.05))';">
+            </div>
+            <div class="card-body">
+              <h3>Electric Golf Carts</h3>
+              <p>Quiet, eco-friendly carts for golf courses, resorts, and communities. OEM/CKD supported.</p>
+              <div class="card-actions">
+                <a class="btn small primary" href="golf-carts.html">View / Order</a>
+                <a class="btn small" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="products.html">Products</a></li>
-            <li><a href="oem.html">OEM &amp; Custom</a></li>
-            <li><a href="about.html">About Factory</a></li>
-            <li><a href="contact.html">Contact / Quote</a></li>
-          </ul>
-        </div>
+          <!-- UTV -->
+          <article class="card">
+            <div class="card-media">
+              <span class="badge">Utility / UTV</span>
+              <img src="images/card-utv.jpg" alt="Electric utility vehicles UTV" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(180deg, rgba(0,194,122,.22), rgba(255,255,255,.05))';">
+            </div>
+            <div class="card-body">
+              <h3>Utility Vehicles (UTV)</h3>
+              <p>Work-ready electric utility vehicles for maintenance, cargo transport, and industrial parks.</p>
+              <div class="card-actions">
+                <a class="btn small primary" href="utv.html">View / Order</a>
+                <a class="btn small" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-        <div class="footer-col">
-          <h4>Popular Pages</h4>
-          <ul class="footer-links">
-            <li><a href="products.html#electric-golf-carts">Electric Golf Carts</a></li>
-            <li><a href="products.html#utility-vehicles">Utility Vehicles (UTV)</a></li>
-            <li><a href="products.html#electric-mini-buses">Electric Mini Buses</a></li>
-            <li><a href="contact.html">Request a Quotation</a></li>
-          </ul>
+          <!-- Mini Buses -->
+          <article class="card">
+            <div class="card-media">
+              <span class="badge">Mini Bus</span>
+              <img src="images/card-bus.jpg" alt="Electric mini buses" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(180deg, rgba(46,229,157,.18), rgba(255,255,255,.05))';">
+            </div>
+            <div class="card-body">
+              <h3>Electric Mini Buses</h3>
+              <p>Shuttle solutions for hotels, campuses, tourist attractions, and internal transport routes.</p>
+              <div class="card-actions">
+                <a class="btn small primary" href="mini-buses.html">View / Order</a>
+                <a class="btn small" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> Luyu Electric Vehicles. All rights reserved.</span>
-        <span><a href="contact.html">Contact</a> · <a href="products.html">Products</a></span>
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-card">
+            <h4>Luyu Electric Vehicles</h4>
+            <p>
+              Manufacturer of EV golf carts, utility vehicles (UTV), mini buses, and petrol carts.
+              Export-ready production with OEM/CKD support and reliable quality control.
+            </p>
+
+            <div class="social" aria-label="Social links">
+              <!-- Replace # with your real links later -->
+              <a class="iconbtn" href="#" aria-label="Facebook">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8H17l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg>
+              </a>
+              <a class="iconbtn" href="#" aria-label="LinkedIn">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.3 2.4 4.3 5.4v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM3.5 20.4V9h3.6v11.4H3.5Z"/></svg>
+              </a>
+              <a class="iconbtn" href="https://wa.me/8613292812529" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.1A8 8 0 1 1 20 12Zm-4.6 2.2c-.2.5-1.2 1-1.7 1.1-.4.1-.9.2-2.9-.6-2.4-1-3.9-3.4-4-3.6-.1-.2-1-1.3-1-2.5 0-1.2.6-1.8.8-2 .2-.2.4-.3.6-.3h.4c.1 0 .4 0 .6.5l.8 1.8c.1.2.1.4 0 .6l-.3.5c-.1.2-.2.3 0 .6.2.3.7 1.2 1.6 1.9.9.8 1.6 1 1.9 1.2.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l2 .9c.2.1.3.3.2.5Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-card">
+            <h4>Contact</h4>
+            <p><strong>Email:</strong> <a href="mailto:carol@luyuecart.com">carol@luyuecart.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a></p>
+            <p style="margin-top:10px;">
+              <strong>Address:</strong><br>
+              DO209, 1ST FLOOR, ZHONGCHU PLAZA,<br>
+              NO.198, ZHONGHUA NORTH STREET,<br>
+              DONGJIAO SUB-DISTRICT, XINHUA DISTRICT
+            </p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          © 2026 Luyu Electric Vehicles. All rights reserved.
+        </div>
       </div>
-
-    </div>
-  </footer>
+    </footer>
+  </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // HERO carousel
+    (function(){
+      const carousel = document.getElementById('heroCarousel');
+      if(!carousel) return;
 
-    const els = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('show');
-      });
-    }, {threshold: 0.12});
-    els.forEach(el => obs.observe(el));
+      const slides = Array.from(carousel.querySelectorAll('img'));
+      const dotsWrap = document.getElementById('heroDots');
+      const caption = document.getElementById('heroCaption');
+
+      let idx = 0;
+      let timer = null;
+
+      function setActive(i){
+        idx = i;
+        slides.forEach((img, k) => img.classList.toggle('active', k === idx));
+        const dots = Array.from(dotsWrap.querySelectorAll('.dotbtn'));
+        dots.forEach((d,k)=> d.classList.toggle('active', k === idx));
+        caption.textContent = slides[idx].alt || 'Factory & Products';
+      }
+
+      function buildDots(){
+        dotsWrap.innerHTML = '';
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.className = 'dotbtn' + (i===0 ? ' active' : '');
+          b.type = 'button';
+          b.setAttribute('aria-label', 'Go to slide ' + (i+1));
+          b.addEventListener('click', () => {
+            stop();
+            setActive(i);
+            start();
+          });
+          dotsWrap.appendChild(b);
+        });
+      }
+
+      function next(){
+        const n = (idx + 1) % slides.length;
+        setActive(n);
+      }
+
+      function start(){
+        timer = setInterval(next, 4200);
+      }
+      function stop(){
+        if(timer) clearInterval(timer);
+      }
+
+      buildDots();
+      setActive(0);
+      start();
+
+      // Pause on hover
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+    })();
   </script>
 </body>
 </html>
