@@ -1,276 +1,749 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luyu Electric Vehicles | Electric Golf Carts & Commercial EV Manufacturer</title>
-<meta name="description" content="Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV) and electric mini buses. OEM & ODM, export-ready, factory direct.">
-<link rel="canonical" href="https://luyuevcart.com/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  background: #f5f6f7;
-}
+  <title>Luyu Electric Vehicles | Electric Golf Cart & Mini Bus Manufacturer</title>
+  <meta name="description" content="Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV), and electric mini buses. OEM/ODM customization, export-ready quality, factory direct supply." />
 
-a { text-decoration: none; color: inherit; }
+  <!-- Canonical -->
+  <link rel="canonical" href="https://luyuevcart.com/" />
 
-/* ===== Header ===== */
-header {
-  background: #0f5132;
-  color: #fff;
-  padding: 16px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header h1 {
-  font-size: 20px;
-  margin: 0;
-}
-nav a {
-  margin-left: 20px;
-  color: #fff;
-  font-size: 14px;
-}
+  <!-- Basic Open Graph -->
+  <meta property="og:title" content="Luyu Electric Vehicles | Electric Golf Cart & Mini Bus Manufacturer" />
+  <meta property="og:description" content="Factory direct electric vehicles: golf carts, UTV, and mini buses with OEM/ODM customization." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://luyuevcart.com/" />
 
-/* ===== Hero Section ===== */
-.hero {
-  height: 85vh;
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-              url("images/hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 0 60px;
-}
-.hero-content {
-  max-width: 700px;
-  color: #fff;
-}
-.hero h2 {
-  font-size: 44px;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-.hero-buttons {
-  margin-top: 30px;
-}
-.btn {
-  padding: 14px 26px;
-  border-radius: 6px;
-  font-size: 15px;
-  display: inline-block;
-  margin-right: 15px;
-}
-.btn-primary {
-  background: #b87300;
-  color: #fff;
-}
-.btn-outline {
-  border: 1px solid #fff;
-  color: #fff;
-}
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --bg2:#0f1722;
+      --card:#121a26;
+      --muted:#9aa7b7;
+      --text:#e9eef5;
+      --line:rgba(255,255,255,.08);
+      --brand:#b87511; /* warm bronze */
+      --brand2:#f0b35a;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius:16px;
+      --radius2:22px;
+      --max:1200px;
+    }
 
-/* ===== Section ===== */
-section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px 20px;
-}
-section h3 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-section p {
-  color: #666;
-  margin-bottom: 40px;
-}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(240,179,90,.18), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(184,117,17,.16), transparent 60%),
+                  linear-gradient(180deg, #070a0e, #0b0f14 35%, #070a0e);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
 
-/* ===== Products ===== */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 25px;
-}
-.card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-}
-.card-img {
-  height: 200px;
-  background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-}
-.card-body {
-  padding: 20px;
-}
-.card-body h4 {
-  margin: 0 0 10px;
-}
-.tags span {
-  background: #eee;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin-right: 6px;
-}
-.card-actions {
-  margin-top: 15px;
-}
-.card-actions button {
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.view {
-  background: #b87300;
-  color: #fff;
-}
-.quote {
-  background: #eee;
-}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
 
-/* ===== Modal ===== */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.6);
-  align-items: center;
-  justify-content: center;
-}
-.modal-content {
-  background: #fff;
-  max-width: 600px;
-  width: 90%;
-  padding: 30px;
-  border-radius: 10px;
-}
-.close {
-  float: right;
-  cursor: pointer;
-  font-size: 18px;
-}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border:1px solid var(--line);
+      border-radius:999px;color:var(--muted);font-size:13px;
+      background: rgba(255,255,255,.03);
+      backdrop-filter: blur(6px);
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--brand2);box-shadow:0 0 18px rgba(240,179,90,.6)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:12px;
+      border:1px solid rgba(240,179,90,.25);
+      background: linear-gradient(180deg, rgba(184,117,17,.95), rgba(150,95,14,.95));
+      color:#111;font-weight:700;
+      box-shadow: 0 16px 30px rgba(184,117,17,.25);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-2px);box-shadow: 0 22px 44px rgba(184,117,17,.35);filter:saturate(1.1)}
+    .btn.secondary{
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border:1px solid var(--line);
+      box-shadow:none;
+    }
+    .btn.secondary:hover{transform: translateY(-2px);background: rgba(255,255,255,.08)}
+    .btn.small{padding:10px 12px;border-radius:10px;font-size:14px}
 
-/* ===== Footer ===== */
-footer {
-  background: #0f5132;
-  color: #fff;
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-}
-</style>
+    /* Header */
+    .header{
+      position:sticky;top:0;z-index:50;
+      background: rgba(8,12,18,.75);
+      border-bottom:1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex;align-items:center;gap:12px;min-width:240px;
+    }
+    .logo{
+      width:42px;height:42px;border-radius:12px;
+      background: rgba(255,255,255,.08);
+      border:1px solid var(--line);
+      overflow:hidden;
+      display:grid;place-items:center;
+      box-shadow: 0 10px 26px rgba(0,0,0,.25);
+      flex:0 0 auto;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover}
+    .logo .fallback{
+      font-weight:900;color:rgba(240,179,90,.95);
+      letter-spacing:.5px;
+    }
+
+    .brand-text{display:flex;flex-direction:column;line-height:1.15}
+    .brand-text strong{font-size:15px}
+    .brand-text span{font-size:12px;color:var(--muted)}
+
+    .nav{
+      display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      font-size:14px;color:rgba(233,238,245,.9);
+      padding:8px 10px;border-radius:10px;
+      border:1px solid transparent;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+      white-space:nowrap;
+    }
+    .nav a:hover{
+      background: rgba(255,255,255,.06);
+      border-color: var(--line);
+      transform: translateY(-1px);
+    }
+    .nav .cta{
+      padding:10px 12px;border-radius:12px;
+      background: rgba(184,117,17,.12);
+      border:1px solid rgba(240,179,90,.22);
+    }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      padding:56px 0 28px;
+    }
+    .hero-grid{
+      display:grid;grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .hero-card{
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      min-height: 360px;
+    }
+    .hero-bg{
+      position:absolute;inset:0;
+      background:
+        linear-gradient(90deg, rgba(11,15,20,.88), rgba(11,15,20,.55)),
+        url("images/hero-bg.jpg"); /* ✅ 替换这里：你的首页背景图 */
+      background-size:cover;
+      background-position:center;
+      filter:saturate(1.05) contrast(1.02);
+      transform: scale(1.02);
+    }
+    .hero-content{
+      position:relative;
+      padding:32px 28px;
+      max-width: 740px;
+    }
+    .hero h1{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 3vw, 44px);
+      line-height:1.15;
+      letter-spacing:-.3px;
+    }
+    .hero p{
+      margin:0;
+      color: rgba(233,238,245,.86);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex;gap:12px;flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .hero-badges{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:16px
+    }
+    .badge{
+      font-size:12px;color:rgba(233,238,245,.9);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px;border-radius:999px;
+    }
+
+    .hero-side{
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      padding:18px;
+      display:flex;flex-direction:column;gap:14px;
+    }
+    .side-title{
+      display:flex;align-items:center;justify-content:space-between;gap:12px
+    }
+    .side-title strong{font-size:14px}
+    .side-title span{font-size:12px;color:var(--muted)}
+    .side-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .side-item{
+      padding:12px;border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      transition: transform .18s ease, background .18s ease;
+    }
+    .side-item:hover{transform: translateY(-2px);background: rgba(0,0,0,.28)}
+    .side-item b{display:block;font-size:13px}
+    .side-item small{color:var(--muted);font-size:12px}
+
+    /* Sections */
+    section{padding:36px 0}
+    .section-head{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    .section-head h2{margin:0;font-size:26px}
+    .section-head p{margin:0;color:var(--muted);max-width:70ch}
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+    }
+    .card{
+      grid-column: span 4;
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      overflow:hidden;
+      transform: translateY(0);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      position:relative;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 28px 70px rgba(0,0,0,.35);
+      border-color: rgba(240,179,90,.22);
+    }
+    .card-media{
+      height:170px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+        url("images/placeholder.jpg"); /* ✅ 替换：每个卡片图 */
+      background-size:cover;
+      background-position:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:hover .card-media::after{
+      transform: scale(1.08);
+    }
+    .card-media::after{
+      content:"";
+      position:absolute;inset:0;
+      background: inherit;
+      transform: scale(1);
+      transition: transform .35s ease;
+      filter:saturate(1.06);
+    }
+    .card-media .label{
+      position:absolute;left:14px;bottom:14px;z-index:2;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+      font-size:12px;color:rgba(255,255,255,.92)
+    }
+    .card-body{padding:16px 16px 14px}
+    .card-body h3{margin:0 0 6px;font-size:18px}
+    .card-body p{margin:0;color:rgba(233,238,245,.82);font-size:14px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{
+      padding:7px 10px;border-radius:999px;font-size:12px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      color: rgba(233,238,245,.9);
+    }
+    .card-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+    /* Split section */
+    .split{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      padding:18px;
+    }
+    .panel h3{margin:0 0 8px;font-size:18px}
+    .panel p{margin:0;color:var(--muted)}
+    .list{
+      margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px
+    }
+    .list li{
+      padding:12px;border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      transition: transform .18s ease;
+    }
+    .list li:hover{transform: translateY(-2px)}
+    .list b{display:block;font-size:13px}
+    .list small{color:var(--muted);font-size:12px}
+
+    /* CTA band */
+    .cta{
+      border:1px solid rgba(240,179,90,.18);
+      background: linear-gradient(90deg, rgba(184,117,17,.18), rgba(255,255,255,.03));
+      border-radius: var(--radius2);
+      padding:18px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .cta h3{margin:0;font-size:18px}
+    .cta p{margin:0;color:rgba(233,238,245,.85);max-width:70ch}
+
+    /* Footer */
+    footer{
+      margin-top:22px;
+      border-top:1px solid var(--line);
+      background: rgba(6,9,13,.65);
+    }
+    .footer-top{
+      padding:28px 0 18px;
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap:16px;
+    }
+    .footer-col{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:14px;
+    }
+    .footer-col h4{margin:0 0 10px;font-size:14px}
+    .footer-col p, .footer-col a, .footer-col li{
+      color:rgba(233,238,245,.82);
+      font-size:13px;
+    }
+    .footer-col p{margin:0 0 8px}
+    .footer-links{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .footer-links a:hover{text-decoration:underline}
+    .social{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px
+    }
+    .social a{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .social a:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.07);
+      border-color: rgba(240,179,90,.22);
+    }
+    .footer-bottom{
+      border-top:1px solid var(--line);
+      padding:14px 0;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      color:var(--muted);font-size:12px;
+    }
+
+    /* Scroll reveal */
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr}
+      .split{grid-template-columns: 1fr}
+      .card{grid-column: span 6}
+      .footer-top{grid-template-columns: 1fr 1fr}
+      .brand{min-width:auto}
+    }
+    @media (max-width: 640px){
+      .nav{gap:8px}
+      .card{grid-column: span 12}
+      .footer-top{grid-template-columns: 1fr}
+      .hero-content{padding:26px 18px}
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Luyu Electric Vehicles</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/products.html">Products</a>
-    <a href="#">OEM & Custom</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
 
-<!-- Hero -->
-<div class="hero">
-  <div class="hero-content">
-    <h2>Electric Vehicle Manufacturer for Golf & Commercial Transport</h2>
-    <p>
-      Luyu Electric Vehicles specializes in electric golf carts, utility vehicles (UTV),
-      and electric mini buses. Factory direct OEM & ODM services with export-ready quality.
-    </p>
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="/products.html">View Products</a>
-      <a class="btn btn-outline" href="#">Get a Quote</a>
+        <a class="brand" href="index.html" aria-label="Luyu Electric Vehicles Home">
+          <div class="logo" title="Logo">
+            <!-- ✅ 放你的logo：images/logo.png 或 images/logo.jpg -->
+            <img src="images/logo.png" alt="Luyu logo"
+                 onerror="this.remove(); this.parentElement.innerHTML='<div class=&quot;fallback&quot;>LUYU</div>';">
+          </div>
+          <div class="brand-text">
+            <strong>Luyu Electric Vehicles</strong>
+            <span>Factory Direct · OEM & Custom · Export Ready</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="oem.html">OEM &amp; Custom</a>
+          <a href="about.html">About Us</a>
+          <a class="cta" href="contact.html">Contact</a>
+        </nav>
+
+      </div>
     </div>
-  </div>
-</div>
+  </header>
 
-<!-- Products -->
-<section>
-  <h3>Our Product Categories</h3>
-  <p>Each category supports customization, battery options, and global shipping.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
 
-  <div class="products">
-    <div class="card">
-      <div class="card-img">Golf Cart Photo</div>
-      <div class="card-body">
-        <h4>Electric Golf Carts</h4>
-        <p>Quiet and reliable carts for resorts and golf courses.</p>
-        <div class="tags"><span>2–8 Seats</span><span>Lithium</span></div>
-        <div class="card-actions">
-          <button class="view" onclick="openModal('golf')">View Details</button>
+        <div class="hero-card reveal">
+          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-content">
+            <span class="pill"><span class="dot"></span> Export-ready electric vehicles · OEM/ODM available</span>
+            <h1>Electric Vehicle Manufacturer for Golf &amp; Commercial Transport</h1>
+            <p>
+              Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV),
+              and electric mini buses for resorts, campuses, industrial parks, and public transport.
+              Factory direct supply with stable quality and customization options.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn" href="products.html">View Products</a>
+              <a class="btn secondary" href="contact.html">Get a Quote</a>
+            </div>
+
+            <div class="hero-badges">
+              <span class="badge">OEM Branding</span>
+              <span class="badge">Battery Options</span>
+              <span class="badge">Container Loading Support</span>
+              <span class="badge">Global Shipping</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-side reveal">
+          <div class="side-title">
+            <strong>Quick Facts</strong>
+            <span>What buyers care about</span>
+          </div>
+
+          <ul class="side-list">
+            <li class="side-item">
+              <b>Fast Quotation</b>
+              <small>Reply within 24 hours (business days)</small>
+            </li>
+            <li class="side-item">
+              <b>OEM & Custom</b>
+              <small>Seats · Colors · Accessories · Logo</small>
+            </li>
+            <li class="side-item">
+              <b>Export Ready</b>
+              <small>Inspection support · Packing · Loading</small>
+            </li>
+            <li class="side-item">
+              <b>Popular Use Cases</b>
+              <small>Resorts · Golf · Campus · Industrial parks</small>
+            </li>
+          </ul>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:2px">
+            <a class="btn small" href="contact.html">Request Quote</a>
+            <a class="btn small secondary" href="about.html">Factory Info</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2>Our Product Categories</h2>
+          <p>Build a strong SEO structure by dedicating one page per product category. Start here, then expand into detailed model pages.</p>
+        </div>
+        <a class="btn small secondary" href="products.html">Open Products Page</a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card reveal">
+          <div class="card-media" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+            url('images/golf-cart.jpg');">
+            <span class="label">Golf Carts</span>
+          </div>
+          <div class="card-body">
+            <h3>Electric Golf Carts</h3>
+            <p>Quiet, comfortable carts for golf courses, resorts, private clubs, and communities.</p>
+            <div class="chips">
+              <span class="chip">2–8 Seats</span><span class="chip">Lithium / Lead-acid</span><span class="chip">Street / Off-road</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn small" href="products.html#electric-golf-carts">View Category</a>
+              <a class="btn small secondary" href="contact.html">Get a Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+            url('images/utv.jpg');">
+            <span class="label">Utility / UTV</span>
+          </div>
+          <div class="card-body">
+            <h3>Utility Vehicles (UTV)</h3>
+            <p>Work-ready electric utility vehicles for maintenance, cargo transport, and industrial use.</p>
+            <div class="chips">
+              <span class="chip">Cargo Box</span><span class="chip">Heavy Duty</span><span class="chip">OEM Branding</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn small" href="products.html#utility-vehicles">View Category</a>
+              <a class="btn small secondary" href="contact.html">Get a Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+            url('images/mini-bus.jpg');">
+            <span class="label">Mini Bus</span>
+          </div>
+          <div class="card-body">
+            <h3>Electric Mini Buses</h3>
+            <p>Shuttle solutions for hotels, campuses, tourist transport, and internal park transportation.</p>
+            <div class="chips">
+              <span class="chip">8–23 Seats</span><span class="chip">Custom Layout</span><span class="chip">Export Ready</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn small" href="products.html#electric-mini-buses">View Category</a>
+              <a class="btn small secondary" href="contact.html">Get a Quote</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Factory / OEM -->
+  <section>
+    <div class="container">
+      <div class="split">
+
+        <div class="panel reveal">
+          <h3>OEM & Custom Solutions</h3>
+          <p>Make your vehicles match your market: seating, battery, colors, accessories, and logo branding.</p>
+          <ul class="list">
+            <li><b>Branding & Appearance</b><small>Logo, decals, colors, canopy, seats</small></li>
+            <li><b>Performance Options</b><small>Battery system, motor, controller</small></li>
+            <li><b>Export Packaging</b><small>Protection, labeling, container loading support</small></li>
+          </ul>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn small" href="oem.html">Learn OEM</a>
+            <a class="btn small secondary" href="contact.html">Request Custom</a>
+          </div>
+        </div>
+
+        <div class="panel reveal" style="position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;opacity:.18;background:
+            url('images/factory.jpg') center/cover no-repeat;"></div>
+          <div style="position:relative">
+            <h3>Factory Quality & Export Standards</h3>
+            <p>From frame welding and assembly to final inspection, we focus on stability, efficiency, and export-ready quality.</p>
+            <ul class="list">
+              <li><b>Inspection Support</b><small>QC checkpoints & final inspection</small></li>
+              <li><b>Capacity & Delivery</b><small>Stable production scheduling</small></li>
+              <li><b>Global Shipping</b><small>Documentation & logistics support</small></li>
+            </ul>
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn small" href="about.html">About Factory</a>
+              <a class="btn small secondary" href="contact.html">Ask Delivery Time</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2>Typical Applications</h2>
+          <p>Help buyers quickly see if you match their scenario. This also helps SEO by covering intent keywords.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card reveal" style="grid-column: span 3;">
+          <div class="card-body">
+            <h3>Resorts</h3>
+            <p>Quiet operation, comfortable seating, and custom branding.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="grid-column: span 3;">
+          <div class="card-body">
+            <h3>Golf Courses</h3>
+            <p>Reliable carts with battery options and export-ready packing.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="grid-column: span 3;">
+          <div class="card-body">
+            <h3>Campuses</h3>
+            <p>Shuttle and service vehicles for safe daily transportation.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="grid-column: span 3;">
+          <div class="card-body">
+            <h3>Industrial Parks</h3>
+            <p>Utility vehicles for cargo movement and maintenance work.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta reveal" style="margin-top:16px">
+        <div>
+          <h3>Need a quote or recommended model?</h3>
+          <p>Tell us your usage scenario, seating capacity, and target market. We’ll recommend suitable configurations and provide a fast quotation.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="contact.html">Get a Quote</a>
+          <a class="btn secondary" href="products.html">Browse Products</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="card-img">UTV Photo</div>
-      <div class="card-body">
-        <h4>Utility Vehicles (UTV)</h4>
-        <p>Electric utility vehicles for cargo and maintenance.</p>
-        <div class="tags"><span>Cargo Box</span><span>Heavy Duty</span></div>
-        <div class="card-actions">
-          <button class="view" onclick="openModal('utv')">View Details</button>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4>Luyu Electric Vehicles</h4>
+          <p>Electric golf carts, utility vehicles (UTV), and electric mini buses. Factory direct supply with OEM/ODM customization and export-ready quality.</p>
+          <div class="social" aria-label="Social links">
+            <!-- ✅ 把 # 换成你的真实链接 -->
+            <a href="#" title="Facebook" aria-label="Facebook">
+              <span>f</span>
+            </a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">
+              <span>in</span>
+            </a>
+            <a href="#" title="YouTube" aria-label="YouTube">
+              <span>▶</span>
+            </a>
+            <a href="#" title="Instagram" aria-label="Instagram">
+              <span>◎</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <!-- ✅ 替换为你的真实信息 -->
+          <p>Email: <a href="mailto:carol@luyuecart.com">carol@luyuecart.com</a></p>
+          <p>WhatsApp: <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a></p>
+          <p>Address: Hebei, China (add detailed address)</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="oem.html">OEM &amp; Custom</a></li>
+            <li><a href="about.html">About Factory</a></li>
+            <li><a href="contact.html">Contact / Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Pages</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#electric-golf-carts">Electric Golf Carts</a></li>
+            <li><a href="products.html#utility-vehicles">Utility Vehicles (UTV)</a></li>
+            <li><a href="products.html#electric-mini-buses">Electric Mini Buses</a></li>
+            <li><a href="contact.html">Request a Quotation</a></li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="card-img">Mini Bus Photo</div>
-      <div class="card-body">
-        <h4>Electric Mini Buses</h4>
-        <p>Shuttle solutions for hotels and campuses.</p>
-        <div class="tags"><span>8–23 Seats</span><span>Export Ready</span></div>
-        <div class="card-actions">
-          <button class="view" onclick="openModal('bus')">View Details</button>
-        </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Luyu Electric Vehicles. All rights reserved.</span>
+        <span><a href="contact.html">Contact</a> · <a href="products.html">Products</a></span>
       </div>
+
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Modal -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">✖</span>
-    <div id="modalText"></div>
-  </div>
-</div>
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<footer>
-  © 2026 Luyu Electric Vehicles. All rights reserved.
-</footer>
-
-<script>
-function openModal(type) {
-  let text = "";
-  if(type === "golf") text = "<h3>Electric Golf Carts</h3><p>OEM & custom seating, lithium batteries, street & off-road options.</p>";
-  if(type === "utv") text = "<h3>Utility Vehicles (UTV)</h3><p>Heavy-duty frames, cargo boxes, industrial applications.</p>";
-  if(type === "bus") text = "<h3>Electric Mini Buses</h3><p>Custom layouts, safety options, global export support.</p>";
-  document.getElementById("modalText").innerHTML = text;
-  document.getElementById("modal").style.display = "flex";
-}
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-</script>
-
+    // Scroll reveal
+    const els = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('show');
+      });
+    }, {threshold: 0.12});
+    els.forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
