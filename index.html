@@ -1,278 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luyu Electric Vehicles | Electric Golf Carts & Commercial EV Manufacturer</title>
+<meta name="description" content="Luyu Electric Vehicles manufactures electric golf carts, utility vehicles (UTV) and electric mini buses. OEM & ODM, export-ready, factory direct.">
+<link rel="canonical" href="https://luyuevcart.com/">
 
-  <title>Electric Golf Cart & Mini Bus Manufacturer | Luyu Electric Vehicles</title>
-  <meta name="description" content="Luyu Electric Vehicles is a professional manufacturer of electric golf carts, utility vehicles (UTV), and electric mini buses. Factory direct supply, OEM & customization, export-ready worldwide." />
-  <link rel="canonical" href="https://luyuevcart.com/" />
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #f5f6f7;
+}
 
-  <style>
-    :root{
-      --bg:#f4f6f8;
-      --card:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --brand:#0b0b0b;
-      --accent:#b86a12;
-      --line:#e5e7eb;
-      --radius:14px;
-    }
+a { text-decoration: none; color: inherit; }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+/* ===== Header ===== */
+header {
+  background: #0f5132;
+  color: #fff;
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-size: 14px;
+}
 
-    a{text-decoration:none;color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+/* ===== Hero Section ===== */
+.hero {
+  height: 85vh;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+              url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+.hero-content {
+  max-width: 700px;
+  color: #fff;
+}
+.hero h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.hero-buttons {
+  margin-top: 30px;
+}
+.btn {
+  padding: 14px 26px;
+  border-radius: 6px;
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 15px;
+}
+.btn-primary {
+  background: #b87300;
+  color: #fff;
+}
+.btn-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
 
-    /* Header */
-    header{
-      background:var(--brand);
-      color:#fff;
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px 0;
-      flex-wrap:wrap;
-      gap:16px;
-    }
-    .logo{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .logo img{
-      width:40px;
-      height:40px;
-      border-radius:8px;
-      background:#222;
-    }
-    .logo strong{font-size:16px}
-    .logo span{
-      display:block;
-      font-size:12px;
-      color:rgba(255,255,255,.75);
-    }
+/* ===== Section ===== */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+section h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+section p {
+  color: #666;
+  margin-bottom: 40px;
+}
 
-    nav{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-    nav a{
-      font-size:14px;
-      color:rgba(255,255,255,.9);
-    }
+/* ===== Products ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.card-img {
+  height: 200px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+.card-body {
+  padding: 20px;
+}
+.card-body h4 {
+  margin: 0 0 10px;
+}
+.tags span {
+  background: #eee;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.card-actions {
+  margin-top: 15px;
+}
+.card-actions button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.view {
+  background: #b87300;
+  color: #fff;
+}
+.quote {
+  background: #eee;
+}
 
-    /* Hero */
-    .hero{
-      background:#fff;
-      padding:70px 0;
-      border-bottom:1px solid var(--line);
-    }
-    .hero h1{
-      font-size:34px;
-      margin:0 0 12px;
-    }
-    .hero p{
-      color:var(--muted);
-      max-width:760px;
-      font-size:16px;
-    }
-    .hero .cta{
-      margin-top:26px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
+/* ===== Modal ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 10px;
+}
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+}
 
-    .btn{
-      padding:12px 20px;
-      border-radius:10px;
-      font-weight:600;
-      font-size:14px;
-      border:1px solid var(--accent);
-      background:var(--accent);
-      color:#fff;
-    }
-    .btn.outline{
-      background:#fff;
-      color:var(--accent);
-    }
-
-    /* Sections */
-    section{padding:60px 0}
-    h2{
-      margin:0 0 10px;
-      font-size:26px;
-    }
-    .subtitle{
-      color:var(--muted);
-      max-width:760px;
-      margin-bottom:34px;
-    }
-
-    /* Cards */
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-    }
-    .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      overflow:hidden;
-    }
-    .card .img{
-      height:180px;
-      background:#e5e7eb;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#888;
-      font-size:14px;
-    }
-    .card .content{
-      padding:22px;
-    }
-    .card h3{
-      margin:0 0 8px;
-      font-size:18px;
-    }
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin:14px 0;
-    }
-    .tag{
-      font-size:12px;
-      background:#f1f5f9;
-      padding:4px 10px;
-      border-radius:20px;
-      color:#555;
-    }
-
-    /* Footer */
-    footer{
-      background:#0b0b0b;
-      color:#aaa;
-      font-size:13px;
-      padding:28px 0;
-      margin-top:40px;
-    }
-    footer a{color:#ccc}
-  </style>
+/* ===== Footer ===== */
+footer {
+  background: #0f5132;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="container header-inner">
-    <div class="logo">
-      <img src="images/logo.jpg" alt="Luyu Electric Vehicles">
-      <div>
-        <strong>Luyu Electric Vehicles</strong>
-        <span>Factory Direct · OEM & Custom · Export Ready</span>
-      </div>
-    </div>
-
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="#">OEM & Custom</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
+  <h1>Luyu Electric Vehicles</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/products.html">Products</a>
+    <a href="#">OEM & Custom</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Electric Vehicle Manufacturer for Golf & Commercial Transport</h1>
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-content">
+    <h2>Electric Vehicle Manufacturer for Golf & Commercial Transport</h2>
     <p>
       Luyu Electric Vehicles specializes in electric golf carts, utility vehicles (UTV),
-      and electric mini buses for resorts, campuses, industrial parks, and tourism transport.
-      We provide OEM & ODM customization with stable export quality.
+      and electric mini buses. Factory direct OEM & ODM services with export-ready quality.
     </p>
-    <div class="cta">
-      <a class="btn" href="/products.html">View Products</a>
-      <a class="btn outline" href="#">Get a Quote</a>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="/products.html">View Products</a>
+      <a class="btn btn-outline" href="#">Get a Quote</a>
     </div>
   </div>
-</section>
+</div>
 
+<!-- Products -->
 <section>
-  <div class="container">
-    <h2>Our Product Categories</h2>
-    <p class="subtitle">
-      Explore our main electric vehicle solutions. Each category supports customization,
-      battery options, and international shipping.
-    </p>
+  <h3>Our Product Categories</h3>
+  <p>Each category supports customization, battery options, and global shipping.</p>
 
-    <div class="grid">
-      <div class="card">
-        <div class="img">Replace with Golf Cart Photo</div>
-        <div class="content">
-          <h3>Electric Golf Carts</h3>
-          <p>Quiet, reliable carts for golf courses, resorts, and communities.</p>
-          <div class="tags">
-            <span class="tag">2–8 Seats</span>
-            <span class="tag">Lithium / Lead-acid</span>
-            <span class="tag">Street / Off-road</span>
-          </div>
-          <a class="btn" href="/products.html">View Category</a>
+  <div class="products">
+    <div class="card">
+      <div class="card-img">Golf Cart Photo</div>
+      <div class="card-body">
+        <h4>Electric Golf Carts</h4>
+        <p>Quiet and reliable carts for resorts and golf courses.</p>
+        <div class="tags"><span>2–8 Seats</span><span>Lithium</span></div>
+        <div class="card-actions">
+          <button class="view" onclick="openModal('golf')">View Details</button>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="img">Replace with UTV Photo</div>
-        <div class="content">
-          <h3>Utility Vehicles (UTV)</h3>
-          <p>Electric utility vehicles for cargo transport and maintenance work.</p>
-          <div class="tags">
-            <span class="tag">Cargo Box</span>
-            <span class="tag">Heavy Duty</span>
-            <span class="tag">OEM Branding</span>
-          </div>
-          <a class="btn" href="/products.html">View Category</a>
+    <div class="card">
+      <div class="card-img">UTV Photo</div>
+      <div class="card-body">
+        <h4>Utility Vehicles (UTV)</h4>
+        <p>Electric utility vehicles for cargo and maintenance.</p>
+        <div class="tags"><span>Cargo Box</span><span>Heavy Duty</span></div>
+        <div class="card-actions">
+          <button class="view" onclick="openModal('utv')">View Details</button>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="img">Replace with Mini Bus Photo</div>
-        <div class="content">
-          <h3>Electric Mini Buses</h3>
-          <p>Shuttle solutions for hotels, campuses, and tourist transport.</p>
-          <div class="tags">
-            <span class="tag">8–23 Seats</span>
-            <span class="tag">Custom Layout</span>
-            <span class="tag">Export Ready</span>
-          </div>
-          <a class="btn" href="/products.html">View Category</a>
+    <div class="card">
+      <div class="card-img">Mini Bus Photo</div>
+      <div class="card-body">
+        <h4>Electric Mini Buses</h4>
+        <p>Shuttle solutions for hotels and campuses.</p>
+        <div class="tags"><span>8–23 Seats</span><span>Export Ready</span></div>
+        <div class="card-actions">
+          <button class="view" onclick="openModal('bus')">View Details</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">✖</span>
+    <div id="modalText"></div>
+  </div>
+</div>
 
 <footer>
-  <div class="container">
-    © 2026 Luyu Electric Vehicles. All rights reserved. |
-    <a href="#">Contact</a>
-  </div>
+  © 2026 Luyu Electric Vehicles. All rights reserved.
 </footer>
+
+<script>
+function openModal(type) {
+  let text = "";
+  if(type === "golf") text = "<h3>Electric Golf Carts</h3><p>OEM & custom seating, lithium batteries, street & off-road options.</p>";
+  if(type === "utv") text = "<h3>Utility Vehicles (UTV)</h3><p>Heavy-duty frames, cargo boxes, industrial applications.</p>";
+  if(type === "bus") text = "<h3>Electric Mini Buses</h3><p>Custom layouts, safety options, global export support.</p>";
+  document.getElementById("modalText").innerHTML = text;
+  document.getElementById("modal").style.display = "flex";
+}
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
