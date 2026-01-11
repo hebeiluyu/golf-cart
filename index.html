@@ -1,606 +1,727 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Luyu Electric Vehicles | EV Cart Manufacturer | 10-Year Factory, Worldwide Export</title>
-  <meta name="description" content="Luyu Electric Vehicles manufactures EV golf carts, utility vehicles (UTV), electric mini buses, and petrol carts. 10-year factory, worldwide export experience, OEM/CKD support, and stable quality control." />
+  <title>Luyu Electric Vehicles | EV Cart Manufacturer</title>
+  <meta name="description" content="Luyu Electric Vehicles manufactures EV golf carts, utility vehicles (UTV), electric mini buses, and petrol carts. 10-year factory with worldwide export experience." />
   <link rel="canonical" href="https://luyuevcart.com/" />
 
   <style>
     :root{
-      /* more formal: dark neutral + green accents (not overly green) */
-      --bg:#0b0f12;
-      --bg2:#0e1418;
-      --panel:#121a1f;
-      --panel2:#0f161b;
+      /* Light green + white theme */
+      --bg-1:#f3fbf6;
+      --bg-2:#ffffff;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#d9f1e2;
 
-      --text:#eaf0f3;
-      --muted:#b9c6cc;
-      --line:rgba(255,255,255,.10);
+      --green:#18a558;      /* primary accent */
+      --green-2:#11b36a;    /* hover */
+      --green-soft:#e8f8ef; /* soft background */
 
-      --green:#22c55e;      /* brighter, cleaner green */
-      --green2:#16a34a;
-      --greenSoft:rgba(34,197,94,.14);
-      --shadow:0 18px 45px rgba(0,0,0,.45);
-      --shadow2:0 14px 30px rgba(0,0,0,.35);
+      --shadow: 0 10px 30px rgba(16, 24, 40, 0.10);
+      --shadow2: 0 6px 18px rgba(16, 24, 40, 0.08);
 
-      --radius:18px;
-      --radius2:22px;
+      --radius: 18px;
+      --radius2: 14px;
+
+      --max: 1120px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "PingFang SC","Microsoft YaHei", sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 520px at 18% 8%, rgba(34,197,94,.10), transparent 55%),
-        radial-gradient(900px 520px at 85% 12%, rgba(34,197,94,.06), transparent 58%),
-        linear-gradient(180deg, #070a0c, var(--bg));
-      overflow-x:hidden;
+        radial-gradient(900px 400px at 20% 0%, rgba(24,165,88,0.12), transparent 60%),
+        radial-gradient(800px 420px at 90% 10%, rgba(17,179,106,0.10), transparent 55%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2) 45%, var(--bg-1));
     }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1160px;margin:0 auto;padding:0 18px}
 
-    /* top bar */
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ===== Top Nav ===== */
     .topbar{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(8,10,12,.92), rgba(8,10,12,.76));
-      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:99;
+      backdrop-filter:saturate(140%) blur(10px);
+      background: rgba(255,255,255,0.80);
+      border-bottom:1px solid rgba(217,241,226,0.9);
     }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:14px;padding:14px 0;
+
+    .navwrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
     }
-    .brand{display:flex;align-items:center;gap:12px;min-width:260px}
-    .logo{
-      width:40px;height:40px;border-radius:12px;
-      background: linear-gradient(135deg, rgba(34,197,94,.22), rgba(34,197,94,.06));
-      border:1px solid rgba(34,197,94,.34);
-      box-shadow: 0 10px 25px rgba(0,0,0,.35);
-      display:grid;place-items:center;overflow:hidden;
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:220px;
     }
-    .logo img{width:100%;height:100%;object-fit:cover;display:block}
-    .brand h1{margin:0;font-size:15px;letter-spacing:.2px;line-height:1.1;font-weight:800}
-    /* ✅ 删除Logo下面那行小字：不显示tagline */
-    .menu{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center}
+
+    .brand .logo{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      overflow:hidden;
+      background: var(--green-soft);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* 如果你有 logo 文件：images/logo.png 就会自动显示 */
+    .brand .logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:6px;
+    }
+
+    .brand .name{
+      font-weight:800;
+      letter-spacing:0.2px;
+      line-height:1.1;
+    }
+
+    /* 删除“Logo 下面那行小字”，所以这里不再显示 subtitle */
+
+    .menu{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+
     .menu a{
-      font-size:14px;color:var(--muted);
-      padding:8px 10px;border-radius:10px;
+      padding:10px 12px;
+      border-radius:999px;
+      color: var(--muted);
+      font-weight:600;
       transition: all .18s ease;
     }
-    .menu a:hover{color:var(--text);background: rgba(255,255,255,.06)}
-    .cta{display:flex;gap:10px;align-items:center;justify-content:flex-end;min-width:260px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 14px;border-radius:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      color:var(--text);font-weight:700;font-size:14px;
-      box-shadow: 0 10px 22px rgba(0,0,0,.25);
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
-      cursor:pointer;white-space:nowrap;
-    }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(34,197,94,.35)}
-    .btn-green{
-      border-color: rgba(34,197,94,.45);
-      background: linear-gradient(180deg, rgba(34,197,94,.96), rgba(22,163,74,.92));
-      color:#052012;
+    .menu a:hover{
+      background: var(--green-soft);
+      color: var(--text);
+      transform: translateY(-1px);
     }
 
-    /* hero layout */
-    .hero{padding:26px 0 10px}
-    .hero-grid{
+    .cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+      min-width:190px;
+    }
+
+    .btn{
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      transition: all .18s ease;
+      box-shadow: var(--shadow2);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn.primary{
+      background: linear-gradient(135deg, var(--green), var(--green-2));
+      color:#fff;
+      border-color: transparent;
+    }
+
+    /* ===== Layout containers ===== */
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 16px 44px;
+    }
+
+    /* ===== Hero ===== */
+    .hero{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap:16px;
       align-items:stretch;
+      margin-top:10px;
     }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius2);
+
+    .panel{
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(217,241,226,0.95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .panel:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(16, 24, 40, 0.12);
+    }
+
+    .hero-left{
+      padding:22px 22px 20px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background: var(--green-soft);
+      border:1px solid var(--line);
+      color: #0b5130;
+      font-weight:700;
+      font-size:13px;
       box-shadow: var(--shadow2);
     }
-    .hero-left{
-      padding:22px;
-      position:relative;
-      overflow:hidden;
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(24,165,88,0.18);
     }
-    .hero-left:before{
-      content:"";
-      position:absolute;inset:-2px;
-      background:
-        radial-gradient(520px 240px at 20% 20%, rgba(34,197,94,.18), transparent 60%),
-        radial-gradient(520px 240px at 90% 60%, rgba(34,197,94,.10), transparent 62%);
-      pointer-events:none;
-      opacity:.55;
-    }
-    .hero-left > *{position:relative;z-index:1}
-    .kicker{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:7px 10px;
-      border-radius:999px;
-      background: rgba(34,197,94,.10);
-      border:1px solid rgba(34,197,94,.30);
-      color:#dff7ea;
-      font-size:12.5px;font-weight:700;
-    }
-    .dot{width:9px;height:9px;border-radius:999px;background:var(--green); box-shadow:0 0 0 4px rgba(34,197,94,.18)}
-    h2{
+
+    /* 主标题缩小：更适配界面 */
+    h1{
       margin:14px 0 10px;
-      font-size:44px;
-      line-height:1.05;
-      letter-spacing:-.7px;
+      font-size: clamp(26px, 3.3vw, 44px); /* 之前更大，这里下调 */
+      line-height:1.08;
+      letter-spacing:-0.5px;
     }
-    .hero-sub{
+
+    .hero-p{
       margin:0;
-      color:var(--muted);
+      color: var(--muted);
       font-size:15.5px;
-      line-height:1.55;
+      line-height:1.6;
       max-width:58ch;
     }
 
-    /* ✅ Hero 两个按钮删除：这里不放按钮 */
+    /* 删除 Hero 下方的两个按钮：View Products / Get a Quote */
+    .hero-actions{ display:none; }
 
-    /* ✅ SEO pills */
-    .pills{
-      margin-top:16px;
-      display:flex;flex-wrap:wrap;gap:10px;
-    }
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:9px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.22);
-      color:#e9f7ef;
-      font-size:12.5px;
-      font-weight:700;
-      transition: transform .18s ease, border-color .18s ease;
-    }
-    .pill:hover{transform: translateY(-1px); border-color: rgba(34,197,94,.35)}
-    .pill .miniDot{width:7px;height:7px;border-radius:999px;background:var(--green)}
+    /* 删除 Hero 下方 4 个小胶囊：直接不显示 */
+    .chips{ display:none; }
 
-    /* hero slider */
+    /* Right slider */
     .hero-right{
       padding:14px;
-      position:relative;
-      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
     }
+
     .slider{
-      position:relative;
-      height:100%;
-      border-radius:18px;
+      border-radius: var(--radius);
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.12);
-      background:#0c1216;
+      border:1px solid rgba(217,241,226,0.95);
       box-shadow: var(--shadow);
-      min-height: 355px;
+      position:relative;
+      min-height: 310px;
+      background: linear-gradient(180deg, #e9f7ef, #ffffff);
     }
+
+    .slides{
+      display:flex;
+      width:100%;
+      height:100%;
+      transition: transform .45s ease;
+    }
+
     .slide{
-      position:absolute; inset:0;
-      opacity:0;
-      transition: opacity .45s ease;
-      background-size:cover;
-      background-position:center;
-    }
-    .slide.active{opacity:1}
-    .slide::after{
-      content:"";
-      position:absolute; inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.55));
-    }
-    .slide-title{
-      position:absolute; left:14px; top:12px;
-      z-index:2;
-      display:inline-flex;
-      gap:8px; align-items:center;
-      padding:8px 10px;
-      border-radius:999px;
-      background: rgba(0,0,0,.42);
-      border:1px solid rgba(255,255,255,.12);
-      color:#eaf0f3;
-      font-weight:800;
-      font-size:13px;
-      backdrop-filter: blur(6px);
-    }
-    .dots{
-      position:absolute; left:14px; bottom:12px;
-      z-index:3;
-      display:flex; gap:7px;
-      padding:7px 9px;
-      border-radius:999px;
-      background: rgba(0,0,0,.40);
-      border:1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(6px);
-    }
-    .dots button{
-      width:9px;height:9px;border-radius:999px;
-      border:0; cursor:pointer;
-      background: rgba(255,255,255,.35);
-      padding:0;
-    }
-    .dots button.active{background: var(--green)}
-    .cap{
-      position:absolute; right:14px; bottom:12px;
-      z-index:3;
-      padding:8px 10px;
-      border-radius:999px;
-      background: rgba(0,0,0,.40);
-      border:1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(6px);
-      color:#eaf0f3;
-      font-weight:750;
-      font-size:13px;
-      max-width: 65%;
-      text-overflow: ellipsis;
+      min-width:100%;
+      height: 310px;
+      position:relative;
       overflow:hidden;
-      white-space:nowrap;
     }
 
-    /* section */
-    section{padding:22px 0}
-    .section-title{
-      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
-      margin-bottom:12px;
+    /* 你后期换图片：把 images/hero-1.jpg 等文件放到 images 文件夹即可 */
+    .slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.02);
     }
-    .section-title h3{
-      margin:0;
-      font-size:26px;
-      letter-spacing:-.25px;
-    }
-    .section-title p{margin:0;color:var(--muted);font-size:14px}
 
-    /* product cards */
+    /* 右侧轮播图：上面/下面小字全部删掉，所以不做 caption */
+    .caption{ display:none; }
+
+    .dots{
+      position:absolute;
+      left:16px;
+      bottom:14px;
+      display:flex;
+      gap:8px;
+      z-index:3;
+      padding:8px 10px;
+      background: rgba(255,255,255,0.75);
+      border:1px solid rgba(217,241,226,0.95);
+      border-radius:999px;
+      backdrop-filter: blur(8px);
+    }
+
+    .dotbtn{
+      width:10px;height:10px;border-radius:50%;
+      border:0;
+      background: rgba(15,23,42,0.25);
+      cursor:pointer;
+      transition: all .18s ease;
+    }
+    .dotbtn.active{
+      background: var(--green);
+      transform: scale(1.15);
+    }
+
+    /* ===== Section: Categories ===== */
+    .section{
+      margin-top:18px;
+      padding-top:18px;
+    }
+
+    .section h2{
+      margin:0 0 6px;
+      font-size: clamp(20px, 2.4vw, 30px);
+      letter-spacing:-0.2px;
+    }
+
+    .section p.lead{
+      margin:0 0 14px;
+      color: var(--muted);
+      line-height:1.6;
+      font-size:15px;
+    }
+
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
     }
-    .p-card{
-      border-radius: var(--radius2);
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+
+    .card{
+      background: rgba(255,255,255,0.92);
+      border:1px solid rgba(217,241,226,0.95);
+      border-radius: var(--radius);
       box-shadow: var(--shadow2);
-      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      overflow:hidden;
+      position:relative;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .p-card:hover{
-      transform: translateY(-2px);
-      border-color: rgba(34,197,94,.28);
-      box-shadow: 0 20px 42px rgba(0,0,0,.45);
+
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(16,24,40,0.12);
     }
-    .p-img{
-      height:140px;
-      background:
-        radial-gradient(650px 180px at 20% 20%, rgba(34,197,94,.12), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.10));
-      border-bottom:1px solid rgba(255,255,255,.10);
+
+    .card-media{
+      height: 150px;
+      background: linear-gradient(135deg, rgba(24,165,88,0.18), rgba(17,179,106,0.10));
       position:relative;
       overflow:hidden;
     }
-    .p-img .hint{
-      position:absolute; inset:auto 12px 12px 12px;
-      padding:8px 10px;
-      border-radius:12px;
-      background: rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.12);
-      font-size:12.5px; color:#eaf0f3;
-      backdrop-filter: blur(6px);
-    }
-    .p-body{padding:14px}
-    .p-body h4{margin:0 0 6px; font-size:18px; letter-spacing:-.2px}
-    .p-body p{margin:0 0 12px; color:var(--muted); font-size:13.5px; line-height:1.5}
-    .p-actions{display:flex; gap:10px; align-items:center}
-    .p-actions a{
-      flex:0 0 auto;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid rgba(34,197,94,.40);
-      background: linear-gradient(180deg, rgba(34,197,94,.96), rgba(22,163,74,.92));
-      color:#052012;
-      font-weight:800;
-      font-size:13.5px;
-      transition: transform .18s ease;
-    }
-    .p-actions a:hover{transform: translateY(-1px)}
-    /* ✅ 产品卡 WhatsApp 按钮删掉：只保留 View / Order */
 
-    /* footer */
-    footer{padding:22px 0 18px}
+    .card-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0.92;
+      transition: transform .35s ease;
+    }
+
+    .card:hover .card-media img{
+      transform: scale(1.05);
+    }
+
+    .placeholder{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: rgba(15,23,42,0.55);
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:0.2px;
+      padding:12px;
+      text-align:center;
+    }
+
+    .card-body{
+      padding:14px 14px 16px;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background: var(--green-soft);
+      border:1px solid var(--line);
+      color:#0b5130;
+      font-weight:800;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      margin:0 0 6px;
+      font-size:18px;
+      letter-spacing:-0.1px;
+    }
+
+    .card p{
+      margin:0 0 12px;
+      color: var(--muted);
+      line-height:1.55;
+      font-size:14px;
+      min-height: 44px;
+    }
+
+    .card-actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    /* 第二张图：WhatsApp 按钮删除，只保留一个 View / Order */
+    .card-actions .btn{ padding:10px 12px; }
+    .card-actions .btn.secondary{ display:none; }
+
+    /* ===== Footer ===== */
+    footer{
+      margin-top:18px;
+      padding:18px 0 28px;
+    }
+
     .footer-grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:14px;
-      align-items:stretch; /* ✅ equal height */
     }
-    .fbox{
-      border-radius: var(--radius2);
-      border:1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      padding:16px;
+
+    .footer-card{
+      background: rgba(255,255,255,0.92);
+      border:1px solid rgba(217,241,226,0.95);
+      border-radius: var(--radius);
       box-shadow: var(--shadow2);
-      min-height: 170px; /* ✅ enforce equal look */
+      padding:16px 16px 18px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-    }
-    .fbox h5{margin:0 0 10px;font-size:15px;letter-spacing:.2px}
-    .fbox p, .fbox li{
-      margin:0;
-      color:var(--muted);
-      font-size:13.5px;
-      line-height:1.55;
-    }
-    .social{
-      display:flex;gap:10px;margin-top:12px
-    }
-    .icon{
-      width:38px;height:38px;border-radius:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.22);
-      display:grid;place-items:center;
-      transition: transform .18s ease, border-color .18s ease;
-    }
-    .icon:hover{transform: translateY(-1px); border-color: rgba(34,197,94,.35)}
-    .legal{
-      margin-top:12px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      color:rgba(255,255,255,.65);
-      font-size:12.5px;
-      border-top:1px solid rgba(255,255,255,.10);
-      padding-top:12px;
+      min-height: 180px; /* ✅ 让两个信息框高度一致 */
     }
 
-    /* responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .slider{min-height: 280px}
-      h2{font-size:36px}
-      .grid3{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
-      .brand{min-width:auto}
-      .cta{min-width:auto}
+    .footer-card h4{
+      margin:0 0 8px;
+      font-size:16px;
+      letter-spacing:-0.1px;
+    }
+
+    .footer-card p{
+      margin:0;
+      color: var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .social{
+      display:flex;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .iconbtn{
+      width:38px;height:38px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: var(--shadow2);
+      transition: all .18s ease;
+    }
+    .iconbtn:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(24,165,88,0.35);
+    }
+
+    .iconbtn svg{ width:18px;height:18px; fill: rgba(15,23,42,0.65); }
+
+    .copyright{
+      margin-top:14px;
+      color: rgba(71,85,105,0.9);
+      font-size:13px;
+      text-align:center;
+    }
+
+    /* 删除右下角 Contact • Products 小字：不再输出该元素 */
+    .corner-links{ display:none; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 960px){
+      .hero{ grid-template-columns: 1fr; }
+      .slider{ min-height: 260px; }
+      .slide{ height:260px; }
+      .grid3{ grid-template-columns: 1fr; }
+      .footer-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width:auto; }
+      .cta{ min-width:auto; }
+      .menu{ display:none; } /* 小屏先简化，后续可做汉堡菜单 */
     }
   </style>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="nav">
-        <div class="brand">
-          <div class="logo">
-            <!-- Put your logo at: images/logo.png -->
-            <img src="images/logo.png" alt="Luyu Electric Vehicles Logo" onerror="this.style.display='none';">
-          </div>
-          <div class="name">
-            <h1>Luyu Electric Vehicles</h1>
-          </div>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="navwrap">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-label="Luyu logo">
+          <!-- 如果你有 logo：把图片放到 images/logo.png -->
+          <img src="images/logo.png" alt="Luyu Electric Vehicles Logo" onerror="this.style.display='none'; this.parentElement.textContent='LV'; this.parentElement.style.fontWeight='900'; this.parentElement.style.color='#0b5130';" />
         </div>
+        <div class="name">Luyu Electric Vehicles</div>
+      </a>
 
-        <nav class="menu" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="products.html">Products</a>
-          <a href="oem.html">OEM &amp; Custom</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+      <nav class="menu" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="oem.html">OEM & Custom</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-        <div class="cta">
-          <!-- Keep ONE WhatsApp button in header (professional, simple) -->
-          <a class="btn btn-green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-  </header>
+  </div>
 
   <main class="container">
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero" id="home">
-      <div class="hero-grid">
-        <div class="card hero-left">
-          <div class="kicker"><span class="dot"></span> EV carts • OEM/CKD available • Export-ready</div>
+      <div class="panel hero-left">
+        <div class="badge"><span class="dot"></span> EV carts • Export-ready manufacturing</div>
 
-          <!-- ✅ Title changed -->
-          <h2>EV Cart Manufacturer • 10-Year Factory, Worldwide Export</h2>
+        <h1>EV Cart Manufacturer • 10-Year Factory, Worldwide Export</h1>
 
-          <p class="hero-sub">
-            We build <strong>EV golf carts</strong>, <strong>utility vehicles (UTV)</strong>, <strong>electric mini buses</strong>, and <strong>petrol carts</strong>.<br>
-            Export-ready production with strong factory capability and stable quality control.<br>
-            Experienced in worldwide shipping, documentation, and container loading support.
-          </p>
+        <p class="hero-p">
+          We build <strong>EV golf carts</strong>, <strong>utility vehicles (UTV)</strong>, <strong>electric mini buses</strong>, and <strong>petrol carts</strong>.<br />
+          Export-ready production with strong factory capability and stable quality control.<br />
+          Experienced in worldwide shipping, documentation, and container loading support.
+        </p>
 
-          <!-- ✅ Hero buttons removed -->
+        <!-- 你要求：两个按钮删掉 -->
+        <div class="hero-actions" aria-hidden="true"></div>
 
-          <!-- ✅ SEO keyword pills (text is crawlable) -->
-          <div class="pills" aria-label="SEO keyword highlights">
-            <div class="pill"><span class="miniDot"></span> EV Golf Cart Manufacturer</div>
-            <div class="pill"><span class="miniDot"></span> Utility Vehicle (UTV) Factory</div>
-            <div class="pill"><span class="miniDot"></span> Electric Mini Bus Export</div>
-            <div class="pill"><span class="miniDot"></span> OEM/CKD Assembly Support</div>
+        <!-- 你要求：4个悬浮胶囊删掉 -->
+        <div class="chips" aria-hidden="true"></div>
+      </div>
+
+      <div class="panel hero-right">
+        <div class="slider" aria-label="Hero image slider">
+          <div class="slides" id="slides">
+            <!-- 你后期把图片放到 images/hero-1.jpg / hero-2.jpg / hero-3.jpg / hero-4.jpg -->
+            <div class="slide">
+              <img src="images/hero-1.jpg" alt="EV golf carts production line"
+                   onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your Hero image (hero-1.jpg)</div>';">
+            </div>
+            <div class="slide">
+              <img src="images/hero-2.jpg" alt="Factory inspection and container loading"
+                   onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your Hero image (hero-2.jpg)</div>';">
+            </div>
+            <div class="slide">
+              <img src="images/hero-3.jpg" alt="Finished electric carts ready for export"
+                   onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your Hero image (hero-3.jpg)</div>';">
+            </div>
+            <div class="slide">
+              <img src="images/hero-4.jpg" alt="Mini bus and commercial transport solutions"
+                   onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your Hero image (hero-4.jpg)</div>';">
+            </div>
           </div>
-        </div>
 
-        <div class="card hero-right">
-          <div class="slider" aria-label="Factory / product photo slider">
-            <!-- Replace these images later: images/hero1.jpg, hero2.jpg, hero3.jpg, hero4.jpg -->
-            <div class="slide active" data-caption="Electric golf carts production line"
-                 style="background-image:url('images/hero1.jpg')">
-              <div class="slide-title"><span class="dot"></span> Factory &amp; Production</div>
-            </div>
-
-            <div class="slide" data-caption="Quality inspection and export packing"
-                 style="background-image:url('images/hero2.jpg')">
-              <div class="slide-title"><span class="dot"></span> QC &amp; Inspection</div>
-            </div>
-
-            <div class="slide" data-caption="Container loading and worldwide shipping"
-                 style="background-image:url('images/hero3.jpg')">
-              <div class="slide-title"><span class="dot"></span> Export Ready</div>
-            </div>
-
-            <div class="slide" data-caption="OEM/CKD customization and branding"
-                 style="background-image:url('images/hero4.jpg')">
-              <div class="slide-title"><span class="dot"></span> OEM / Custom</div>
-            </div>
-
-            <div class="dots" role="tablist" aria-label="Slider controls">
-              <button class="active" aria-label="Slide 1"></button>
-              <button aria-label="Slide 2"></button>
-              <button aria-label="Slide 3"></button>
-              <button aria-label="Slide 4"></button>
-            </div>
-
-            <div class="cap" id="cap">Electric golf carts production line</div>
+          <div class="dots" role="tablist" aria-label="Slider dots">
+            <button class="dotbtn active" aria-label="Slide 1" onclick="goSlide(0)"></button>
+            <button class="dotbtn" aria-label="Slide 2" onclick="goSlide(1)"></button>
+            <button class="dotbtn" aria-label="Slide 3" onclick="goSlide(2)"></button>
+            <button class="dotbtn" aria-label="Slide 4" onclick="goSlide(3)"></button>
           </div>
+
+          <!-- 你要求：上/下小字都删掉，所以没有 caption -->
         </div>
       </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section id="products">
-      <div class="section-title">
-        <div>
-          <h3>Our Product Categories</h3>
-          <p>Choose a category to open its dedicated page (no mixed categories).</p>
-        </div>
-      </div>
+    <!-- Product Categories -->
+    <section class="section" id="products">
+      <h2>Our Product Categories</h2>
+      <p class="lead">Choose a category to open its dedicated page (no mixed categories).</p>
 
       <div class="grid3">
-        <article class="p-card">
-          <div class="p-img">
-            <div class="hint">Replace with your Golf Cart photo</div>
+        <!-- Golf Carts -->
+        <article class="card">
+          <div class="card-media">
+            <img src="images/cat-golf.jpg" alt="Electric Golf Carts"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your Golf Cart photo</div>';">
           </div>
-          <div class="p-body">
-            <h4>Electric Golf Carts</h4>
-            <p>Quiet, reliable carts for golf courses, resorts, and communities. OEM/CKD supported.</p>
-            <div class="p-actions">
-              <a href="golf-carts.html">View / Order</a>
+          <div class="card-body">
+            <span class="tag">Golf Carts</span>
+            <h3>Electric Golf Carts</h3>
+            <p>Quiet, reliable carts for golf courses, resorts, and communities. Export-ready support.</p>
+            <div class="card-actions">
+              <!-- ✅ 你要求：View/Order 需要跳 products 页面 -->
+              <a class="btn primary" href="products.html">View / Order</a>
+              <a class="btn secondary" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
         </article>
 
-        <article class="p-card">
-          <div class="p-img">
-            <div class="hint">Replace with your UTV photo</div>
+        <!-- UTV -->
+        <article class="card">
+          <div class="card-media">
+            <img src="images/cat-utv.jpg" alt="Utility Vehicles (UTV)"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your UTV photo</div>';">
           </div>
-          <div class="p-body">
-            <h4>Utility Vehicles (UTV)</h4>
+          <div class="card-body">
+            <span class="tag">Utility / UTV</span>
+            <h3>Utility Vehicles (UTV)</h3>
             <p>Work-ready electric utility vehicles for maintenance, cargo transport, and industrial parks.</p>
-            <div class="p-actions">
-              <a href="utv.html">View / Order</a>
+            <div class="card-actions">
+              <a class="btn primary" href="products.html">View / Order</a>
+              <a class="btn secondary" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
         </article>
 
-        <article class="p-card">
-          <div class="p-img">
-            <div class="hint">Replace with your Mini Bus photo</div>
+        <!-- Mini Bus -->
+        <article class="card">
+          <div class="card-media">
+            <img src="images/cat-bus.jpg" alt="Electric Mini Buses"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>Replace with your Mini Bus photo</div>';">
           </div>
-          <div class="p-body">
-            <h4>Electric Mini Buses</h4>
+          <div class="card-body">
+            <span class="tag">Mini Bus</span>
+            <h3>Electric Mini Buses</h3>
             <p>Shuttle solutions for hotels, campuses, tourist attractions, and internal transport routes.</p>
-            <div class="p-actions">
-              <a href="mini-buses.html">View / Order</a>
+            <div class="card-actions">
+              <a class="btn primary" href="products.html">View / Order</a>
+              <a class="btn secondary" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- FOOTER BOXES -->
-    <footer id="contact">
+    <!-- Footer -->
+    <footer>
       <div class="footer-grid">
-        <div class="fbox">
+        <div class="footer-card">
           <div>
-            <h5>Luyu Electric Vehicles</h5>
+            <h4>Luyu Electric Vehicles</h4>
             <p>
               Manufacturer of EV golf carts, utility vehicles (UTV), electric mini buses, and petrol carts.
-              Export-ready production with OEM/CKD support and stable quality control.
+              Export-ready production with stable quality control.
             </p>
 
             <div class="social" aria-label="Social links">
-              <!-- Replace # with your real links later -->
-              <a class="icon" href="#" aria-label="Facebook" title="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-3c0-.6.4-1 1-1Z" fill="currentColor"/></svg>
+              <!-- 你后期把链接换成真实的 -->
+              <a class="iconbtn" href="#" aria-label="Facebook" title="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.7V5c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V11H7v3h2.9v8h3.6z"/></svg>
               </a>
-              <a class="icon" href="#" aria-label="LinkedIn" title="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6.5A1.5 1.5 0 1 1 6 3.5a1.5 1.5 0 0 1 0 3Z" fill="currentColor"/><path d="M5 8h2v13H5V8Z" fill="currentColor"/><path d="M10 8h2v2c.6-1.1 1.8-2.2 3.8-2.2 2.7 0 4.2 1.8 4.2 5V21h-2v-7.6c0-2.3-.8-3.5-2.6-3.5-1.9 0-3.4 1.3-3.4 4V21h-2V8Z" fill="currentColor"/></svg>
+              <a class="iconbtn" href="#" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M6.94 6.5A2.2 2.2 0 1 1 6.94 2.1a2.2 2.2 0 0 1 0 4.4zM4.9 21.9V8.3h4.1v13.6H4.9zM13 8.3v1.9h.1c.6-1.1 2-2.3 4.1-2.3 4.4 0 5.2 2.9 5.2 6.6v7.4h-4.1v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.7H9.5V8.3H13z"/></svg>
               </a>
-              <a class="icon" href="#" aria-label="YouTube" title="YouTube">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 8.2a3 3 0 0 0-2.1-2.1C17 5.5 12 5.5 12 5.5s-5 0-6.9.6A3 3 0 0 0 3 8.2 31 31 0 0 0 2.5 12c0 1.3.2 2.6.5 3.8a3 3 0 0 0 2.1 2.1c1.9.6 6.9.6 6.9.6s5 0 6.9-.6a3 3 0 0 0 2.1-2.1c.3-1.2.5-2.5.5-3.8 0-1.3-.2-2.6-.5-3.8ZM10.5 15.2V8.8L16 12l-5.5 3.2Z" fill="currentColor"/></svg>
+              <a class="iconbtn" href="#" aria-label="YouTube" title="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5A3 3 0 0 0 2.4 7.2 31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8zM10.2 15.2V8.8L15.8 12l-5.6 3.2z"/></svg>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="fbox">
+        <div class="footer-card">
           <div>
-            <h5>Contact</h5>
-            <p><strong>Email:</strong> carol@luyuecart.com</p>
-            <p><strong>WhatsApp:</strong> +86 132 9281 2529</p>
-            <p style="margin-top:10px"><strong>Address:</strong><br>
-              Shijiazhuang, Hebei, China<br>
+            <h4>Contact</h4>
+            <p><strong>Email:</strong> <a href="mailto:carol@luyuecart.com">carol@luyuecart.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a></p>
+            <p style="margin-top:8px;">
+              <strong>Address:</strong><br>
+              SHIJIAZHUANG, HEBEI, CHINA<br>
               DO209, 1ST FLOOR, ZHONGCHU PLAZA,<br>
               NO.198, ZHONGHUA NORTH STREET,<br>
               DONGJIAO SUB-DISTRICT, XINHUA DISTRICT
             </p>
           </div>
+
           <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn btn-green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">Get a Quote (WhatsApp)</a>
+            <a class="btn primary" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp Quote</a>
             <a class="btn" href="products.html">Browse Products</a>
           </div>
         </div>
       </div>
 
-      <div class="legal">
-        <div>© 2026 Luyu Electric Vehicles. All rights reserved.</div>
-        <div><a href="contact.html">Contact</a> · <a href="products.html">Products</a></div>
-      </div>
+      <div class="copyright">© 2026 Luyu Electric Vehicles. All rights reserved.</div>
+      <!-- 右下角 Contact • Products 小字：已删除 -->
     </footer>
   </main>
 
   <script>
-    // Simple slider (no libraries)
-    (function(){
-      const slides = Array.from(document.querySelectorAll('.slide'));
-      const dots = Array.from(document.querySelectorAll('.dots button'));
-      const cap = document.getElementById('cap');
-      let i = 0;
-      let timer = null;
+    // ===== Hero slider (simple, lightweight) =====
+    const slidesEl = document.getElementById('slides');
+    const dots = Array.from(document.querySelectorAll('.dotbtn'));
+    let idx = 0;
+    let timer = null;
 
-      function show(idx){
-        i = idx;
-        slides.forEach((s, k) => s.classList.toggle('active', k === i));
-        dots.forEach((d, k) => d.classList.toggle('active', k === i));
-        cap.textContent = slides[i].dataset.caption || '';
-      }
+    function setActiveDot(n){
+      dots.forEach((d,i)=> d.classList.toggle('active', i===n));
+    }
 
-      function next(){ show((i + 1) % slides.length); }
-
-      dots.forEach((btn, idx) => {
-        btn.addEventListener('click', () => {
-          show(idx);
-          restart();
-        });
-      });
-
-      function restart(){
-        if(timer) clearInterval(timer);
-        timer = setInterval(next, 4500);
-      }
-
-      show(0);
+    function goSlide(n){
+      idx = (n + 4) % 4;
+      slidesEl.style.transform = `translateX(${-idx * 100}%)`;
+      setActiveDot(idx);
       restart();
-    })();
+    }
+
+    function next(){
+      goSlide(idx + 1);
+    }
+
+    function restart(){
+      clearInterval(timer);
+      timer = setInterval(next, 4200);
+    }
+
+    restart();
+    window.goSlide = goSlide;
   </script>
 </body>
 </html>
