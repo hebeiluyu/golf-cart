@@ -1,1 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Luyu Electric Vehicles | WhatsApp & Inquiry Form</title>
+  <meta name="description" content="Contact Luyu Electric Vehicles for EV golf carts, electric mini buses and utility vehicles (UTV). WhatsApp contacts, inquiry form, and factory address in Shijiazhuang, Hebei, China." />
+  <link rel="canonical" href="https://luyuevcart.com/contact.html" />
 
+  <style>
+    :root{
+      --bg:#f6fbf7;
+      --panel:#ffffff;
+      --panel2:#f0faf3;
+      --line:#d9efe0;
+      --text:#0f172a;
+      --muted:#475569;
+
+      --green:#16a34a;
+      --green2:#22c55e;
+      --greenSoft:#e7f7ec;
+
+      --shadow: 0 14px 35px rgba(15, 23, 42, .08);
+      --shadow2: 0 10px 22px rgba(2, 6, 23, .08);
+
+      --radius:18px;
+      --radius2:24px;
+      --max:1120px;
+      --speed:280ms;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% 0%, #e7f7ec 0%, var(--bg) 55%, #ffffff 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(246, 251, 247, .78);
+      border-bottom: 1px solid rgba(217, 239, 224, .8);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 12px 0;
+      gap: 10px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width:240px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, #dff6e7 0%, #bdf0cf 55%, #9be7b7 100%);
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      box-shadow: 0 8px 18px rgba(22, 163, 74, .12);
+      font-weight:800; color:#0b3a1a;
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:contain;padding:6px;display:block}
+    .brand strong{display:block;font-size:14px;letter-spacing:.2px}
+
+    .menu{
+      display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;
+    }
+    .menu a{
+      padding:10px 12px;border-radius:12px;
+      color:#0f172a;
+      border:1px solid transparent;
+      transition: background var(--speed), border var(--speed), transform var(--speed);
+      font-weight:600;font-size:14px;
+    }
+    .menu a:hover{background:#ffffff;border-color:var(--line);transform: translateY(-1px)}
+    .menu a.active{background:#ffffff;border-color:var(--line);box-shadow: 0 10px 18px rgba(2,6,23,.06)}
+
+    .btn{
+      border:none;cursor:pointer;
+      padding:10px 14px;border-radius:999px;
+      font-weight:800;font-size:14px;
+      transition: transform var(--speed), box-shadow var(--speed), background var(--speed);
+      display:inline-flex;align-items:center;gap:8px;
+      white-space:nowrap;
+    }
+    .btn-green{
+      background: linear-gradient(135deg, var(--green) 0%, var(--green2) 100%);
+      color:#fff;
+      box-shadow: 0 12px 22px rgba(34,197,94,.18);
+    }
+    .btn-green:hover{transform: translateY(-1px); box-shadow: 0 16px 28px rgba(34,197,94,.22)}
+    .btn-ghost{
+      background:#ffffff;border:1px solid var(--line);color:#0f172a;
+      box-shadow: 0 10px 18px rgba(2,6,23,.06);
+    }
+    .btn-ghost:hover{transform: translateY(-1px)}
+
+    /* Layout */
+    .hero{padding:26px 0 14px}
+    h1{
+      margin:0 0 8px;
+      font-size:32px;
+      letter-spacing:-.4px;
+      line-height:1.15;
+    }
+    .lead{margin:0;color:var(--muted);font-size:15px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:14px;
+      align-items:stretch;
+      padding: 10px 0 18px;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+    }
+    .pad{padding:16px}
+
+    .kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      background:var(--panel2);border:1px solid var(--line);
+      font-weight:800;font-size:13px;color:#0b3a1a;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;background:var(--green);
+      box-shadow:0 0 0 4px rgba(34,197,94,.16);
+    }
+
+    /* Contact cards */
+    .contactCards{
+      display:grid;
+      gap:12px;
+      margin-top:12px;
+    }
+    .mini{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background: linear-gradient(180deg, #ffffff, rgba(240,250,243,.75));
+      box-shadow: 0 10px 18px rgba(2,6,23,.05);
+      padding:14px;
+    }
+    .mini h2{
+      margin:0 0 6px;
+      font-size:16px;
+      letter-spacing:-.1px;
+    }
+    .mini p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+      font-weight:650;
+    }
+    .mini .row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#ffffff;border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 10px;
+      font-weight:800;
+      font-size:13px;
+      box-shadow:0 10px 18px rgba(2,6,23,.05);
+    }
+    .tag b{font-weight:900}
+    .mutedSmall{color:#64748b;font-size:12.5px;font-weight:700;margin-top:8px}
+
+    /* Form */
+    .formGrid{
+      display:grid;
+      gap:10px;
+      margin-top:12px;
+    }
+    label{
+      display:block;
+      font-weight:800;
+      font-size:13px;
+      color:#0f172a;
+      margin-bottom:6px;
+    }
+    input, select, textarea{
+      width:100%;
+      font: inherit;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#ffffff;
+      outline:none;
+      box-shadow:0 8px 16px rgba(2,6,23,.04);
+      transition:border var(--speed), box-shadow var(--speed);
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(34,197,94,.55);
+      box-shadow: 0 12px 22px rgba(34,197,94,.12);
+    }
+    textarea{min-height:120px; resize:vertical}
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .formActions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+      align-items:center;
+      justify-content:flex-start;
+    }
+    .note{
+      font-size:13px;
+      color:#64748b;
+      font-weight:700;
+      margin-top:10px;
+    }
+
+    /* Map */
+    .mapWrap{
+      margin-top:14px;
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .mapWrap iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      display:block;
+    }
+
+    /* Footer */
+    footer{
+      padding: 16px 0 28px;
+      border-top:1px solid rgba(217,239,224,.8);
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(10px);
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .footCard{
+      background:#ffffff;
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow2);
+      padding:16px;
+      min-height:170px;
+    }
+    .footCard h3{margin:0 0 8px;font-size:14.5px}
+    .footCard p{margin:0;color:var(--muted);font-weight:650;line-height:1.55;font-size:13.5px}
+    .copy{
+      margin-top:10px;
+      color:#64748b;
+      font-size:13px;
+      text-align:center;
+      font-weight:700;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+      .footGrid{grid-template-columns:1fr}
+      h1{font-size:28px}
+      .brand{min-width:auto}
+    }
+  </style>
+
+  <!-- Basic structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Luyu Electric Vehicles",
+    "url":"https://luyuevcart.com/",
+    "email":"carol@luyuevcart.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"DO209, 1ST FLOOR, ZHONGCHU PLAZA, NO.198, ZHONGHUA NORTH STREET, DONGJIAO SUB-DISTRICT, XINHUA DISTRICT",
+      "addressLocality":"SHIJIAZHUANG",
+      "addressRegion":"HEBEI",
+      "addressCountry":"CN"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="index.html" aria-label="Luyu Electric Vehicles">
+          <div class="logo">
+            <img src="images/logo.png" alt="Luyu logo" onerror="this.style.display='none'; this.parentElement.textContent='LV';" />
+          </div>
+          <strong>Luyu Electric Vehicles</strong>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="oem.html">OEM &amp; Custom</a>
+          <a href="about.html">About Us</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+
+        <a class="btn btn-green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p class="lead">
+        Contact Luyu Electric Vehicles for EV golf carts, electric mini buses and UTV. You can message us on WhatsApp, send email, or use the inquiry form.
+      </p>
+    </section>
+
+    <section class="grid">
+      <!-- Left: contacts -->
+      <div class="card pad">
+        <div class="kicker"><span class="dot"></span> WhatsApp & Email</div>
+
+        <div class="contactCards">
+          <!-- Carol -->
+          <div class="mini">
+            <h2>Carol (Sales Manager)</h2>
+            <p>
+              WhatsApp: <a href="https://wa.me/8613485306254" target="_blank" rel="noopener"><b>+86 134 8530 6254</b></a><br>
+              Email: <a href="mailto:carol@luyuevcart.com"><b>carol@luyuevcart.com</b></a>
+            </p>
+            <div class="row">
+              <a class="btn btn-green" href="https://wa.me/8613485306254" target="_blank" rel="noopener">Chat with Carol</a>
+              <a class="btn btn-ghost" href="mailto:carol@luyuevcart.com">Send Email</a>
+            </div>
+            <div class="mutedSmall">Best for: quotation, model recommendation, OEM discussion, shipping coordination.</div>
+          </div>
+
+          <!-- General -->
+          <div class="mini">
+            <h2>General WhatsApp</h2>
+            <p>
+              WhatsApp: <a href="https://wa.me/8613292812529" target="_blank" rel="noopener"><b>+86 132 9281 2529</b></a>
+            </p>
+            <div class="row">
+              <a class="btn btn-green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+            <div class="mutedSmall">Best for: quick inquiry, after-sales contact, general questions.</div>
+          </div>
+
+          <!-- Address -->
+          <div class="mini">
+            <h2>Factory / Office Address</h2>
+            <p style="text-transform: uppercase;">
+              DO209, 1ST FLOOR, ZHONGCHU PLAZA,<br>
+              NO.198, ZHONGHUA NORTH STREET,<br>
+              DONGJIAO SUB-DISTRICT, XINHUA DISTRICT,<br>
+              SHIJIAZHUANG, HEBEI, CHINA
+            </p>
+
+            <div class="row">
+              <span class="tag"><b>Timezone:</b> GMT+8</span>
+              <span class="tag"><b>Business:</b> Mon–Sat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="card pad">
+        <div class="kicker"><span class="dot"></span> Inquiry Form</div>
+
+        <form id="inquiryForm" class="formGrid" onsubmit="return sendInquiry(event)">
+          <div class="two">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Your email" required />
+            </div>
+          </div>
+
+          <div class="two">
+            <div>
+              <label for="country">Country</label>
+              <input id="country" name="country" placeholder="Your country" />
+            </div>
+            <div>
+              <label for="interest">Product of Interest</label>
+              <select id="interest" name="interest">
+                <option value="EV Golf Carts">EV Golf Carts</option>
+                <option value="Electric Mini Buses">Electric Mini Buses</option>
+                <option value="Utility Vehicles (UTV)">Utility Vehicles (UTV)</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us seat capacity, quantity, battery preference, destination port, and any OEM requirements." required></textarea>
+          </div>
+
+          <div class="formActions">
+            <button class="btn btn-green" type="submit">Send Inquiry (WhatsApp)</button>
+            <a class="btn btn-ghost" href="mailto:carol@luyuevcart.com?subject=Inquiry%20from%20Website">Send by Email</a>
+          </div>
+
+          <div class="note">
+            We reply within <b>24 hours</b> (business days). For urgent requests, please contact us on WhatsApp.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="mapWrap" aria-label="Map">
+      <!-- Google Maps embed (generic Shijiazhuang location) -->
+      <iframe
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Shijiazhuang%20Hebei%20China&output=embed"
+        title="Map - Shijiazhuang, Hebei, China"></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footGrid">
+        <div class="footCard">
+          <h3>Luyu Electric Vehicles</h3>
+          <p>
+            EV golf carts, utility vehicles (UTV), and electric mini buses. OEM/CKD support, export-ready packing and stable quality control.
+          </p>
+        </div>
+
+        <div class="footCard">
+          <h3>Quick Contact</h3>
+          <p style="text-transform: uppercase;">
+            EMAIL: <a href="mailto:carol@luyuevcart.com">CAROL@LUYUEVCART.COM</a><br>
+            WHATSAPP (CAROL): <a href="https://wa.me/8613485306254" target="_blank" rel="noopener">+86 134 8530 6254</a><br>
+            WHATSAPP (GENERAL): <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="copy">© 2026 Luyu Electric Vehicles. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Send inquiry to WhatsApp with user's form content
+    function sendInquiry(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const interest = document.getElementById('interest').value;
+      const message = document.getElementById('message').value.trim();
+
+      const text =
+        `Hello, I want to send an inquiry.%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Email: ${encodeURIComponent(email)}%0A` +
+        `Country: ${encodeURIComponent(country)}%0A` +
+        `Product: ${encodeURIComponent(interest)}%0A` +
+        `Message: ${encodeURIComponent(message)}%0A`;
+
+      // Default: send to Carol (Sales Manager)
+      const url = `https://wa.me/8613485306254?text=${text}`;
+      window.open(url, "_blank");
+      return false;
+    }
+  </script>
+</body>
+</html>
