@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>产品 | Luyu Electric Vehicles</title>
-  <meta name="description" content="电动高尔夫球车、电动迷你巴士、公用车辆UTV。支持OEM/CKD，出口经验丰富，工厂直供，支持定制与快速报价。" />
+  <title>Products | Luyu Electric Vehicles</title>
+  <meta name="description" content="Electric golf carts, electric mini buses, and utility vehicles (UTV). OEM/CKD support, export-ready manufacturing, factory direct supply, customization and fast quotation." />
   <link rel="canonical" href="https://luyuevcart.com/products.html" />
 
   <style>
@@ -19,24 +19,27 @@
       --greenSoft:#e9f7ef;
       --shadow: 0 10px 30px rgba(12, 34, 22, .08);
       --radius:18px;
-      --radius2:14px;
     }
 
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC","Microsoft Yahei", sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background: linear-gradient(180deg, #eef9f1 0%, var(--bg) 40%, #ffffff 100%);
       color:var(--text);
     }
-
-    /* ✅ 关键：弹窗打开时锁定背景滚动 */
-    body.modal-open{ overflow:hidden; }
-
     a{ color:inherit; text-decoration:none; }
+
+    /* ✅ lock background when modal open */
+    body.modal-open{
+      overflow:hidden;
+      height:100%;
+      touch-action:none;
+    }
+
     .container{ width:min(1160px, 92vw); margin:0 auto; }
 
-    /* Header (跟你现在首页风格一致：浅色+绿点缀) */
+    /* Header */
     .topbar{
       position:sticky; top:0; z-index:20;
       background: rgba(255,255,255,.78);
@@ -68,9 +71,7 @@
     .menu a{ padding:8px 10px; border-radius:10px; }
     .menu a:hover{ background: var(--greenSoft); color:#0d2b1c; }
 
-    .cta{
-      display:flex; gap:10px; align-items:center;
-    }
+    .cta{ display:flex; gap:10px; align-items:center; }
     .btn{
       border:1px solid var(--line);
       background:#fff;
@@ -87,28 +88,21 @@
       background: linear-gradient(180deg, #22c978 0%, var(--green2) 100%);
       border:0; color:#fff;
     }
+    .btn.small{ padding:9px 12px; border-radius:12px; font-weight:900; }
 
     /* Page head */
-    .hero{
-      padding:26px 0 12px;
-    }
+    .hero{ padding:26px 0 12px; }
     .hero h1{
       margin:0 0 8px;
       font-size: clamp(24px, 3.2vw, 34px);
       letter-spacing:.2px;
     }
-    .hero p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.6;
-    }
+    .hero p{ margin:0; color:var(--muted); line-height:1.6; }
 
-    /* Top category tabs */
+    /* Tabs */
     .tabs{
       margin:18px 0 18px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
+      display:flex; gap:10px; flex-wrap:wrap;
     }
     .tab{
       padding:10px 14px;
@@ -128,19 +122,14 @@
       border-color: transparent;
     }
 
-    /* Sections */
-    section{
-      scroll-margin-top:90px;
-      padding:18px 0 8px;
-    }
+    section{ scroll-margin-top:90px; padding:18px 0 8px; }
     .sectionHead{
       display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
       margin:8px 0 14px;
     }
     .sectionHead h2{ margin:0; font-size:22px; }
-    .sectionHead small{ color:var(--muted); }
+    /* ✅ remove right-side texts by not using them */
 
-    /* Cards grid */
     .grid{
       display:grid;
       grid-template-columns: repeat(12, 1fr);
@@ -155,7 +144,6 @@
       box-shadow: var(--shadow);
       overflow:hidden;
       transition:.18s transform, .18s box-shadow;
-      position:relative;
     }
     .card:hover{ transform: translateY(-2px); box-shadow: 0 16px 38px rgba(12,34,22,.12); }
     .cardMedia{
@@ -164,8 +152,7 @@
         linear-gradient(120deg, rgba(27,179,107,.18), rgba(255,255,255,.0)),
         linear-gradient(180deg, #eaf7ef, #ffffff);
       display:flex; align-items:center; justify-content:center;
-      color:#2b5a41;
-      font-weight:800;
+      color:#2b5a41; font-weight:800;
     }
     .cardBody{ padding:14px; }
     .badge{
@@ -183,27 +170,13 @@
       background: var(--green);
       box-shadow: 0 0 0 4px rgba(27,179,107,.18);
     }
-    .cardTitle{
-      margin:10px 0 6px;
-      font-size:18px;
-      font-weight:900;
-    }
-    .cardDesc{
-      margin:0 0 12px;
-      color:var(--muted);
-      line-height:1.55;
-      min-height:46px;
-    }
-    .cardActions{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .btn.small{ padding:9px 12px; border-radius:12px; font-weight:900; }
+    .cardTitle{ margin:10px 0 6px; font-size:18px; font-weight:900; }
+    .cardDesc{ margin:0 0 12px; color:var(--muted); line-height:1.55; min-height:46px; }
+    .cardActions{ display:flex; gap:10px; flex-wrap:wrap; }
 
-    /* UTV gallery */
     .utvGrid .card{ grid-column: span 4; }
     .utvGrid .cardMedia{ height:140px; }
 
-    /* Footer */
     .footer{
       margin-top:22px;
       padding:18px 0 28px;
@@ -220,10 +193,15 @@
       z-index:100;
       padding:18px;
     }
-    .modalOverlay.open{ display:flex; align-items:center; justify-content:center; }
+    .modalOverlay.open{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
     .modal{
       width:min(1100px, 96vw);
-      max-height: min(84vh, 760px);
+      height: min(84vh, 760px);          /* ✅ fixed height so right side can scroll */
       background: #f7fbf8;
       border:1px solid rgba(255,255,255,.55);
       border-radius: 22px;
@@ -232,22 +210,18 @@
       display:grid;
       grid-template-columns: 360px 1fr;
     }
+
     .modalLeft{
-      background: #ffffff;
+      background:#ffffff;
       border-right:1px solid var(--line);
       padding:16px;
       display:flex;
       flex-direction:column;
       gap:12px;
+      min-height:0;
     }
-    .modalTitleRow{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-    }
-    .modalTitle{
-      font-weight:1000;
-      font-size:18px;
-      margin:0;
-    }
+    .modalTitleRow{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .modalTitle{ font-weight:1000; font-size:18px; margin:0; }
     .closeBtn{
       border:1px solid var(--line);
       background:#fff;
@@ -262,23 +236,18 @@
       border-radius:16px;
       padding:12px;
     }
-    .panel h4{
-      margin:0 0 6px;
-      font-size:13px;
-      color:#0f3b25;
-    }
-    .panel .big{
-      font-size:26px;
-      font-weight:1000;
-      color:#0e2a1c;
-    }
+    .panel h4{ margin:0 0 6px; font-size:13px; color:#0f3b25; }
+    .panel .big{ font-size:26px; font-weight:1000; color:#0e2a1c; }
     .muted{ color:var(--muted); font-size:13px; line-height:1.45; }
 
-    /* ✅ 右侧滚动区域：必须 overflow auto */
+    /* ✅ key: this area scrolls */
     .modalRight{
+      min-height:0;                        /* ✅ required for grid children scroll */
+      overflow:auto;                       /* ✅ scroll inside modal */
+      -webkit-overflow-scrolling: touch;   /* ✅ smooth on iOS */
       padding:16px;
-      overflow:auto;
       background: linear-gradient(180deg, #f6fbf7 0%, #ffffff 55%);
+      overscroll-behavior: contain;        /* ✅ prevent scroll chaining to page */
     }
 
     .group{
@@ -289,13 +258,14 @@
       overflow:hidden;
     }
     .groupHead{
-      padding:12px 12px;
+      padding:12px;
       display:flex; align-items:center; justify-content:space-between; gap:12px;
-      background: #f3faf6;
+      background:#f3faf6;
       border-bottom:1px solid var(--line);
     }
     .groupHead strong{ font-size:14px; }
     .hint{ font-size:12px; color:var(--muted); }
+
     .options{
       padding:10px 12px 12px;
       display:flex; flex-direction:column; gap:10px;
@@ -341,7 +311,6 @@
       border-radius:50%;
     }
 
-    /* bottom bar inside modal */
     .modalBottom{
       position:sticky;
       bottom:0;
@@ -356,15 +325,9 @@
       border-radius: 0 0 16px 16px;
       margin-top:14px;
     }
-    .totalLine{
-      font-weight:1000;
-      color:#0e2a1c;
-    }
-    .bottomBtns{
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-    }
+    .totalLine{ font-weight:1000; color:#0e2a1c; }
+    .bottomBtns{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
 
-    /* Responsive */
     @media (max-width: 920px){
       .card{ grid-column: span 12; }
       .utvGrid .card{ grid-column: span 12; }
@@ -394,7 +357,7 @@
 
         <div class="cta">
           <a class="btn primary" target="_blank" rel="noopener"
-             href="https://wa.me/8613292812529?text=Hello%20Luyu%2C%20I%20would%20like%20a%20quote%20for%20EV%20carts.">
+             href="https://wa.me/8613292812529?text=Hello%20Luyu%2C%20I%20would%20like%20a%20quote%20for%20EV%20vehicles.">
             WhatsApp
           </a>
         </div>
@@ -405,69 +368,68 @@
   <!-- Page -->
   <div class="container">
     <div class="hero">
-      <h1>产品中心 / Products</h1>
-      <p>电动高尔夫球车、电动迷你巴士、公用车辆（UTV）。支持 OEM/CKD，工厂直供与出口服务。</p>
+      <h1>Products</h1>
+      <p>Electric golf carts, electric mini buses, and utility vehicles (UTV). OEM/CKD supported. Factory direct and export-ready.</p>
     </div>
 
     <!-- Tabs -->
     <div class="tabs" id="tabs">
-      <button class="tab active" data-target="golf">电动高尔夫球车</button>
-      <button class="tab" data-target="bus">电动迷你巴士</button>
-      <button class="tab" data-target="utv">公用车辆（UTV）</button>
+      <button class="tab active" data-target="golf">Electric Golf Carts</button>
+      <button class="tab" data-target="bus">Electric Mini Buses</button>
+      <button class="tab" data-target="utv">Utility Vehicles (UTV)</button>
     </div>
 
     <!-- Golf -->
     <section id="golf">
       <div class="sectionHead">
-        <h2>电动高尔夫球车</h2>
-        <small>套餐卡片 → 点击“详情/订单”弹窗配置并自动计算（参考）</small>
+        <h2>Electric Golf Carts</h2>
       </div>
 
       <div class="grid">
         <div class="card">
-          <div class="cardMedia">（占位图）A 套餐：不同前脸 / 颜色</div>
+          <div class="cardMedia">(Placeholder Image) Package A</div>
           <div class="cardBody">
-            <span class="badge"><span class="dot"></span> 电动高尔夫球车 - A 套餐</span>
+            <span class="badge"><span class="dot"></span> EV Golf Cart - Package A</span>
             <div class="cardTitle">EV Golf Cart - Package A</div>
-            <p class="cardDesc">适用于球场/度假村/社区。支持 OEM/CKD，快速装柜与出口文件。</p>
+            <p class="cardDesc">For golf courses, resorts, and communities. OEM/CKD supported. Export-ready.</p>
             <div class="cardActions">
-              <button class="btn small primary" onclick="openModal('golf','A')">详情 / 订单</button>
+              <button class="btn small primary" onclick="openModal('golf','A')">Details / Order</button>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="cardMedia">（占位图）B 套餐：不同前脸 / 颜色</div>
+          <div class="cardMedia">(Placeholder Image) Package B</div>
           <div class="cardBody">
-            <span class="badge"><span class="dot"></span> 电动高尔夫球车 - B 套餐</span>
+            <span class="badge"><span class="dot"></span> EV Golf Cart - Package B</span>
             <div class="cardTitle">EV Golf Cart - Package B</div>
-            <p class="cardDesc">主推款：高性价比配置，适合批量采购与定制升级。</p>
+            <p class="cardDesc">Best value package for bulk orders and customization upgrades.</p>
             <div class="cardActions">
-              <button class="btn small primary" onclick="openModal('golf','B')">详情 / 订单</button>
+              <button class="btn small primary" onclick="openModal('golf','B')">Details / Order</button>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="cardMedia">（占位图）C 套餐：不同前脸 / 颜色</div>
+          <div class="cardMedia">(Placeholder Image) Package C</div>
           <div class="cardBody">
-            <span class="badge"><span class="dot"></span> 电动高尔夫球车 - C 套餐</span>
+            <span class="badge"><span class="dot"></span> EV Golf Cart - Package C</span>
             <div class="cardTitle">EV Golf Cart - Package C</div>
-            <p class="cardDesc">偏豪华配置：外观/内饰/多媒体升级空间更大。</p>
+            <p class="cardDesc">Premium options and more upgrade space for comfort and features.</p>
             <div class="cardActions">
-              <button class="btn small primary" onclick="openModal('golf','C')">详情 / 订单</button>
+              <button class="btn small primary" onclick="openModal('golf','C')">Details / Order</button>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="cardMedia">（占位图）D 套餐：不同前脸 / 颜色</div>
+          <div class="cardMedia">(Placeholder Image) Package D</div>
           <div class="cardBody">
-            <span class="badge"><span class="dot"></span> 电动高尔夫球车 - D 套餐</span>
+            <span class="badge"><span class="dot"></span> EV Golf Cart - Package D</span>
             <div class="cardTitle">EV Golf Cart - Package D</div>
-            <p class="cardDesc">更强动力/越野轮胎等可选，适合景区/复杂路况。</p>
+            <p class="cardDesc">Stronger motor and off-road tire upgrades for tougher conditions.</p>
             <div class="cardActions">
-              <button class="btn small primary" onclick="openModal('golf','D')">详情 / 订单</button>
+              <button class="btn small primary" onclick="openModal('golf','D')">Details / Order</button>
             </div>
           </div>
         </div>
@@ -477,31 +439,30 @@
     <!-- Mini bus -->
     <section id="bus">
       <div class="sectionHead">
-        <h2>电动迷你巴士</h2>
-        <small>套餐 A / B → 弹窗选择座位数、动力、车身形式等</small>
+        <h2>Electric Mini Buses</h2>
       </div>
 
       <div class="grid">
         <div class="card">
-          <div class="cardMedia">（占位图）Mini Bus A：不同前脸</div>
+          <div class="cardMedia">(Placeholder Image) Mini Bus A</div>
           <div class="cardBody">
-            <span class="badge"><span class="dot"></span> 电动迷你巴士 - A 套餐</span>
+            <span class="badge"><span class="dot"></span> Electric Mini Bus - Package A</span>
             <div class="cardTitle">Electric Mini Bus - Package A</div>
-            <p class="cardDesc">酒店/园区/接驳。支持多座位版本与出口定制。</p>
+            <p class="cardDesc">For hotels, campuses, and shuttle services. Multiple seat options supported.</p>
             <div class="cardActions">
-              <button class="btn small primary" onclick="openModal('bus','A')">详情 / 订单</button>
+              <button class="btn small primary" onclick="openModal('bus','A')">Details / Order</button>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="cardMedia">（占位图）Mini Bus B：不同前脸</div>
+          <div class="cardMedia">(Placeholder Image) Mini Bus B</div>
           <div class="cardBody">
-            <span class="badge"><span class="dot"></span> 电动迷你巴士 - B 套餐</span>
+            <span class="badge"><span class="dot"></span> Electric Mini Bus - Package B</span>
             <div class="cardTitle">Electric Mini Bus - Package B</div>
-            <p class="cardDesc">更丰富配置组合：封闭/敞篷、动力升级等。</p>
+            <p class="cardDesc">More configuration combinations: open/closed, motor upgrades, export ready.</p>
             <div class="cardActions">
-              <button class="btn small primary" onclick="openModal('bus','B')">详情 / 订单</button>
+              <button class="btn small primary" onclick="openModal('bus','B')">Details / Order</button>
             </div>
           </div>
         </div>
@@ -511,30 +472,29 @@
     <!-- UTV -->
     <section id="utv">
       <div class="sectionHead">
-        <h2>公用车辆（UTV）</h2>
-        <small>先放 3-4 张占位图，后期你可替换为真实产品图</small>
+        <h2>Utility Vehicles (UTV)</h2>
       </div>
 
       <div class="grid utvGrid">
         <div class="card">
-          <div class="cardMedia">（占位图）UTV Photo 1</div>
+          <div class="cardMedia">(Placeholder Image) UTV 1</div>
           <div class="cardBody">
             <div class="cardTitle">Utility Vehicle (UTV)</div>
-            <p class="cardDesc">工地/园区/货运维护场景。支持 OEM 定制。</p>
+            <p class="cardDesc">For warehouses, parks, maintenance, and cargo transport. OEM available.</p>
           </div>
         </div>
         <div class="card">
-          <div class="cardMedia">（占位图）UTV Photo 2</div>
+          <div class="cardMedia">(Placeholder Image) UTV 2</div>
           <div class="cardBody">
             <div class="cardTitle">Utility Vehicle (UTV)</div>
-            <p class="cardDesc">可选货箱、加固车架、灯光等配置。</p>
+            <p class="cardDesc">Cargo box, reinforced frame, lighting and more options can be customized.</p>
           </div>
         </div>
         <div class="card">
-          <div class="cardMedia">（占位图）UTV Photo 3</div>
+          <div class="cardMedia">(Placeholder Image) UTV 3</div>
           <div class="cardBody">
             <div class="cardTitle">Utility Vehicle (UTV)</div>
-            <p class="cardDesc">适合批量采购与出口装柜支持。</p>
+            <p class="cardDesc">Bulk orders supported. Export documents and container loading support.</p>
           </div>
         </div>
       </div>
@@ -545,57 +505,56 @@
     </div>
   </div>
 
-  <!-- ---------------- Modal ---------------- -->
+  <!-- Modal -->
   <div class="modalOverlay" id="modal" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modalLeft">
         <div class="modalTitleRow">
-          <h3 class="modalTitle" id="modalTitle">产品配置</h3>
-          <button class="closeBtn" onclick="closeModal()">关闭</button>
+          <h3 class="modalTitle" id="modalTitle">Configuration</h3>
+          <button class="closeBtn" onclick="closeModal()">Close</button>
         </div>
 
         <div class="panel">
-          <h4>基准价格（参考价）</h4>
-          <div class="big" id="basePriceText">来自 $****</div>
-          <div class="muted">美元价格仅供参考。最终价格取决于配置与目的港。</div>
+          <h4>Base Price (Reference)</h4>
+          <div class="big" id="basePriceText">From $****</div>
+          <div class="muted">USD price is for reference only. Final price depends on configuration and destination port.</div>
         </div>
 
         <div class="panel">
-          <h4>当前总计（参考）</h4>
+          <h4>Current Total (Reference)</h4>
           <div class="big" id="totalPriceText">$0</div>
-          <div class="muted">点击“运费/获取报价”将您的选择通过 WhatsApp 发送。</div>
+          <div class="muted">Click “Shipping / Get Quote” to send your selections via WhatsApp.</div>
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <a class="btn primary" id="whBtn" target="_blank" rel="noopener"
              href="https://wa.me/8613292812529?text=Hello%20Luyu%2C%20I%20would%20like%20a%20quote.">
-            运费/获取报价（WhatsApp）
+            Shipping / Get Quote (WhatsApp)
           </a>
-          <button class="btn" onclick="resetChoices()">重置</button>
+          <button class="btn" onclick="resetChoices()">Reset</button>
         </div>
       </div>
 
-      <!-- ✅ 右侧滚动区：ID 必须是 modalForm（用于拦截滚动事件） -->
-      <div class="modalRight" id="modalForm">
-        <!-- 动态插入表单 -->
+      <div class="modalRight" id="modalRight">
         <div id="formMount"></div>
 
         <div class="modalBottom">
-          <div class="totalLine">总计（参考值）：<span id="stickyTotal">$0</span></div>
+          <div class="totalLine">Total (Reference): <span id="stickyTotal">$0</span></div>
           <div class="bottomBtns">
             <a class="btn primary" id="whBtn2" target="_blank" rel="noopener"
                href="https://wa.me/8613292812529?text=Hello%20Luyu%2C%20I%20would%20like%20a%20quote.">
-              运费/获取报价
+              Shipping / Get Quote
             </a>
-            <button class="btn" onclick="closeModal()">关闭</button>
+            <button class="btn" onclick="closeModal()">Close</button>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
   <script>
-    /* ---------------- Tabs scroll ---------------- */
+    /* Tabs scroll */
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach(t=>{
       t.addEventListener("click", ()=>{
@@ -606,178 +565,163 @@
       })
     });
 
-    /* ---------------- Data (你后期改价格就改这里) ---------------- */
+    /* Pricing data (edit here later) */
     const PRICE = {
       golf: {
-        base: { A: 0, B: 0, C: 0, D: 0 }, // 你后期写基础价
+        base: { A: 0, B: 0, C: 0, D: 0 }, // fill later if needed
         seats: [
-          { id:"2", label:"2个座位", add:0 },
-          { id:"4", label:"4个座位", add:0 },
-          { id:"6", label:"6个座位", add:0 },
-          { id:"8", label:"8个座位", add:0 },
+          { id:"2", label:"2 Seats", add:0 },
+          { id:"4", label:"4 Seats", add:0 },
+          { id:"6", label:"6 Seats", add:0 },
+          { id:"8", label:"8 Seats", add:0 },
         ],
         upgrades: [
-          { key:"seat", title:"座椅", items:[
-            { id:"seat_std", label:"标配座椅", add:0 },
-            { id:"seat_lux", label:"升级版豪华座椅", add:88 }
+          { key:"seat", title:"Seats", items:[
+            { id:"seat_std", label:"Standard Seat", add:0 },
+            { id:"seat_lux", label:"Luxury Seat Upgrade", add:88 }
           ]},
-          { key:"dash", title:"中控", items:[
-            { id:"dash_std", label:"标配中控", add:0 },
-            { id:"dash_cp", label:"CarPlay + 后视摄像头", add:171 }
+          { key:"dash", title:"Dashboard", items:[
+            { id:"dash_std", label:"Standard Dashboard", add:0 },
+            { id:"dash_cp", label:"CarPlay + Rear Camera", add:171 }
           ]},
-          { key:"belt", title:"安全带", items:[
-            { id:"belt_none", label:"标配无安全带", add:0 },
-            { id:"belt_2p", label:"两点式安全带", add:35 },
-            { id:"belt_3p", label:"三点式豪华安全带", add:40 },
+          { key:"belt", title:"Seat Belts", items:[
+            { id:"belt_none", label:"No Belt (Standard)", add:0 },
+            { id:"belt_2p", label:"2-Point Belt", add:35 },
+            { id:"belt_3p", label:"3-Point Belt", add:40 },
           ]},
-          { key:"tire", title:"轮胎", items:[
-            { id:"tire_10", label:"标配10英寸公路胎", add:0 },
-            { id:"tire_12", label:"升级版12英寸公路胎", add:88 },
-            { id:"tire_14", label:"升级版14英寸越野胎", add:172 }
+          { key:"tire", title:"Tires", items:[
+            { id:"tire_10", label:"10-inch Road Tire (Standard)", add:0 },
+            { id:"tire_12", label:"12-inch Road Tire Upgrade", add:88 },
+            { id:"tire_14", label:"14-inch Off-road Tire Upgrade", add:172 }
           ]},
-          { key:"motor", title:"电机", items:[
-            { id:"m35", label:"标配3.5千瓦电机", add:0 },
-            { id:"m4", label:"升级版4千瓦电机", add:0 },   // 你后期填
-            { id:"m5", label:"升级版5千瓦电机", add:0 }    // 你后期填
+          { key:"motor", title:"Motor", items:[
+            { id:"m35", label:"3.5kW Motor (Standard)", add:0 },
+            { id:"m4", label:"4kW Motor Upgrade", add:0 },   // fill later
+            { id:"m5", label:"5kW Motor Upgrade", add:0 }    // fill later
           ]},
-          { key:"cover", title:"车衣", items:[
-            { id:"cover_none", label:"标配无车衣", add:0 },
-            { id:"cover_full", label:"全方位包裹型车衣", add:45 }
+          { key:"cover", title:"Cover", items:[
+            { id:"cover_none", label:"No Cover (Standard)", add:0 },
+            { id:"cover_full", label:"Full Enclosure Cover", add:45 }
           ]},
-          { key:"speaker", title:"扬声器", items:[
-            { id:"spk_none", label:"标配无扬声器", add:0 },
-            { id:"spk_2set", label:"升级2套扬声器", add:165 }
+          { key:"speaker", title:"Speakers", items:[
+            { id:"spk_none", label:"No Speakers (Standard)", add:0 },
+            { id:"spk_2set", label:"2-Sets Speakers Upgrade", add:165 }
           ]}
         ],
         options: [
-          { id:"wind", label:"可折叠前挡风玻璃", add:60 },
-          { id:"front_bumper", label:"前保险杠", add:60 },
-          { id:"front_basket", label:"前置物架", add:50 },
-          { id:"bag_holder", label:"球包带", add:50 },
-          { id:"bar_audio", label:"全车条形音响", add:100 },
-          { id:"roof_light", label:"探照顶灯", add:25 },
-          { id:"led_light", label:"全车LED彩灯", add:35 },
+          { id:"wind", label:"Foldable Windshield", add:60 },
+          { id:"front_bumper", label:"Front Bumper", add:60 },
+          { id:"front_basket", label:"Front Basket", add:50 },
+          { id:"bag_holder", label:"Golf Bag Holder", add:50 },
+          { id:"bar_audio", label:"Sound Bar", add:100 },
+          { id:"roof_light", label:"Search Light", add:25 },
+          { id:"led_light", label:"LED Ambient Lights", add:35 },
         ],
         freebies: [
-          "标志设计",
-          "免费定制车身颜色",
-          "符合当地的充电器",
-          "高尔夫球",
-          "易损坏开关按钮配件"
+          "Logo design",
+          "Free body color customization",
+          "Local standard charger",
+          "Golf balls",
+          "Spare switches & wearable parts"
         ]
       },
 
       bus: {
         base: { A: 0, B: 0 },
         seats: [
-          { id:"8", label:"8座（标配）", add:0 },
-          { id:"11", label:"11座", add:0 },
-          { id:"14", label:"14座", add:0 },
-          { id:"17", label:"17座", add:0 },
-          { id:"20", label:"20座", add:0 },
-          { id:"23", label:"23座", add:0 },
+          { id:"8", label:"8 Seats (Standard)", add:0 },
+          { id:"11", label:"11 Seats", add:0 },
+          { id:"14", label:"14 Seats", add:0 },
+          { id:"17", label:"17 Seats", add:0 },
+          { id:"20", label:"20 Seats", add:0 },
+          { id:"23", label:"23 Seats", add:0 },
         ],
         upgrades: [
-          { key:"motor", title:"电机", items:[
-            { id:"m35", label:"标配3.5千瓦电机", add:0 },
-            { id:"m4", label:"升级版4千瓦电机", add:0 },
-            { id:"m5", label:"升级版5千瓦电机", add:0 }
+          { key:"motor", title:"Motor", items:[
+            { id:"m35", label:"3.5kW Motor (Standard)", add:0 },
+            { id:"m4", label:"4kW Motor Upgrade", add:0 },
+            { id:"m5", label:"5kW Motor Upgrade", add:0 }
           ]},
-          { key:"body", title:"车身形式", items:[
-            { id:"open", label:"敞篷", add:0 },
-            { id:"closed", label:"全包裹", add:0 }
+          { key:"body", title:"Body Type", items:[
+            { id:"open", label:"Open Top", add:0 },
+            { id:"closed", label:"Fully Enclosed", add:0 }
           ]},
-          { key:"tire", title:"轮胎", items:[
-            { id:"tire_10", label:"标配轮胎", add:0 },
-            { id:"tire_12", label:"升级版12英寸公路胎", add:88 },
-            { id:"tire_14", label:"升级版14英寸越野胎", add:172 }
+          { key:"tire", title:"Tires", items:[
+            { id:"tire_std", label:"Standard Tires", add:0 },
+            { id:"tire_12", label:"12-inch Road Tire Upgrade", add:88 },
+            { id:"tire_14", label:"14-inch Off-road Tire Upgrade", add:172 }
           ]}
         ],
-        freebies: ["（占位）后期补充免费赠送内容"]
+        freebies: ["(Placeholder) Free items to be added later"]
       }
     };
 
-    /* ---------------- State ---------------- */
-    let currentType = "golf"; // golf / bus
+    let currentType = "golf";
     let currentPkg = "B";
-    const state = {
-      seat: null,
-      upgrades: {},
-      options: new Set()
-    };
 
-    /* ---------------- Modal open/close ---------------- */
+    const state = { seat:null, upgrades:{}, options:new Set() };
+
+    /* Open / Close Modal */
     function openModal(type, pkg){
       currentType = type;
       currentPkg = pkg;
       resetChoices(false);
 
-      // Title
       const titleMap = {
-        golf: `电动高尔夫球车 - ${pkg} 套餐`,
-        bus: `电动迷你巴士 - ${pkg} 套餐`
+        golf: `EV Golf Cart - Package ${pkg}`,
+        bus: `Electric Mini Bus - Package ${pkg}`
       };
-      document.getElementById("modalTitle").textContent = titleMap[type] || "产品配置";
+      document.getElementById("modalTitle").textContent = titleMap[type] || "Configuration";
 
-      // Base price
       const base = (PRICE[type].base[pkg] ?? 0);
-      document.getElementById("basePriceText").textContent = base > 0 ? `来自 $${base}` : "来自 $****";
+      document.getElementById("basePriceText").textContent = base > 0 ? `From $${base}` : "From $****";
 
-      // Build form
       buildForm(type);
 
-      // Open modal
       document.getElementById("modal").classList.add("open");
       document.getElementById("modal").setAttribute("aria-hidden","false");
-
-      // ✅ 关键：锁背景滚动 + 只允许弹窗内部滚动
       document.body.classList.add("modal-open");
-      trapModalScroll();
 
-      // First calc
       updateTotal();
+
+      // Ensure scroll starts at top
+      const sc = document.getElementById("modalRight");
+      sc.scrollTop = 0;
     }
 
     function closeModal(){
       document.getElementById("modal").classList.remove("open");
       document.getElementById("modal").setAttribute("aria-hidden","true");
-
-      // ✅ 关键：恢复背景滚动
       document.body.classList.remove("modal-open");
     }
 
-    // 点击遮罩关闭
+    // Click overlay to close
     document.getElementById("modal").addEventListener("click", (e)=>{
       if(e.target.id === "modal") closeModal();
     });
 
-    /* ---------------- Build form ---------------- */
+    /* Build Form */
     function buildForm(type){
       const mount = document.getElementById("formMount");
       mount.innerHTML = "";
 
-      // Seats group
       mount.appendChild(makeSingleChoiceGroup(
-        "座位选择（选择一个）",
+        "Seat Options (Choose One)",
         PRICE[type].seats,
-        (opt)=> { state.seat = opt; updateTotal(); },
-        "seat"
+        (opt)=> { state.seat = opt; updateTotal(); }
       ));
 
-      // Upgrades (radio groups)
       (PRICE[type].upgrades || []).forEach(g=>{
         mount.appendChild(makeSingleChoiceGroup(
           g.title,
           g.items,
-          (opt)=> { state.upgrades[g.key] = opt; updateTotal(); },
-          g.key
+          (opt)=> { state.upgrades[g.key] = opt; updateTotal(); }
         ));
       });
 
-      // Options (checkbox style using radio UI)
       if(type === "golf"){
         mount.appendChild(makeMultiChoiceGroup(
-          "选配部分（可多选）",
+          "Optional Items (Multi-select)",
           PRICE.golf.options,
           (id, on)=> {
             if(on) state.options.add(id);
@@ -785,62 +729,49 @@
             updateTotal();
           }
         ));
-
-        // freebies
-        mount.appendChild(makeListGroup("免费赠送（示例）", PRICE.golf.freebies));
+        mount.appendChild(makeListGroup("Free Items (Example)", PRICE.golf.freebies));
       }else{
-        mount.appendChild(makeListGroup("免费赠送（占位）", PRICE.bus.freebies));
+        mount.appendChild(makeListGroup("Free Items (Placeholder)", PRICE.bus.freebies));
       }
     }
 
-    function makeSingleChoiceGroup(title, items, onPick, groupKey){
+    function makeSingleChoiceGroup(title, items, onPick){
       const wrap = document.createElement("div");
       wrap.className = "group";
       wrap.innerHTML = `
         <div class="groupHead">
           <strong>${title}</strong>
-          <span class="hint">单选</span>
+          <span class="hint">Single</span>
         </div>
         <div class="options"></div>
       `;
-      const optionsBox = wrap.querySelector(".options");
+      const box = wrap.querySelector(".options");
 
       items.forEach((it, idx)=>{
         const row = document.createElement("div");
         row.className = "opt";
-        row.dataset.group = groupKey;
-        row.dataset.id = it.id;
-        row.dataset.add = it.add;
-
         row.innerHTML = `
           <div class="optLeft">
             <div class="imgPh">IMG</div>
             <div class="optText">
               <b>${it.label}</b>
-              <span>（占位图，可后期替换）</span>
+              <span>(Placeholder image, replace later)</span>
             </div>
           </div>
           <div class="optRight">
-            <div class="priceTag">+${it.add} 美元</div>
+            <div class="priceTag">+$${it.add}</div>
             <span class="radio"></span>
           </div>
         `;
 
         row.addEventListener("click", ()=>{
-          // clear group
-          optionsBox.querySelectorAll(".opt").forEach(x=>{
-            x.querySelector(".radio").classList.remove("on");
-          });
+          box.querySelectorAll(".radio").forEach(r=>r.classList.remove("on"));
           row.querySelector(".radio").classList.add("on");
           onPick({ id: it.id, label: it.label, add: it.add });
         });
 
-        // default first option selected (seat: first; upgrade groups default first)
-        if(idx === 0){
-          setTimeout(()=>row.click(), 0);
-        }
-
-        optionsBox.appendChild(row);
+        if(idx === 0) setTimeout(()=>row.click(), 0);
+        box.appendChild(row);
       });
 
       return wrap;
@@ -852,40 +783,37 @@
       wrap.innerHTML = `
         <div class="groupHead">
           <strong>${title}</strong>
-          <span class="hint">多选</span>
+          <span class="hint">Multi</span>
         </div>
         <div class="options"></div>
       `;
-      const optionsBox = wrap.querySelector(".options");
+      const box = wrap.querySelector(".options");
 
       items.forEach((it)=>{
         const row = document.createElement("div");
         row.className = "opt";
-        row.dataset.id = it.id;
-        row.dataset.add = it.add;
-
         row.innerHTML = `
           <div class="optLeft">
             <div class="imgPh">IMG</div>
             <div class="optText">
               <b>${it.label}</b>
-              <span>（占位图，可后期替换）</span>
+              <span>(Placeholder image, replace later)</span>
             </div>
           </div>
           <div class="optRight">
-            <div class="priceTag">+${it.add} 美元</div>
+            <div class="priceTag">+$${it.add}</div>
             <span class="radio"></span>
           </div>
         `;
 
         row.addEventListener("click", ()=>{
           const r = row.querySelector(".radio");
-          const nowOn = !r.classList.contains("on");
-          r.classList.toggle("on", nowOn);
-          onToggle(it.id, nowOn);
+          const on = !r.classList.contains("on");
+          r.classList.toggle("on", on);
+          onToggle(it.id, on);
         });
 
-        optionsBox.appendChild(row);
+        box.appendChild(row);
       });
 
       return wrap;
@@ -897,7 +825,7 @@
       wrap.innerHTML = `
         <div class="groupHead">
           <strong>${title}</strong>
-          <span class="hint">文字会被 Google 抓取</span>
+          <span class="hint">Text helps SEO</span>
         </div>
         <div class="options" style="gap:8px;"></div>
       `;
@@ -911,33 +839,26 @@
       return wrap;
     }
 
-    /* ---------------- Total / WhatsApp ---------------- */
+    /* Total + WhatsApp */
     function updateTotal(){
       const type = currentType;
       const base = (PRICE[type].base[currentPkg] ?? 0);
 
       let total = base;
+      if(state.seat) total += Number(state.seat.add||0);
 
-      if(state.seat) total += Number(state.seat.add || 0);
+      Object.values(state.upgrades).forEach(u=> total += Number((u&&u.add)||0));
 
-      // upgrades
-      Object.values(state.upgrades).forEach(u=>{
-        total += Number(u.add || 0);
-      });
-
-      // options
       if(type === "golf"){
         PRICE.golf.options.forEach(o=>{
-          if(state.options.has(o.id)) total += Number(o.add || 0);
+          if(state.options.has(o.id)) total += Number(o.add||0);
         });
       }
 
-      // show
-      const showText = `$${total}`;
-      document.getElementById("totalPriceText").textContent = showText;
-      document.getElementById("stickyTotal").textContent = showText;
+      const show = `$${total}`;
+      document.getElementById("totalPriceText").textContent = show;
+      document.getElementById("stickyTotal").textContent = show;
 
-      // build whatsapp message
       const msg = buildWhatsAppMessage(type, base, total);
       const url = "https://wa.me/8613292812529?text=" + encodeURIComponent(msg);
       document.getElementById("whBtn").href = url;
@@ -953,10 +874,10 @@
       lines.push(`Hello Luyu, I would like a quote.`);
       lines.push(`Product: ${title}`);
       lines.push(`Base price: ${base>0?("$"+base):"$****"} (reference)`);
-      if(state.seat) lines.push(`Seat option: ${state.seat.label} (+$${state.seat.add})`);
+      if(state.seat) lines.push(`Seat: ${state.seat.label} (+$${state.seat.add})`);
 
       Object.entries(state.upgrades).forEach(([k,v])=>{
-        if(v) lines.push(`Upgrade - ${k}: ${v.label} (+$${v.add})`);
+        if(v) lines.push(`Upgrade (${k}): ${v.label} (+$${v.add})`);
       });
 
       if(type === "golf" && state.options.size){
@@ -978,46 +899,7 @@
       if(recalc) updateTotal();
     }
 
-    /* ---------------- ✅ Fix: Modal scroll should NOT scroll background ---------------- */
-    function trapModalScroll(){
-      const modal = document.getElementById("modal");
-      const scrollBox = document.getElementById("modalForm"); // 右侧滚动区域
-
-      // 防止重复绑定
-      if(modal.dataset.trap === "1") return;
-      modal.dataset.trap = "1";
-
-      // 鼠标滚轮/触控板：只滚 modal，不传递到背景
-      scrollBox.addEventListener("wheel", function(e){
-        const delta = e.deltaY;
-        const atTop = scrollBox.scrollTop <= 0;
-        const atBottom = scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight - 1;
-
-        if((atTop && delta < 0) || (atBottom && delta > 0)){
-          e.preventDefault();
-        }
-      }, { passive:false });
-
-      // 触摸滑动：防止背景滚动
-      let startY = 0;
-      scrollBox.addEventListener("touchstart", function(e){
-        startY = e.touches[0].clientY;
-      }, { passive:true });
-
-      scrollBox.addEventListener("touchmove", function(e){
-        const currentY = e.touches[0].clientY;
-        const delta = startY - currentY;
-        const atTop = scrollBox.scrollTop <= 0;
-        const atBottom = scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight - 1;
-
-        if((atTop && delta < 0) || (atBottom && delta > 0)){
-          e.preventDefault();
-        }
-      }, { passive:false });
-    }
-
-    /* ---------------- Update hash scroll highlight ---------------- */
-    // 如果你从首页点锚点进入
+    // If opened via hash
     if(location.hash){
       const id = location.hash.replace("#","");
       const el = document.getElementById(id);
