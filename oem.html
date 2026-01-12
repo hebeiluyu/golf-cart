@@ -1,1 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OEM & Custom | Luyu Electric Vehicles | EV Cart OEM/CKD Customization</title>
+  <meta name="description" content="OEM & custom EV carts: electric golf carts, utility vehicles (UTV), and electric mini buses. OEM/CKD support, branding, seating layouts, battery options, QC inspection, export packing and container loading." />
+  <link rel="canonical" href="https://luyuevcart.com/oem.html" />
+  <style>
+    :root{
+      --bg:#f5fbf7;
+      --panel:#ffffff;
+      --panel2:#f1fbf5;
+      --text:#102019;
+      --muted:#4a6a5a;
+      --line:#d7efe0;
+      --shadow:0 14px 34px rgba(16,32,25,.10);
+      --shadow2:0 10px 22px rgba(16,32,25,.08);
+      --green:#2bb673;
+      --green2:#1ea565;
+      --greenSoft:#dff7ea;
+      --radius:18px;
+      --radius2:14px;
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 450px at 20% -10%, rgba(43,182,115,.16), transparent 70%),
+        radial-gradient(800px 420px at 100% 0%, rgba(43,182,115,.10), transparent 65%),
+        linear-gradient(180deg, #ffffff, var(--bg));
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(1.2) blur(10px);
+      background:rgba(255,255,255,.78);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width:240px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      display:grid; place-items:center;
+      background:linear-gradient(135deg, rgba(43,182,115,.22), rgba(30,165,101,.12));
+      border:1px solid rgba(43,182,115,.35);
+      font-weight:800; letter-spacing:.5px;
+      color:var(--green2);
+      flex:0 0 auto;
+    }
+    .brandname{
+      font-weight:800;
+      line-height:1.1;
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex; align-items:center; gap:6px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .navlink{
+      padding:9px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--muted);
+      font-weight:650;
+      transition:.18s ease;
+    }
+    .navlink:hover{
+      border-color:rgba(43,182,115,.28);
+      background:rgba(223,247,234,.65);
+      color:var(--text);
+      transform:translateY(-1px);
+    }
+    .navlink.active{
+      border-color:rgba(43,182,115,.45);
+      background:rgba(223,247,234,.95);
+      color:var(--text);
+    }
+    .ctaRow{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:220px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid rgba(16,32,25,.10);
+      background:#fff;
+      box-shadow:0 8px 18px rgba(16,32,25,.06);
+      transition:.18s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(16,32,25,.10)}
+    .btn.green{
+      background:linear-gradient(180deg, var(--green), var(--green2));
+      border-color:rgba(0,0,0,0);
+      color:#fff;
+      box-shadow:0 14px 26px rgba(43,182,115,.22);
+    }
+    .btn.green:hover{filter:saturate(1.05)}
+    .btn.ghost{
+      background:rgba(255,255,255,.85);
+    }
 
+    /* Hero */
+    .hero{
+      padding:28px 0 10px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+    }
+    .heroLeft{
+      padding:22px 22px 18px;
+      position:relative;
+    }
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(43,182,115,.35);
+      background:rgba(223,247,234,.85);
+      color:#13402b;
+      font-weight:750;
+      font-size:13px;
+    }
+    .dot{width:8px;height:8px;border-radius:50%; background:var(--green)}
+    h1{
+      margin:12px 0 8px;
+      font-size:40px;
+      line-height:1.08;
+      letter-spacing:-.6px;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      line-height:1.55;
+    }
+    .heroBullets{
+      margin:14px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .heroBullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px 12px;
+      border:1px solid rgba(43,182,115,.22);
+      background:linear-gradient(180deg, rgba(223,247,234,.65), rgba(255,255,255,.9));
+      border-radius:14px;
+    }
+    .check{
+      width:18px;height:18px;border-radius:5px;
+      background:rgba(43,182,115,.18);
+      border:1px solid rgba(43,182,115,.35);
+      display:grid; place-items:center;
+      flex:0 0 auto;
+      margin-top:2px;
+      color:var(--green2);
+      font-weight:900;
+      font-size:12px;
+    }
+    .heroRight{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:280px;
+      padding:18px;
+      background:
+        radial-gradient(700px 280px at 40% 0%, rgba(43,182,115,.18), transparent 70%),
+        linear-gradient(180deg, #ffffff, rgba(241,251,245,.75));
+    }
+    .photoBox{
+      border-radius:16px;
+      border:1px solid rgba(43,182,115,.22);
+      background:#f7fffb;
+      height:250px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:var(--shadow2);
+    }
+    .slide{
+      position:absolute; inset:0;
+      display:grid; place-items:center;
+      font-weight:800;
+      color:#2a5d47;
+      background:
+        radial-gradient(900px 300px at 40% 0%, rgba(43,182,115,.12), transparent 65%),
+        linear-gradient(135deg, rgba(43,182,115,.08), rgba(255,255,255,.65));
+      opacity:0;
+      transform:scale(1.01);
+      transition:opacity .45s ease, transform .45s ease;
+    }
+    .slide.active{opacity:1; transform:scale(1)}
+    .slide small{
+      display:block;
+      font-weight:750;
+      color:#3c6b57;
+      margin-top:6px;
+      opacity:.9;
+    }
+    .dots{
+      display:flex; gap:8px; align-items:center;
+      margin-top:12px;
+      justify-content:center;
+    }
+    .dots button{
+      width:10px;height:10px;border-radius:50%;
+      border:1px solid rgba(43,182,115,.45);
+      background:rgba(255,255,255,.95);
+      cursor:pointer;
+      transition:.18s ease;
+    }
+    .dots button.active{background:var(--green); border-color:var(--green)}
+    .hint{
+      margin:10px 0 0;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    /* Sections */
+    .section{
+      padding:18px 0 0;
+    }
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin:18px 0 10px;
+    }
+    h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.3px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      line-height:1.45;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .miniCard{
+      padding:16px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, #fff, rgba(241,251,245,.8));
+      box-shadow:var(--shadow2);
+      transition:.18s ease;
+    }
+    .miniCard:hover{transform:translateY(-2px)}
+    .miniCard h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .miniCard p{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      line-height:1.45;
+      font-size:13.5px;
+    }
+
+    .process{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .steps{
+      padding:18px;
+    }
+    .step{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px;
+      border:1px solid rgba(43,182,115,.18);
+      border-radius:16px;
+      background:rgba(223,247,234,.55);
+      margin-bottom:10px;
+    }
+    .num{
+      width:28px;height:28px;border-radius:10px;
+      background:rgba(43,182,115,.18);
+      border:1px solid rgba(43,182,115,.35);
+      display:grid;place-items:center;
+      font-weight:900;color:var(--green2);
+      flex:0 0 auto;
+    }
+    .step strong{display:block; margin:0 0 2px}
+    .step span{color:var(--muted); font-weight:650; font-size:13.5px; line-height:1.45}
+    .rightBox{
+      padding:18px;
+      background:linear-gradient(180deg, #fff, rgba(241,251,245,.85));
+    }
+    .pillRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:12px;
+    }
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(43,182,115,.28);
+      background:rgba(223,247,234,.8);
+      color:#1b3a2b;
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+    /* FAQ */
+    .faq{
+      padding:18px;
+    }
+    details{
+      border:1px solid rgba(43,182,115,.18);
+      background:rgba(255,255,255,.9);
+      border-radius:16px;
+      padding:12px 14px;
+      margin-bottom:10px;
+      box-shadow:0 10px 22px rgba(16,32,25,.05);
+    }
+    summary{
+      cursor:pointer;
+      font-weight:850;
+      color:#133425;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .caret{
+      width:26px;height:26px;border-radius:10px;
+      display:grid;place-items:center;
+      border:1px solid rgba(43,182,115,.25);
+      background:rgba(223,247,234,.8);
+      color:var(--green2);
+      font-weight:900;
+      flex:0 0 auto;
+      transition:.18s ease;
+    }
+    details[open] .caret{transform:rotate(180deg)}
+    .faq p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-weight:650;
+      line-height:1.55;
+    }
+
+    /* CTA */
+    .cta{
+      margin:18px 0 22px;
+      padding:18px;
+      border-radius:var(--radius);
+      border:1px solid rgba(43,182,115,.22);
+      background:linear-gradient(135deg, rgba(223,247,234,.9), rgba(255,255,255,.95));
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .cta strong{
+      font-size:16px;
+      display:block;
+      margin-bottom:4px;
+    }
+    .cta span{
+      color:var(--muted);
+      font-weight:650;
+      line-height:1.45;
+    }
+
+    /* Footer */
+    footer{
+      margin-top:18px;
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.75);
+      backdrop-filter: blur(10px);
+    }
+    .foot{
+      padding:18px 0;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .footCard{
+      padding:16px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:var(--shadow2);
+    }
+    .footCard h3{margin:0 0 8px; font-size:14.5px}
+    .footCard p{margin:0; color:var(--muted); font-weight:650; line-height:1.55; font-size:13.5px}
+    .footSmall{
+      padding:10px 0 18px;
+      color:rgba(16,32,25,.55);
+      font-weight:650;
+      font-size:12.5px;
+      text-align:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      .process{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .foot{grid-template-columns:1fr}
+      h1{font-size:34px}
+      nav{justify-content:flex-start}
+      .ctaRow{min-width:auto}
+      .brand{min-width:auto}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="index.html" aria-label="Luyu Electric Vehicles">
+          <div class="logo">LV</div>
+          <div class="brandname">Luyu Electric Vehicles</div>
+        </a>
+
+        <nav aria-label="Primary">
+          <a class="navlink" href="index.html">Home</a>
+          <a class="navlink" href="products.html">Products</a>
+          <a class="navlink active" href="oem.html">OEM &amp; Custom</a>
+          <a class="navlink" href="about.html">About Us</a>
+          <a class="navlink" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="ctaRow">
+          <a class="btn green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="wrap">
+    <section class="hero" aria-label="OEM & Custom EV Carts">
+      <div class="heroGrid">
+        <div class="card heroLeft">
+          <div class="badge"><span class="dot"></span> OEM / CKD Customization • Export-ready manufacturing</div>
+          <h1>OEM &amp; Custom EV Carts for Your Market</h1>
+          <p class="lead">
+            We support OEM branding and configuration for <strong>EV golf carts</strong>, <strong>utility vehicles (UTV)</strong>, and
+            <strong>electric mini buses</strong>. Build your model lineup with reliable quality control and export-ready packing.
+          </p>
+
+          <ul class="heroBullets">
+            <li>
+              <div class="check">✓</div>
+              <div>
+                <strong>Branding & Appearance</strong>
+                <span>Logo / labels, color matching, trims, lighting, accessories, and market-specific styling.</span>
+              </div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div>
+                <strong>Powertrain & Battery Options</strong>
+                <span>Motor / controller tuning, battery choices, charger standards, and performance setup.</span>
+              </div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div>
+                <strong>Export & QC Support</strong>
+                <span>Inspection support, documentation, export packing, container loading, and stable lead time.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card heroRight" aria-label="Factory and production images carousel">
+          <div class="photoBox" id="carousel">
+            <div class="slide active">
+              Replace with your factory photo (oem-1.jpg)
+              <small>Suggested: production line / assembly</small>
+            </div>
+            <div class="slide">
+              Replace with your inspection photo (oem-2.jpg)
+              <small>Suggested: QC & inspection</small>
+            </div>
+            <div class="slide">
+              Replace with your container loading photo (oem-3.jpg)
+              <small>Suggested: packing / container loading</small>
+            </div>
+          </div>
+
+          <div class="dots" aria-label="Carousel controls">
+            <button class="active" aria-label="Slide 1"></button>
+            <button aria-label="Slide 2"></button>
+            <button aria-label="Slide 3"></button>
+          </div>
+          <div class="hint">Tip: later you will replace these with real images.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="section" aria-label="OEM capabilities">
+      <div class="sectionTitle">
+        <div>
+          <h2>What We Customize</h2>
+          <p class="sub">Structured for SEO: each section targets buyer-intent keywords (OEM, CKD, customization, export-ready).</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="miniCard">
+          <h3>OEM Branding</h3>
+          <p>Logo placement, nameplate, decals, color schemes, and private label packaging for your local market.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Seating & Layout</h3>
+          <p>2/4/6/8 seat layouts for carts, and flexible seating plans for mini buses (shuttle, resort, campus).</p>
+        </div>
+        <div class="miniCard">
+          <h3>Battery & Charger</h3>
+          <p>Battery options, charger standards, and configuration to match your country’s power and compliance needs.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Performance Setup</h3>
+          <p>Motor/controller configuration, hill-climbing support, speed limits, and application-based tuning.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Safety & Accessories</h3>
+          <p>Seat belts, lighting, mirrors, canopy, windshields, speakers, cargo accessories, and optional upgrades.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Export-ready Packing</h3>
+          <p>Inspection support, packing plan, documentation coordination, and container loading support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" aria-label="OEM process">
+      <div class="sectionTitle">
+        <div>
+          <h2>OEM / CKD Cooperation Process</h2>
+          <p class="sub">Clear steps help buyers trust the process and improve conversion.</p>
+        </div>
+      </div>
+
+      <div class="process">
+        <div class="card steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <strong>Requirement & Model Selection</strong>
+              <span>Usage scenario, seat capacity, target market, and your branding goals.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <strong>Configuration & Quotation</strong>
+              <span>Confirm options, accessories, battery/charger, and export packing requirements.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <strong>Sample / Pre-production Check</strong>
+              <span>Visual confirmation, key parts, QC points, and labeling plan.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <div>
+              <strong>Mass Production & QC</strong>
+              <span>Assembly, inspection, testing, and photo/video confirmation if required.</span>
+            </div>
+          </div>
+          <div class="step" style="margin-bottom:0">
+            <div class="num">5</div>
+            <div>
+              <strong>Packing, Loading & Shipment</strong>
+              <span>Export packing, container loading support, and shipping documentation coordination.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card rightBox">
+          <h3 style="margin:0 0 8px;font-size:16px;">Typical OEM Requests</h3>
+          <p class="sub" style="margin:0;color:var(--muted);font-weight:650;">
+            These are common buyer keywords that Google can crawl on this page.
+          </p>
+          <div class="pillRow">
+            <span class="pill">OEM electric golf cart</span>
+            <span class="pill">CKD assembly support</span>
+            <span class="pill">UTV customization</span>
+            <span class="pill">Mini bus seating layout</span>
+            <span class="pill">Battery & charger options</span>
+            <span class="pill">Export packing & loading</span>
+            <span class="pill">Logo / color customization</span>
+            <span class="pill">Quality control inspection</span>
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">Request OEM Quote</a>
+            <a class="btn ghost" href="products.html">Browse Products</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" aria-label="OEM FAQ">
+      <div class="sectionTitle">
+        <div>
+          <h2>OEM & Export FAQ</h2>
+          <p class="sub">Answering FAQs improves trust and helps SEO with long-tail queries.</p>
+        </div>
+      </div>
+
+      <div class="card faq">
+        <details>
+          <summary>
+            What products do you support for OEM / customization?
+            <span class="caret">⌄</span>
+          </summary>
+          <p>
+            We support OEM and configuration for EV golf carts, utility vehicles (UTV), and electric mini buses.
+            Common changes include branding, seating, battery/charger options, accessories, and market-specific setups.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Can you support CKD / SKD style assembly?
+            <span class="caret">⌄</span>
+          </summary>
+          <p>
+            Yes. We can discuss parts packaging, labeling, and assembly support requirements according to your target market
+            and after-sales plan.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            What is the typical lead time for export orders?
+            <span class="caret">⌄</span>
+          </summary>
+          <p>
+            Lead time depends on configuration and quantity. For planning, we recommend confirming your required options,
+            packing method, and shipping schedule during quotation.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            How do you handle quality control and inspection?
+            <span class="caret">⌄</span>
+          </summary>
+          <p>
+            QC is applied across production stages. We can also support inspection points and photo/video confirmation on
+            key steps when needed for export orders.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Can you help with export packing and container loading?
+            <span class="caret">⌄</span>
+          </summary>
+          <p>
+            Yes. We support export packing plans and container loading support, plus document coordination for shipment.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-label="Get OEM quotation">
+      <div>
+        <strong>Ready to build your OEM lineup?</strong>
+        <span>Send your target market, seat capacity, and preferred options. We’ll reply with a clear configuration plan.</span>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn green" href="https://wa.me/8613292812529" target="_blank" rel="noopener">WhatsApp for Quote</a>
+        <a class="btn ghost" href="contact.html">Contact Page</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div class="footCard">
+          <h3>Luyu Electric Vehicles</h3>
+          <p>
+            EV golf carts, utility vehicles (UTV), and electric mini buses. OEM/CKD support and export-ready manufacturing
+            with quality control and packing assistance.
+          </p>
+        </div>
+        <div class="footCard">
+          <h3>Contact</h3>
+          <p>
+            Email: <a href="mailto:carol@luyuevcart.com">carol@luyuevcart.com</a><br/>
+            WhatsApp: <a href="https://wa.me/8613292812529" target="_blank" rel="noopener">+86 132 9281 2529</a><br/>
+            Address: Shijiazhuang, Hebei, China<br/>
+            DO209, 1ST FLOOR, ZHONGCHU PLAZA, NO.198, ZHONGHUA NORTH STREET, DONGJIAO SUB-DISTRICT, XINHUA DISTRICT
+          </p>
+        </div>
+      </div>
+      <div class="footSmall">© 2026 Luyu Electric Vehicles. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple carousel (placeholder slides now; later you can change to real images)
+    (function(){
+      const carousel = document.getElementById('carousel');
+      if(!carousel) return;
+      const slides = Array.from(carousel.querySelectorAll('.slide'));
+      const dots = Array.from(document.querySelectorAll('.dots button'));
+      let idx = 0;
+
+      function show(i){
+        idx = (i + slides.length) % slides.length;
+        slides.forEach((s,k)=>s.classList.toggle('active', k===idx));
+        dots.forEach((d,k)=>d.classList.toggle('active', k===idx));
+      }
+      dots.forEach((btn, i)=>btn.addEventListener('click', ()=>show(i)));
+
+      setInterval(()=>show(idx+1), 4200);
+    })();
+  </script>
+</body>
+</html>
