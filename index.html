@@ -50,14 +50,13 @@
     .brand{
       display:flex; align-items:center; gap:12px; min-width:230px;
     }
-    .logo{
-      width:40px; height:40px; border-radius:12px;
-      background:linear-gradient(135deg, rgba(24,165,88,.18), rgba(17,179,106,.12));
-      border:1px solid rgba(24,165,88,.25);
-      display:grid; place-items:center;
-      font-weight:800; color:rgba(15,23,42,.85);
-      letter-spacing:.5px;
-    }
+    .logo-img{
+  height:40px;
+  width:auto;
+  display:block;
+  border-radius:10px;
+  object-fit:contain;
+}
     .brand-title{
       font-weight:800; line-height:1.1;
     }
@@ -303,12 +302,13 @@
   <div class="topbar">
     <div class="container">
       <div class="nav">
+        
         <div class="brand">
-          <div class="logo">LV</div>
-          <div>
-            <div class="brand-title">Luyu Electric Vehicles</div>
-          </div>
-        </div>
+  < img src="images/logo.png" alt="Luyu Electric Vehicles Logo" class="logo-img">
+  <div>
+    <div class="brand-title">Luyu Electric Vehicles</div>
+  </div>
+</div>
 
         <div class="menu">
           <a href="index.html">Home</a>
@@ -482,5 +482,6 @@
   </script>
 </body>
 </html>
+
 
 
