@@ -294,6 +294,24 @@
       .brand{min-width:auto}
       .footer-grid{grid-template-columns:1fr}
     }
+    /* === HERO CAROUSEL IMAGE FIX === */
+.hero-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 核心：图片裁切而不是被拉伸 */
+  border-radius: 18px;
+}
+
+.carousel{
+  height: 320px;          /* 控制整体高度 */
+}
+
+@media (max-width: 980px){
+  .carousel{
+    height: 240px;        /* 手机上再小一点 */
+  }
+}
+
   </style>
 </head>
 
@@ -495,6 +513,7 @@
   </script>
 </body>
 </html>
+
 
 
 
