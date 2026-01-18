@@ -209,7 +209,11 @@
   border-radius:16px;
   border:1px solid rgba(43,182,115,.22);
   background:#f7fffb;
-  height:380px;   /* 关键：加高显示完整图片 */
+
+  /* 核心修改 */
+  height:auto;                 /* 不固定高度 */
+  aspect-ratio: 4 / 3;         /* 按 4:3 显示（和你原图一致） */
+
   overflow:hidden;
   position:relative;
   box-shadow:var(--shadow2);
