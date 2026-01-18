@@ -49,8 +49,12 @@
       gap:12px;
     }
     .brand{
-      display:flex; align-items:center; gap:10px; min-width:240px;
-    }
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:240px;
+  height: 40px;        /* 限制整体高度 */
+}
     .logo{
       width:34px; height:34px; border-radius:10px;
       display:grid; place-items:center;
@@ -60,10 +64,9 @@
       color:var(--green2);
       flex:0 0 auto;
     }
-    .logo-img{
-  height: 32px;
+    .logo-img {
+  height: 26px;   /* 这里是关键：缩小 logo */
   width: auto;
-  max-height: 32px;
   display: block;
 }
     .brandname{
