@@ -53,21 +53,19 @@
   align-items:center;
   gap:10px;
   min-width:240px;
-  height: 40px;        /* 限制整体高度 */
+  height:auto;          /* 允许 logo 撑开 */
+  padding:6px 0;        /* 保证 header 高度一致 */
 }
-    .logo{
-      width:34px; height:22px; border-radius:10px;
-      display:grid; place-items:center;
-      background:linear-gradient(135deg, rgba(43,182,115,.22), rgba(30,165,101,.12));
-      border:1px solid rgba(43,182,115,.35);
-      font-weight:800; letter-spacing:.5px;
-      color:var(--green2);
-      flex:0 0 auto;
-    }
-    .logo-img {
-  height: 26px;   /* 这里是关键：缩小 logo */
-  width: auto;
-  display: block;
+    .logo-img{
+  height:32px;          /* 与 Home / About 页一致 */
+  width:auto;
+  max-width:160px;
+  display:block;
+  object-fit:contain;
+}
+    .header .brand img{
+  height:32px !important;
+  width:auto !important;
 }
     .brandname{
       font-weight:800;
@@ -471,10 +469,10 @@
   <header class="header">
     <div class="wrap">
       <div class="topbar">
-        <a class="brand" href="aria-label="Luyu Electric Vehicles">
-  <img src="images/logo.png" alt="Luyu Electric Vehicles Logo" class="logo-png">
+        <a class="brand brand-link" href="index.html" aria-label="Luyu Electric Vehicles Home">
+  <img src="images/logo.png" alt="Luyu Electric Vehicles Logo" class="logo-img">
+  <span class="brandname">Luyu Electric Vehicles</span>
 </a>
-
         <nav aria-label="Primary">
           <a class="navlink" href="index.html">Home</a>
           <a class="navlink" href="products.html">Products</a>
