@@ -53,16 +53,15 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      font-weight:800;
+      font-weight:900;
       letter-spacing:.2px;
+      min-width: 220px;
     }
-    .logo{
-      width:34px; height:34px; border-radius:10px;
-      background: radial-gradient(circle at 30% 30%, #baf2d5 0%, #54d89f 45%, #1bb36b 100%);
-      border:1px solid #bfe8d2;
-      box-shadow: 0 8px 18px rgba(27,179,107,.18);
-      display:grid; place-items:center;
-      color:#0b3a24; font-weight:900;
+    .logo-img{
+      height: 30px;
+      width: auto;
+      display:block;
+      object-fit:contain;
     }
     .menu{
       display:flex; gap:22px; align-items:center;
@@ -128,7 +127,6 @@
       margin:8px 0 14px;
     }
     .sectionHead h2{ margin:0; font-size:22px; }
-    /* ✅ remove right-side texts by not using them */
 
     .grid{
       display:grid;
@@ -153,6 +151,8 @@
         linear-gradient(180deg, #eaf7ef, #ffffff);
       display:flex; align-items:center; justify-content:center;
       color:#2b5a41; font-weight:800;
+      text-align:center;
+      padding:10px;
     }
     .cardBody{ padding:14px; }
     .badge{
@@ -201,7 +201,7 @@
 
     .modal{
       width:min(1100px, 96vw);
-      height: min(84vh, 760px);          /* ✅ fixed height so right side can scroll */
+      height: min(84vh, 760px);
       background: #f7fbf8;
       border:1px solid rgba(255,255,255,.55);
       border-radius: 22px;
@@ -240,14 +240,13 @@
     .panel .big{ font-size:26px; font-weight:1000; color:#0e2a1c; }
     .muted{ color:var(--muted); font-size:13px; line-height:1.45; }
 
-    /* ✅ key: this area scrolls */
     .modalRight{
-      min-height:0;                        /* ✅ required for grid children scroll */
-      overflow:auto;                       /* ✅ scroll inside modal */
-      -webkit-overflow-scrolling: touch;   /* ✅ smooth on iOS */
+      min-height:0;
+      overflow:auto;
+      -webkit-overflow-scrolling: touch;
       padding:16px;
       background: linear-gradient(180deg, #f6fbf7 0%, #ffffff 55%);
-      overscroll-behavior: contain;        /* ✅ prevent scroll chaining to page */
+      overscroll-behavior: contain;
     }
 
     .group{
@@ -264,8 +263,6 @@
       border-bottom:1px solid var(--line);
     }
     .groupHead strong{ font-size:14px; }
-    .hint{ font-size:12px; color:var(--muted); }
-
     .options{
       padding:10px 12px 12px;
       display:flex; flex-direction:column; gap:10px;
@@ -280,13 +277,6 @@
     }
     .opt:hover{ transform: translateY(-1px); box-shadow: 0 10px 18px rgba(0,0,0,.06); }
     .optLeft{ display:flex; gap:12px; align-items:center; }
-    .imgPh{
-      width:46px; height:46px; border-radius:14px;
-      background: linear-gradient(135deg,#e9f7ef,#ffffff);
-      border:1px solid var(--line);
-      display:grid; place-items:center;
-      font-weight:900; color:#2a5a40;
-    }
     .optText{ display:flex; flex-direction:column; gap:2px; }
     .optText b{ font-size:14px; }
     .optText span{ font-size:12px; color:var(--muted); }
@@ -333,6 +323,7 @@
       .utvGrid .card{ grid-column: span 12; }
       .modal{ grid-template-columns: 1fr; }
       .modalLeft{ border-right:0; border-bottom:1px solid var(--line); }
+      .menu{ display:none; }
     }
   </style>
 </head>
@@ -342,8 +333,8 @@
   <div class="topbar">
     <div class="container">
       <div class="nav">
-        <a class="brand" href="index.html">
-          <div class="logo">LV</div>
+        <a class="brand" href="index.html" aria-label="Luyu Electric Vehicles Home">
+          <img src="images/logo.png" alt="Luyu Electric Vehicles Logo" class="logo-img">
           <div>Luyu Electric Vehicles</div>
         </a>
 
@@ -517,7 +508,7 @@
         <div class="panel">
           <h4>Base Price (Reference)</h4>
           <div class="big" id="basePriceText">From $****</div>
-          <div class="muted">USD price is for reference only. Final price depends on configuration and destination port.</div>
+          <div class="muted">USD price is for reference only. Final price depends on configuration and destination.</div>
         </div>
 
         <div class="panel">
@@ -565,94 +556,150 @@
       })
     });
 
-    /* Pricing data (edit here later) */
+    /* =========================
+       Data (edit later)
+       ========================= */
+
+    const BASE_GOLF = [
+      "3.5kW motor",
+      "Motor: Depuda",
+      "Controller: Inbol",
+      "Front McPherson independent suspension",
+      "Rear torsion beam floating rear axle",
+      "One-piece acrylic windshield",
+      "Integrated chassis beam",
+      "Full steel frame structure",
+      "Injection-molded body",
+      "10-inch steel wheel rim",
+      "40V 100Ah lead-acid battery",
+      "Grass tires",
+      "Accordion-style accelerator pedal",
+      "Anti-rust treatment: electrophoresis + hardened powder coating"
+    ];
+
+    const GOLF_SEAT = [
+      { id:"std", label:"Standard seat layout", add:null },
+      { id:"front_row", label:"Add one row (front)", add:null },
+      { id:"rear_row", label:"Add one row (rear)", add:null }
+    ];
+
+    const GOLF_BATTERY = [
+      { id:"b48_100", label:"48V 100Ah", add:null },
+      { id:"b60_100", label:"60V 100Ah", add:null },
+      { id:"b72_100", label:"72V 100Ah", add:null },
+      { id:"b48_150", label:"48V 150Ah", add:null },
+      { id:"b72_150", label:"72V 150Ah", add:null },
+      { id:"b48_200", label:"48V 200Ah", add:null },
+      { id:"b60_200", label:"60V 200Ah", add:null },
+      { id:"b72_200", label:"72V 200Ah", add:null }
+    ];
+
+    const GOLF_SCREEN = [
+      { id:"screen9", label:"9-inch multimedia screen", add:null },
+      { id:"screen101", label:"10.1-inch multimedia screen + CarPlay", add:null }
+    ];
+
+    const GOLF_TIRE = [
+      { id:"t10", label:"10-inch alloy wheel + off-road tire", add:null },
+      { id:"t12", label:"12-inch alloy wheel + off-road tire", add:null },
+      { id:"t14", label:"14-inch alloy wheel + off-road tire", add:null }
+    ];
+
+    const GOLF_MOTOR = [
+      { id:"m4", label:"4000W motor", add:null },
+      { id:"m5", label:"5000W motor", add:null },
+      { id:"m75", label:"7500W motor", add:null }
+    ];
+
+    const GOLF_OPTIONAL_LIST = [
+      "Front bumper",
+      "Footstep board (one row)",
+      "Front cargo rack",
+      "Rear cargo rack",
+      "Foldable windshield",
+      "Slim foldable windshield",
+      "Tempered glass + wiper",
+      "Tow hook",
+      "Luxury seat (per row)",
+      "Fridge",
+      "Golf bag rack",
+      "Golf ball washer",
+      "Integrated accelerator + brake pedal",
+      "Wireless charging",
+      "Curtis controller + KDS motor",
+      "4-inch colorful speakers (1 pair)",
+      "6-inch colorful speakers (1 pair)",
+      "Sound bar",
+      "Double wishbone suspension",
+      "Carbon fiber dashboard",
+      "Four-wheel disc brakes",
+      "Electronic parking brake",
+      "Roof long light bar",
+      "Solar panel",
+      "Golf bag rain curtain",
+      "Roof luggage rack",
+      "Chassis lights",
+      "Roof ambient lights (per row)"
+    ];
+
+    const GOLF_FREEBIES = [
+      "Logo design",
+      "Free body color customization",
+      "Local standard charger",
+      "Golf balls",
+      "Spare switches & wearable parts"
+    ];
+
+    const BUS_BASE = [
+      "4kW motor",
+      "Multimedia + rear-view camera",
+      "Front McPherson independent suspension",
+      "Rear integrated rear axle",
+      "Integrated chassis beam",
+      "Full steel frame structure"
+    ];
+
+    const BUS_SEATS = [
+      { id:"8", label:"8 seats (standard)", add:null },
+      { id:"11", label:"11 seats", add:null },
+      { id:"14", label:"14 seats", add:null },
+      { id:"17", label:"17 seats", add:null },
+      { id:"20", label:"20 seats", add:null },
+      { id:"23", label:"23 seats (max)", add:null }
+    ];
+
+    const BUS_OPTIONAL_LIST = [
+      "Add one row (3 seats) — up to 23 seats",
+      "Warning light + siren speaker",
+      "Fully enclosed (per row)",
+      "Ceiling mounted air conditioner",
+      "5000W motor",
+      "7500W motor",
+      "11kW motor",
+      "Heavy-duty load rear axle"
+    ];
+
+    /* Pricing data (placeholders) */
     const PRICE = {
       golf: {
-        base: { A: 0, B: 0, C: 0, D: 0 }, // fill later if needed
-        seats: [
-          { id:"2", label:"2 Seats", add:0 },
-          { id:"4", label:"4 Seats", add:0 },
-          { id:"6", label:"6 Seats", add:0 },
-          { id:"8", label:"8 Seats", add:0 },
-        ],
+        base: { A: 0, B: 0, C: 0, D: 0 },
+        baseConfig: BASE_GOLF,
+        seats: GOLF_SEAT,
         upgrades: [
-          { key:"seat", title:"Seats", items:[
-            { id:"seat_std", label:"Standard Seat", add:0 },
-            { id:"seat_lux", label:"Luxury Seat Upgrade", add:88 }
-          ]},
-          { key:"dash", title:"Dashboard", items:[
-            { id:"dash_std", label:"Standard Dashboard", add:0 },
-            { id:"dash_cp", label:"CarPlay + Rear Camera", add:171 }
-          ]},
-          { key:"belt", title:"Seat Belts", items:[
-            { id:"belt_none", label:"No Belt (Standard)", add:0 },
-            { id:"belt_2p", label:"2-Point Belt", add:35 },
-            { id:"belt_3p", label:"3-Point Belt", add:40 },
-          ]},
-          { key:"tire", title:"Tires", items:[
-            { id:"tire_10", label:"10-inch Road Tire (Standard)", add:0 },
-            { id:"tire_12", label:"12-inch Road Tire Upgrade", add:88 },
-            { id:"tire_14", label:"14-inch Off-road Tire Upgrade", add:172 }
-          ]},
-          { key:"motor", title:"Motor", items:[
-            { id:"m35", label:"3.5kW Motor (Standard)", add:0 },
-            { id:"m4", label:"4kW Motor Upgrade", add:0 },   // fill later
-            { id:"m5", label:"5kW Motor Upgrade", add:0 }    // fill later
-          ]},
-          { key:"cover", title:"Cover", items:[
-            { id:"cover_none", label:"No Cover (Standard)", add:0 },
-            { id:"cover_full", label:"Full Enclosure Cover", add:45 }
-          ]},
-          { key:"speaker", title:"Speakers", items:[
-            { id:"spk_none", label:"No Speakers (Standard)", add:0 },
-            { id:"spk_2set", label:"2-Sets Speakers Upgrade", add:165 }
-          ]}
+          { key:"battery", title:"Battery Options (Choose One)", items: GOLF_BATTERY },
+          { key:"screen", title:"Multimedia Screen (Choose One)", items: GOLF_SCREEN },
+          { key:"tire", title:"Tires & Wheels (Choose One)", items: GOLF_TIRE },
+          { key:"motor", title:"Motor Upgrade (Choose One)", items: GOLF_MOTOR }
         ],
-        options: [
-          { id:"wind", label:"Foldable Windshield", add:60 },
-          { id:"front_bumper", label:"Front Bumper", add:60 },
-          { id:"front_basket", label:"Front Basket", add:50 },
-          { id:"bag_holder", label:"Golf Bag Holder", add:50 },
-          { id:"bar_audio", label:"Sound Bar", add:100 },
-          { id:"roof_light", label:"Search Light", add:25 },
-          { id:"led_light", label:"LED Ambient Lights", add:35 },
-        ],
-        freebies: [
-          "Logo design",
-          "Free body color customization",
-          "Local standard charger",
-          "Golf balls",
-          "Spare switches & wearable parts"
-        ]
+        optionList: GOLF_OPTIONAL_LIST,
+        freebies: GOLF_FREEBIES
       },
-
       bus: {
         base: { A: 0, B: 0 },
-        seats: [
-          { id:"8", label:"8 Seats (Standard)", add:0 },
-          { id:"11", label:"11 Seats", add:0 },
-          { id:"14", label:"14 Seats", add:0 },
-          { id:"17", label:"17 Seats", add:0 },
-          { id:"20", label:"20 Seats", add:0 },
-          { id:"23", label:"23 Seats", add:0 },
-        ],
-        upgrades: [
-          { key:"motor", title:"Motor", items:[
-            { id:"m35", label:"3.5kW Motor (Standard)", add:0 },
-            { id:"m4", label:"4kW Motor Upgrade", add:0 },
-            { id:"m5", label:"5kW Motor Upgrade", add:0 }
-          ]},
-          { key:"body", title:"Body Type", items:[
-            { id:"open", label:"Open Top", add:0 },
-            { id:"closed", label:"Fully Enclosed", add:0 }
-          ]},
-          { key:"tire", title:"Tires", items:[
-            { id:"tire_std", label:"Standard Tires", add:0 },
-            { id:"tire_12", label:"12-inch Road Tire Upgrade", add:88 },
-            { id:"tire_14", label:"14-inch Off-road Tire Upgrade", add:172 }
-          ]}
-        ],
-        freebies: ["(Placeholder) Free items to be added later"]
+        baseConfig: BUS_BASE,
+        seats: BUS_SEATS,
+        optionList: BUS_OPTIONAL_LIST,
+        freebies: ["Free items: to be confirmed in quotation (placeholder)."]
       }
     };
 
@@ -684,7 +731,6 @@
 
       updateTotal();
 
-      // Ensure scroll starts at top
       const sc = document.getElementById("modalRight");
       sc.scrollTop = 0;
     }
@@ -695,7 +741,6 @@
       document.body.classList.remove("modal-open");
     }
 
-    // Click overlay to close
     document.getElementById("modal").addEventListener("click", (e)=>{
       if(e.target.id === "modal") closeModal();
     });
@@ -705,34 +750,41 @@
       const mount = document.getElementById("formMount");
       mount.innerHTML = "";
 
+      // Base configuration (same for all packages)
+      mount.appendChild(makeListGroup("Base Configuration (Standard)", PRICE[type].baseConfig, false));
+
+      // Seat options
       mount.appendChild(makeSingleChoiceGroup(
-        "Seat Options (Choose One)",
+        "Seat Layout (Choose One)",
         PRICE[type].seats,
         (opt)=> { state.seat = opt; updateTotal(); }
       ));
 
-      (PRICE[type].upgrades || []).forEach(g=>{
-        mount.appendChild(makeSingleChoiceGroup(
-          g.title,
-          g.items,
-          (opt)=> { state.upgrades[g.key] = opt; updateTotal(); }
-        ));
-      });
-
       if(type === "golf"){
-        mount.appendChild(makeMultiChoiceGroup(
-          "Optional Items (Multi-select)",
-          PRICE.golf.options,
-          (id, on)=> {
-            if(on) state.options.add(id);
-            else state.options.delete(id);
-            updateTotal();
-          }
-        ));
-        mount.appendChild(makeListGroup("Free Items (Example)", PRICE.golf.freebies));
+        // Upgrades groups
+        (PRICE.golf.upgrades || []).forEach(g=>{
+          mount.appendChild(makeSingleChoiceGroup(
+            g.title,
+            g.items,
+            (opt)=> { state.upgrades[g.key] = opt; updateTotal(); }
+          ));
+        });
+
+        // Optional list (no photos, no selectable price required)
+        mount.appendChild(makeListGroup("Optional Items (Add-ons)", PRICE.golf.optionList, true));
+
+        // Freebies kept
+        mount.appendChild(makeListGroup("Free Items (Included)", PRICE.golf.freebies, true));
       }else{
-        mount.appendChild(makeListGroup("Free Items (Placeholder)", PRICE.bus.freebies));
+        // Bus: optional list only (no “option/selection” wording)
+        mount.appendChild(makeListGroup("Available Customization Items", PRICE.bus.optionList, true));
+        mount.appendChild(makeListGroup("Free Items (Placeholder)", PRICE.bus.freebies, true));
       }
+    }
+
+    function formatAdd(add){
+      if(add === null || typeof add === "undefined") return "+$****";
+      return "+$" + Number(add || 0);
     }
 
     function makeSingleChoiceGroup(title, items, onPick){
@@ -741,7 +793,6 @@
       wrap.innerHTML = `
         <div class="groupHead">
           <strong>${title}</strong>
-          <span class="hint">Single</span>
         </div>
         <div class="options"></div>
       `;
@@ -752,14 +803,12 @@
         row.className = "opt";
         row.innerHTML = `
           <div class="optLeft">
-            <div class="imgPh">IMG</div>
             <div class="optText">
               <b>${it.label}</b>
-              <span>(Placeholder image, replace later)</span>
             </div>
           </div>
           <div class="optRight">
-            <div class="priceTag">+$${it.add}</div>
+            <div class="priceTag">${formatAdd(it.add)}</div>
             <span class="radio"></span>
           </div>
         `;
@@ -777,83 +826,38 @@
       return wrap;
     }
 
-    function makeMultiChoiceGroup(title, items, onToggle){
+    function makeListGroup(title, items, useDots){
       const wrap = document.createElement("div");
       wrap.className = "group";
       wrap.innerHTML = `
         <div class="groupHead">
           <strong>${title}</strong>
-          <span class="hint">Multi</span>
-        </div>
-        <div class="options"></div>
-      `;
-      const box = wrap.querySelector(".options");
-
-      items.forEach((it)=>{
-        const row = document.createElement("div");
-        row.className = "opt";
-        row.innerHTML = `
-          <div class="optLeft">
-            <div class="imgPh">IMG</div>
-            <div class="optText">
-              <b>${it.label}</b>
-              <span>(Placeholder image, replace later)</span>
-            </div>
-          </div>
-          <div class="optRight">
-            <div class="priceTag">+$${it.add}</div>
-            <span class="radio"></span>
-          </div>
-        `;
-
-        row.addEventListener("click", ()=>{
-          const r = row.querySelector(".radio");
-          const on = !r.classList.contains("on");
-          r.classList.toggle("on", on);
-          onToggle(it.id, on);
-        });
-
-        box.appendChild(row);
-      });
-
-      return wrap;
-    }
-
-    function makeListGroup(title, items){
-      const wrap = document.createElement("div");
-      wrap.className = "group";
-      wrap.innerHTML = `
-        <div class="groupHead">
-          <strong>${title}</strong>
-          <span class="hint">Text helps SEO</span>
         </div>
         <div class="options" style="gap:8px;"></div>
       `;
       const box = wrap.querySelector(".options");
+
       items.forEach(t=>{
         const div = document.createElement("div");
         div.style.cssText = "padding:10px 12px;border:1px dashed #cfeedd;border-radius:14px;background:#fbfffd;color:#274a38;font-weight:700;";
-        div.textContent = "• " + t;
+        div.textContent = (useDots ? "• " : "") + t;
         box.appendChild(div);
       });
       return wrap;
     }
 
-    /* Total + WhatsApp */
+    /* Total + WhatsApp (reference only) */
     function updateTotal(){
       const type = currentType;
       const base = (PRICE[type].base[currentPkg] ?? 0);
 
       let total = base;
-      if(state.seat) total += Number(state.seat.add||0);
+      // only numeric adds are counted; null means TBD
+      if(state.seat && typeof state.seat.add === "number") total += state.seat.add;
 
-      Object.values(state.upgrades).forEach(u=> total += Number((u&&u.add)||0));
-
-      if(type === "golf"){
-        PRICE.golf.options.forEach(o=>{
-          if(state.options.has(o.id)) total += Number(o.add||0);
-        });
-      }
+      Object.values(state.upgrades).forEach(u=>{
+        if(u && typeof u.add === "number") total += u.add;
+      });
 
       const show = `$${total}`;
       document.getElementById("totalPriceText").textContent = show;
@@ -874,18 +878,12 @@
       lines.push(`Hello Luyu, I would like a quote.`);
       lines.push(`Product: ${title}`);
       lines.push(`Base price: ${base>0?("$"+base):"$****"} (reference)`);
-      if(state.seat) lines.push(`Seat: ${state.seat.label} (+$${state.seat.add})`);
+
+      if(state.seat) lines.push(`Seat layout: ${state.seat.label} (${state.seat.add===null?"+$****":("+$"+state.seat.add)})`);
 
       Object.entries(state.upgrades).forEach(([k,v])=>{
-        if(v) lines.push(`Upgrade (${k}): ${v.label} (+$${v.add})`);
+        if(v) lines.push(`Upgrade: ${v.label} (${v.add===null?"+$****":("+$"+v.add)})`);
       });
-
-      if(type === "golf" && state.options.size){
-        lines.push(`Optional items:`);
-        PRICE.golf.options.forEach(o=>{
-          if(state.options.has(o.id)) lines.push(`- ${o.label} (+$${o.add})`);
-        });
-      }
 
       lines.push(`Estimated total: $${total} (reference)`);
       lines.push(`Please advise shipping and final quotation.`);
