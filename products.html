@@ -378,7 +378,9 @@
 
       <div class="grid">
         <div class="card">
-          <div class="cardMedia">(Placeholder Image) Package A</div>
+          <div class="cardMedia">
+  <img src="images/golf-package-a.jpg" alt="EV Golf Cart Package A" style="width:100%;height:100%;object-fit:cover;">
+</div>
           <div class="cardBody">
             <span class="badge"><span class="dot"></span> EV Golf Cart - Package A</span>
             <div class="cardTitle">EV Golf Cart - Package A</div>
@@ -390,7 +392,9 @@
         </div>
 
         <div class="card">
-          <div class="cardMedia">(Placeholder Image) Package B</div>
+          <div class="cardMedia">
+  <img src="images/golf-package-b.jpg" alt="EV Golf Cart Package A" style="width:100%;height:100%;object-fit:cover;">
+</div>
           <div class="cardBody">
             <span class="badge"><span class="dot"></span> EV Golf Cart - Package B</span>
             <div class="cardTitle">EV Golf Cart - Package B</div>
@@ -402,7 +406,9 @@
         </div>
 
         <div class="card">
-          <div class="cardMedia">(Placeholder Image) Package C</div>
+          <div class="cardMedia">
+  <img src="images/golf-package-c.jpg" alt="EV Golf Cart Package A" style="width:100%;height:100%;object-fit:cover;">
+</div>
           <div class="cardBody">
             <span class="badge"><span class="dot"></span> EV Golf Cart - Package C</span>
             <div class="cardTitle">EV Golf Cart - Package C</div>
@@ -414,7 +420,9 @@
         </div>
 
         <div class="card">
-          <div class="cardMedia">(Placeholder Image) Package D</div>
+          <div class="cardMedia">
+  <img src="images/golf-package-d.jpg" alt="EV Golf Cart Package A" style="width:100%;height:100%;object-fit:cover;">
+</div>
           <div class="cardBody">
             <span class="badge"><span class="dot"></span> EV Golf Cart - Package D</span>
             <div class="cardTitle">EV Golf Cart - Package D</div>
@@ -720,8 +728,8 @@
       };
       document.getElementById("modalTitle").textContent = titleMap[type] || "Configuration";
 
-      const base = (PRICE[type].base[pkg] ?? 0);
-      document.getElementById("basePriceText").textContent = base > 0 ? `From $${base}` : "From $****";
+      document.getElementById("basePriceText").textContent =
+  "USD 3,200 – 4,200";
 
       buildForm(type);
 
