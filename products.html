@@ -145,15 +145,20 @@
     }
     .card:hover{ transform: translateY(-2px); box-shadow: 0 16px 38px rgba(12,34,22,.12); }
     .cardMedia{
-      height:160px;
-      background:
-        linear-gradient(120deg, rgba(27,179,107,.18), rgba(255,255,255,.0)),
-        linear-gradient(180deg, #eaf7ef, #ffffff);
-      display:flex; align-items:center; justify-content:center;
-      color:#2b5a41; font-weight:800;
-      text-align:center;
-      padding:10px;
-    }
+  height:160px;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:#eaf7ef;
+  display:block;
+}
+
+.cardMedia img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
     .cardBody{ padding:14px; }
     .badge{
       display:inline-flex; align-items:center; gap:8px;
@@ -175,7 +180,7 @@
     .cardActions{ display:flex; gap:10px; flex-wrap:wrap; }
 
     .utvGrid .card{ grid-column: span 4; }
-    .utvGrid .cardMedia{ height:140px; overflow:hidden;}
+    .utvGrid .cardMedia{ height:140px; overflow:hidden; }
 
     .footer{
       margin-top:22px;
